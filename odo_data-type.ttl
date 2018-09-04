@@ -135,3 +135,241 @@ odo-dt:Proteomics a odo-dt:SubjectArea,
     owl:NamedIndividual ;
     rdfs:label "Proteomics"@en-us .
     
+odo-dt:ProteinBestHitTaxonIdentifier a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Protein Best Taxon Identifier"@en ;
+    rdfs:comment "Representative of the taxon identifier for the protein."@en .
+
+odo-dt:ProteinLatitudeDecimalDegrees a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Latitude in decimal degrees for protein measurements"@en ;
+    rdfs:comment "A latitude recorded in decimal degrees."@en ;
+        skos:related odo-dt:ProteinLongitudeDecimalDegrees,
+        odo-dt:ProteinStationIdentifier .
+
+odo-dt:ProteinLongitudeDecimalDegrees a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Longitude in decimal degrees for protein measurements"@en ;
+    rdfs:comment "A longtiude recorded in decimal degrees for protein measurements."@en ;
+        skos:related odo-dt:ProteinLatitudeDecimalDegrees,
+        odo-dt:ProteinStationIdentifier .
+
+odo-dt:ProteinMolecularWeightInDaltons a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Protein Molecular Weight in Daltons (Da)"@en ;
+    rdfs:comment "The molecular weight measured in Daltons for a protein."@en .
+
+odo-dt:ProteinPFamsIdentifier a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Protein PFams Identifier"@en ;
+    rdfs:comment "Representative of a PFams identifier for the protein."@en .
+
+odo-dt:ProteinDepthMeters a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Depth in Meters for protein measurements"@en ;
+    rdfs:comment "A depth measurement made in meters for protein measurements."@en ;
+        skos:related odo-dt:ProteinStationIdentifier .
+
+odo-dt:ProteinKeggIdentifier a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Protein Kegg Orthology Identifier"@en ;
+    rdfs:comment "Representative of a Kegg identifier for the protein."@en .
+
+odo-dt:ProteinIdentifier a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Protein Identifier"@en ;
+    rdfs:comment "Unqiuely identifies one protein within a dataset."@en .
+
+odo-dt:ProteinStationIdentifier a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Station Identifier"@en ;
+    rdfs:comment "Representative of a particular station for protein measurements."@en .
+
+odo-dt:ProteinBestHitAnnotaion a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Protein Best Annotation (Product Name)"@en ;
+    rdfs:comment "The best annotation hit for a protein."@en .
+
+odo-dt:ProteinBestHitSpecies a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Protein Best Species (Taxon)"@en ;
+    rdfs:comment "The best taxonomic species name related to a Taxon identifier for a protein."@en ;
+        skos:related odo-dt:ProteinBestHitTaxonIdentifier .
+
+odo-dt:ProteinDeploymentIdentifier a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Protein Deployment Identifier"@en ;
+    rdfs:comment "Representative of a cruise or some other named deployment."@en .
+
+odo-dt:ProteinEnzymeCommissionIdentifier a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Protein Enzyme Commission Identifier"@en ;
+    rdfs:comment "Representative of a Enzyme Commission identifier for the protein."@en .
+
+odo-dt:ProteinKeggDescription a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Protein Kegg Orthology Description"@en ;
+    rdfs:comment "The Kegg description related to an identified Kegg Identifier for a protein."@en ;
+        skos:related odo-dt:ProteinKeggIdentifier .
+
+odo-dt:ProteinKeggName a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Protein Kegg Orthology Name"@en ;
+    rdfs:comment "The Kegg pathway related to an identified Kegg Identifier for a protein."@en ;
+        skos:related odo-dt:ProteinKeggIdentifier .
+
+odo-dt:ProteinMaxFilterSizeInMicrons a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Protein Maximum Filter Size in Microns"@en ;
+    rdfs:comment "The maximum filter size measured in microns for protein measurements."@en .
+
+odo-dt:ProteinMinFilterSizeInMicrons a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Protein Minimum Filter Size in Microns"@en ;
+    rdfs:comment "The minimum filter size measured in microns for protein measurements."@en .
+
+odo-dt:ProteinObservationDateTimeUTC a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Observation Date/Time UTC"@en ;
+    rdfs:comment "A date time measurement made in UTC for protein measurements."@en ;
+        skos:related odo-dt:ProteinStationIdentifier .
+
+odo-dt:ProteinPFamsDescription a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Protein PFams Description"@en ;
+    rdfs:comment "The PFams description related to an identified PFams Identifier for a protein."@en ;
+        skos:related odo-dt:ProteinPFamsIdentifier .
+
+odo-dt:ProteinSpectralCountAtPlaceTime a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Protein Spectral Count at a Station, Depth, and Date"@en ;
+    rdfs:comment "The spectral count for a protein at a specific station, depth and date/time."@en ;
+        skos:related odo-dt:ProteinDepthMeters,
+        odo-dt:ProteinStationIdentifier .
+
+odo-dt:ProteinUniprotIdentifier a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Protein Uniprot Identifier"@en ;
+    rdfs:comment "Representative of a Uniprot identifier for the protein."@en .
+
+
+
+
+
+
+
+odo-dt:PeptideBestIdProbability a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Best Peptide identification probability"@en ;
+    rdfs:comment "Metric of peptide quality."@en .
+
+odo-dt:PeptideBestSequestDCnScore a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Best SEQUEST DCn score"@en ;
+    rdfs:comment "Metric of peptide quality."@en .
+
+odo-dt:PeptideBestSequestXCorrScore a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Best SEQUEST XCorr score"@en ;
+    rdfs:comment "Metric of peptide quality."@en .
+
+odo-dt:PeptideDepthMeters a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Depth in Meters for peptide measurements"@en ;
+    rdfs:comment "A depth measurement made in meters for peptide measurements."@en ;
+        skos:related odo-dt:ProteinDepthMeters .
+
+odo-dt:PeptideMaxFilterSizeInMicrons a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Peptide Maximum Filter Size in Microns"@en ;
+    rdfs:comment "The maximum filter size measured in microns for peptide measurements."@en .
+
+odo-dt:PeptideMedianRetentionTime a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Median Retention Time"@en ;
+    rdfs:comment "Median Retention Time"@en .
+
+odo-dt:PeptideMinFilterSize a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Peptide Minumum Filter Size in Microns"@en ;
+    rdfs:comment "The minimum filter size measured in microns for peptide measurements."@en .
+
+odo-dt:PeptideProteinAccessionId a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Peptide Protein Accession Identifier"@en ;
+    rdfs:comment "Representative of all the possible proteins from which this peptide came from."@en ;
+        skos:exactMatch odo-dt:ProteinIdentifier .
+
+odo-dt:PeptideProteinMolecularWeightDaltons a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Peptide Protein Molecular Weight in Daltons"@en ;
+    rdfs:comment "The molecular weight measured in Daltons for the protein."@en ;
+        skos:related odo-dt:PeptideProteinId,
+        odo-dt:ProteinMolecularWeightInDaltons .
+
+odo-dt:PeptideSampleName a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Peptide Sample Name"@en ;
+    rdfs:comment "The MS/MS sample name for peptide measurements."@en .
+
+odo-dt:PeptideSequence a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Peptide Sequence"@en ;
+    rdfs:comment "Unique Peptide sequence - ultimately this is the most unique identifier."@en .
+
+odo-dt:PeptideSpectralCountSummation a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Sum of the spectral counts"@en ;
+    rdfs:comment "Sum of +2,+3,+4 data, = total unnormalized spectral counts - Quantitative Value"@en ;
+        skos:related odo-dt:PeptidePlus2HSpectraCount,
+        odo-dt:PeptidePlus3HSpectraCount,
+        odo-dt:PeptidePlus4HSpectraCount .
+
+odo-dt:PeptideStationIdentifier a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Station Identifier"@en ;
+    rdfs:comment "Representative of a particular station where measurements about a peptide were taken."@en ;
+        skos:related odo-dt:ProteinStationIdentifier .
+
+odo-dt:PeptideTotalPrecursorIntensity a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Total Precursor Intensity"@en ;
+    rdfs:comment "Total Precursor Intensity"@en .
+
+odo-dt:PeptideTotalTIC a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Total TIC"@en ;
+    rdfs:comment "Total TIC"@en .
+
+odo-dt:PeptidePlus2HSpectraCount a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Number of identified +2H spectra"@en ;
+    rdfs:comment "Number of identified +2H spectra"@en .
+
+odo-dt:PeptidePlus3HSpectraCount a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Number of identified +3H spectra"@en ;
+    rdfs:comment "Number of identified +3H spectra"@en .
+
+odo-dt:PeptidePlus4HSpectraCount a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Number of identified +4H spectra"@en ;
+    rdfs:comment "Number of identified +4H spectra"@en .
+
+odo-dt:PeptideProteinId a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Peptide Protein Identifier"@en ;
+    rdfs:comment "Representative of the protein from which this peptide came from."@en ;
+        skos:exactMatch odo-dt:ProteinIdentifier .
+
+odo-dt:PeptideStartIndex a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Peptide start index"@en ;
+    rdfs:comment "Data useful in creating peptide coverage map"@en ;
+        skos:related odo-dt:PeptideStopIndex .
+
+odo-dt:PeptideStopIndex a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Peptide stop index"@en ;
+    rdfs:comment "Data useful in creating peptide coverage map"@en ;
+        skos:related odo-dt:PeptideStartIndex .
