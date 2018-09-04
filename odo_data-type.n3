@@ -1,0 +1,89 @@
+@prefix : <http://ocean-data.org/schema/data-type/v1.0/> .
+@prefix odo-dt: <http://ocean-data.org/schema/data-type/v1.0/> .
+@prefix dco: <http://info.deepcarbon.net/schema#> .
+@prefix odo: <http://ocean-data.org/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+odo-dt:Proteomics a odo-dt:SubjectArea,
+        owl:NamedIndividual ;
+    rdfs:label "Proteomics"@en-us .
+
+odo-dt:aggregates a owl:ObjectProperty ;
+    rdfs:label "aggregates"@en-us ;
+    rdfs:comment "Aggregates means that the domain DataType is a new DataType that requires at least one instance of the aggregates range."@en-us ;
+    rdfs:domain <odo-dt:DataType> ;
+    rdfs:range <odo-dt:DataType> .
+
+odo-dt:dataType a owl:ObjectProperty ;
+    rdfs:label "dataType"@en-us ;
+    rdfs:comment "Specifies that a Dataset meets the criteria for a certain DataType."@en-us ;
+    rdfs:domain <odo:Dataset> ;
+    rdfs:range <odo-dt:DataType> .
+
+odo-dt:extends a owl:ObjectProperty ;
+    rdfs:label "extends"@en-us ;
+    rdfs:comment "Extends means that the domain DataType is a specialization of the range DataType by inheriting the range's Parameters but also incluing new Parameters as part of the specialization."@en-us ;
+    rdfs:domain <odo-dt:DataType> ;
+    rdfs:range <odo-dt:DataType> .
+
+odo-dt:isSpecializationOf a owl:ObjectProperty ;
+    rdfs:label "isSpecializationOf"@en-us ;
+    rdfs:comment "This parameter is narrower version of its range. It a specialization of its range by because of some detail such as a specific unit of measure or becuase it was observed using a specific instrument."@en-us ;
+    rdfs:domain <odo:Parameter> ;
+    rdfs:range <odo:Parameter> ;
+    rdfs:subPropertyOf <skos:broader> .
+
+odo-dt:requires a owl:ObjectProperty ;
+    rdfs:label "requires"@en-us ;
+    rdfs:comment "Specifies that a DataType must include the associated Parameter."@en-us ;
+    rdfs:domain <odo-dt:DataType> ;
+    rdfs:range <odo:Parameter> ;
+    rdfs:subPropertyOf odo-dt:measures .
+
+odo-dt:subjectArea a owl:ObjectProperty ;
+    rdfs:label "subjectArea"@en-us ;
+    rdfs:comment "Specifies that the SubjectArea pertains to the observations made for a DataType."@en-us ;
+    rdfs:domain <odo-dt:DataType> ;
+    rdfs:range <odo-dt:SubjectArea> .
+
+<http://ocean-data/schema/data-type/v1.0/OceanProteinPortalDataType> a odo-dt:DataType,
+        owl:NamedIndividual ;
+    rdfs:label "Ocean Protein Portal Data Type"@en-us ;
+    odo-dt:aggregates <http://ocean-data/schema/data-type/v1.0/FASTA-ProteinIdentifications>,
+        <http://ocean-data/schema/data-type/v1.0/PeptideSpectralCounts>,
+        <http://ocean-data/schema/data-type/v1.0/ProteinSpectralCounts> .
+
+<http://webprotege.stanford.edu/project/84LiWHICZiZdji6z1cXFNY> a owl:Ontology .
+
+odo-dt:SubjectArea a owl:Class ;
+    rdfs:label "SubjectArea"@en-us ;
+    rdfs:comment "A certain field of study used to group or filter Data Types"@en-us .
+
+odo-dt:measures a owl:ObjectProperty ;
+    rdfs:label "measures"@en-us ;
+    rdfs:comment "Specifies that a DataType should include the associated Parameter."@en-us ;
+    rdfs:domain <odo-dt:DataType> ;
+    rdfs:range <odo:Parameter> .
+
+<http://ocean-data/schema/data-type/v1.0/FASTA-ProteinIdentifications> a odo-dt:DataType,
+        owl:NamedIndividual ;
+    rdfs:label "FASTA File of Protein Identifications"@en-us .
+
+<http://ocean-data/schema/data-type/v1.0/PeptideSpectralCounts> a odo-dt:DataType,
+        owl:NamedIndividual ;
+    rdfs:label "Tabular File of Peptide Spectral Counts"@en-us .
+
+<http://ocean-data/schema/data-type/v1.0/ProteinSpectralCounts> a odo-dt:DataType,
+        owl:NamedIndividual ;
+    rdfs:label "Tabular File of Protein Spectral Counts"@en-us .
+
+odo-dt:DataType a owl:Class ;
+    rdfs:label "DataType"@en-us ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "2"^^<xsd:nonNegativeInteger> ;
+            owl:onProperty <odo:aggregates> ] .
+
