@@ -129,30 +129,64 @@ odo-dt:OceanProteinPortalDataType a odo-dt:DataType,
     rdfs:label "Ocean Protein Portal Data Type"@en-us ;
     odo-dt:aggregates odo-dt:FASTA-ProteinIdentifications,
         odo-dt:PeptideSpectralCounts,
-        odo-dt:ProteinSpectralCounts .
+        odo-dt:ProteinSpectralCounts ;
+    odo-dt:requires odo-dt:CruiseIdentifier,
+        odo-dt:CruiseStationIdentifier,
+        odo-dt:CruiseStationLatitudeDecimalDegrees,
+        odo-dt:CruiseStationLongitudeDecimalDegrees,
     
 odo-dt:Proteomics a odo-dt:SubjectArea,
     owl:NamedIndividual ;
     rdfs:label "Proteomics"@en-us .
     
+odo-dt:CruiseIdentifier a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Protein Cruise Identifier"@en ;
+    rdfs:comment "Representative of a cruise or some other named deployment."@en .
+
+odo-dt:CruiseStationIdentifier a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Station Identifier"@en ;
+    rdfs:comment "Representative of a particular station from a cruise."@en ;
+    skos:related odo-dt:CruiseIdentifier .
+
+odo-dt:CruiseStationLatitudeDecimalDegrees a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Latitude in decimal degrees for protein measurements"@en ;
+    rdfs:comment "A latitude recorded in decimal degrees."@en ;
+        skos:related odo-dt:CruiseStationIdentifier,
+            odo-dt:CruiseStationLongitudeDecimalDegrees .
+
+odo-dt:CruiseStationLongitudeDecimalDegrees a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Longitude in decimal degrees for protein measurements"@en ;
+    rdfs:comment "A longtiude recorded in decimal degrees for protein measurements."@en ;
+        skos:related odo-dt:CruiseStationIdentifier,
+            odo-dt:CruiseStationLatitudeDecimalDegrees .
+
+odo-dt:DepthMeters a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Depth in Meters for protein measurements"@en ;
+    rdfs:comment "A depth measurement made in meters for protein measurements."@en ;
+        skos:related odo-dt:CruiseStationIdentifier .
+
+odo-dt:MaxFilterSizeInMicrons a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Maximum Filter Size in Microns"@en ;
+    rdfs:comment "The maximum filter size measured in microns."@en .
+
+odo-dt:MinFilterSizeInMicrons a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Minimum Filter Size in Microns"@en ;
+    rdfs:comment "The minimum filter size measured in microns."@en .
+
+
+
+
 odo-dt:ProteinBestHitTaxonIdentifier a owl:NamedIndividual,
         odo:Parameter ;
     rdfs:label "Protein Best Taxon Identifier"@en ;
     rdfs:comment "Representative of the taxon identifier for the protein."@en .
-
-odo-dt:ProteinLatitudeDecimalDegrees a owl:NamedIndividual,
-        odo:Parameter ;
-    rdfs:label "Latitude in decimal degrees for protein measurements"@en ;
-    rdfs:comment "A latitude recorded in decimal degrees."@en ;
-        skos:related odo-dt:ProteinLongitudeDecimalDegrees,
-        odo-dt:ProteinStationIdentifier .
-
-odo-dt:ProteinLongitudeDecimalDegrees a owl:NamedIndividual,
-        odo:Parameter ;
-    rdfs:label "Longitude in decimal degrees for protein measurements"@en ;
-    rdfs:comment "A longtiude recorded in decimal degrees for protein measurements."@en ;
-        skos:related odo-dt:ProteinLatitudeDecimalDegrees,
-        odo-dt:ProteinStationIdentifier .
 
 odo-dt:ProteinMolecularWeightInDaltons a owl:NamedIndividual,
         odo:Parameter ;
@@ -164,11 +198,7 @@ odo-dt:ProteinPFamsIdentifier a owl:NamedIndividual,
     rdfs:label "Protein PFams Identifier"@en ;
     rdfs:comment "Representative of a PFams identifier for the protein."@en .
 
-odo-dt:ProteinDepthMeters a owl:NamedIndividual,
-        odo:Parameter ;
-    rdfs:label "Depth in Meters for protein measurements"@en ;
-    rdfs:comment "A depth measurement made in meters for protein measurements."@en ;
-        skos:related odo-dt:ProteinStationIdentifier .
+
 
 odo-dt:ProteinKeggIdentifier a owl:NamedIndividual,
         odo:Parameter ;
@@ -180,11 +210,6 @@ odo-dt:ProteinIdentifier a owl:NamedIndividual,
     rdfs:label "Protein Identifier"@en ;
     rdfs:comment "Unqiuely identifies one protein within a dataset."@en .
 
-odo-dt:ProteinStationIdentifier a owl:NamedIndividual,
-        odo:Parameter ;
-    rdfs:label "Station Identifier"@en ;
-    rdfs:comment "Representative of a particular station for protein measurements."@en .
-
 odo-dt:ProteinBestHitAnnotaion a owl:NamedIndividual,
         odo:Parameter ;
     rdfs:label "Protein Best Annotation (Product Name)"@en ;
@@ -195,11 +220,6 @@ odo-dt:ProteinBestHitSpecies a owl:NamedIndividual,
     rdfs:label "Protein Best Species (Taxon)"@en ;
     rdfs:comment "The best taxonomic species name related to a Taxon identifier for a protein."@en ;
         skos:related odo-dt:ProteinBestHitTaxonIdentifier .
-
-odo-dt:ProteinDeploymentIdentifier a owl:NamedIndividual,
-        odo:Parameter ;
-    rdfs:label "Protein Deployment Identifier"@en ;
-    rdfs:comment "Representative of a cruise or some other named deployment."@en .
 
 odo-dt:ProteinEnzymeCommissionIdentifier a owl:NamedIndividual,
         odo:Parameter ;
