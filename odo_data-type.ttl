@@ -138,6 +138,11 @@ odo-dt:OceanProteinPortalDataType a odo-dt:DataType,
         odo-dt:CruiseStationLatitudeDecimalDegrees,
         odo-dt:CruiseStationLongitudeDecimalDegrees,
     
+odo-dt:Ocean-Proteomics a odo-dt:SubjectArea,
+    owl:NamedIndividual ;
+    skos:broader odo-dt:Proteomics ;
+    rdfs:label "Ocean Proteomics"@en-us .
+
 odo-dt:Proteomics a odo-dt:SubjectArea,
     owl:NamedIndividual ;
     rdfs:label "Proteomics"@en-us .
