@@ -139,7 +139,7 @@ odo-dt:OceanProteinPortalDataType a odo-dt:DataType,
     odo-dt:requires odo-dt:CruiseIdentifier,
         odo-dt:CruiseStationIdentifier,
         odo-dt:CruiseStationLatitudeDecimalDegrees,
-        odo-dt:CruiseStationLongitudeDecimalDegrees,
+        odo-dt:CruiseStationLongitudeDecimalDegrees .
     
 odo-dt:Ocean-Proteomics a odo-dt:SubjectArea,
     owl:NamedIndividual ;
