@@ -113,6 +113,15 @@ odo-dt:specializationOf a owl:ObjectProperty ;
     rdfs:subPropertyOf prov:specializationOf .
 
 
+#### Object Properties
+
+odo-dt:delimiter a owl:DatatypeProperty ;
+    rdfs:label "delimiter"@en-us ;
+    rdfs:comment "For parameters that have multiple values, this property determines how a field should be parsed into a list of values by specifying the string identifying where the value should be split."@en-us ;
+    rdfs:domain odo:Parameter ;
+    rdfs:range xsd:string .
+
+
 #### Named Individuals ####
 
 ### Data Type ###
