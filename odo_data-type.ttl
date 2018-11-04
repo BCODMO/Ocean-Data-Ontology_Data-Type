@@ -303,11 +303,6 @@ odo-dt:PeptideSpectralCounts_MedianRetentionTime a owl:NamedIndividual,
     rdfs:label "Median Retention Time"@en ;
     rdfs:comment "Median Retention Time"@en .
 
-odo-dt:PeptideSpectralCounts_ProteinAccessionId a owl:NamedIndividual,
-        odo:Parameter ;
-    rdfs:label "Protein Accession Identifier"@en ;
-    rdfs:comment "Representative of all the possible proteins from which this peptide came from."@en .
-
 odo-dt:PeptideSpectralCounts_MS-MS_SampleName a owl:NamedIndividual,
         odo:Parameter ;
     rdfs:label "MS/MS Sample Name"@en ;
@@ -351,11 +346,23 @@ odo-dt:PeptideSpectralCounts_ProteinIdentifier a owl:NamedIndividual,
     ## Axiom:
     ## if a odo-dt:OceanProteinPortalDataType,
     ## and odo-dt:PepetideSpectralCounts odo-dt:measures odo-dt:PeptideSpectralCounts_ProteinIdentifier ;
-    ## then, odo-dt:PeptideSpectralCounts_ProteinIdentifier owl:allValuesFrom ( odo-dt:PepetideSpectralCounts odo-dt:measures odo-dt:SampleIdentifier ).
+    ## then, odo-dt:PeptideSpectralCounts_ProteinIdentifier owl:allValuesFrom ( odo-dt:ProteinSpectralCounts odo-dt:measures odo-dt:SampleIdentifier ).
     ## 
     prov:wasInfluencedBy odo-dt:SampleIdentifier ;
     rdfs:label "Peptide Protein Identifier"@en ;
     rdfs:comment "Representative of the protein from which this peptide came from."@en .
+
+odo-dt:PeptideSpectralCounts_ProteinAccessionId a owl:NamedIndividual,
+        odo:Parameter ;
+    ## Axiom:
+    ## if a odo-dt:OceanProteinPortalDataType,
+    ## and odo-dt:PepetideSpectralCounts odo-dt:measures odo-dt:PeptideSpectralCounts_ProteinAccessionId ;
+    ## then, odo-dt:PeptideSpectralCounts_ProteinAccessionId owl:allValuesFrom ( odo-dt:ProteinSpectralCounts odo-dt:measures odo-dt:SampleIdentifier ).
+    ## 
+    prov:wasInfluencedBy odo-dt:SampleIdentifier ;
+    skos:related odo-dt:PeptideSpectralCounts_ProteinAccessionId ;
+    rdfs:label "Protein Accession Identifier"@en ;
+    rdfs:comment "Representative of all the possible proteins from which this peptide came from."@en .
 
 odo-dt:PeptideSpectralCounts_StartIndex a owl:NamedIndividual,
         odo:Parameter ;
