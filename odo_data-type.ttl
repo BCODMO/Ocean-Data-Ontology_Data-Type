@@ -129,13 +129,23 @@ odo-dt:delimiter a owl:DatatypeProperty ;
 odo-dt:FASTA-ProteinIdentifications a odo-dt:DataType,
         owl:NamedIndividual ;
     rdfs:label "FASTA File of Protein Identifications"@en-us ;
+    odo-dt:measures odo-dt:SampleIdentifier,
+        odo-dt:GeneticSequenceIdentifier ;
     odo-dt:requires odo-dt:SampleIdentifier,
         odo-dt:GeneticSequenceIdentifier .
 
 odo-dt:PeptideSpectralCounts a odo-dt:DataType,
         owl:NamedIndividual ;
     rdfs:label "Tabular File of Peptide Spectral Counts"@en-us  ;
-    odo-dt:measures odo-dt:PeptideSpectralCounts_ProteinIdentifier,
+    odo-dt:measures odo-dt:CruiseIdentifier,
+        odo-dt:CruiseStationIdentifier,
+        odo-dt:LatitudeDecimalDegrees,
+        odo-dt:LongitudeDecimalDegrees,
+        odo-dt:DepthMeters,
+        odo-dt:ISODateTimeUTC,
+        odo-dt:SpectralCount,
+        odo-dt:GeneticSequenceIdentifier,
+        odo-dt:PeptideSpectralCounts_ProteinIdentifier,
         odo-dt:PeptideSpectralCounts_ProteinAccessionIdentifiers,
         odo-dt:MolecularWeightInDaltons,
         odo-dt:PeptideSpectralCounts_MS-MS_SampleName,
@@ -165,7 +175,16 @@ odo-dt:PeptideSpectralCounts a odo-dt:DataType,
 odo-dt:ProteinSpectralCounts a odo-dt:DataType,
         owl:NamedIndividual ;
     rdfs:label "Tabular File of Protein Spectral Counts"@en-us ;
-    odo-dt:measures odo-dt:MolecularWeightInDaltons,
+    odo-dt:measures odo-dt:CruiseIdentifier,
+        odo-dt:CruiseStationIdentifier,
+        odo-dt:LatitudeDecimalDegrees,
+        odo-dt:LongitudeDecimalDegrees,
+        odo-dt:DepthMeters,
+        odo-dt:ISODateTimeUTC,
+        odo-dt:SampleIdentifier,
+        odo-dt:IdentifiedProductName,
+        odo-dt:SpectralCount,
+        odo-dt:MolecularWeightInDaltons,
         odo-dt:BestNCBITaxonName,
         odo-dt:BestNCBITaxonIdentifier,
         odo-dt:KeggIdentifier,
