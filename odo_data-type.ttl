@@ -129,9 +129,9 @@ odo-dt:delimiter a owl:DatatypeProperty ;
 odo-dt:FASTA-ProteinIdentifications a odo-dt:DataType,
         owl:NamedIndividual ;
     rdfs:label "FASTA File of Protein Identifications"@en-us ;
-    odo-dt:measures odo-dt:SampleIdentifier,
+    odo-dt:measures odo-dt:ProteinIdentifier,
         odo-dt:GeneticSequenceIdentifier ;
-    odo-dt:requires odo-dt:SampleIdentifier,
+    odo-dt:requires odo-dt:ProteinIdentifier,
         odo-dt:GeneticSequenceIdentifier .
 
 odo-dt:PeptideSpectralCounts a odo-dt:DataType,
@@ -183,6 +183,7 @@ odo-dt:ProteinSpectralCounts a odo-dt:DataType,
         odo-dt:ISODateTimeUTC,
         odo-dt:MinFilterSizeInMicrons,
         odo-dt:MaxFilterSizeInMicrons,
+        odo-dt:ProteinIdentifier,
         odo-dt:SampleIdentifier,
         odo-dt:IdentifiedProductName,
         odo-dt:SpectralCount,
@@ -202,6 +203,7 @@ odo-dt:ProteinSpectralCounts a odo-dt:DataType,
         odo-dt:LongitudeDecimalDegrees,
         odo-dt:DepthMeters,
         odo-dt:ISODateTimeUTC,
+        odo-dt:ProteinIdentifier,
         odo-dt:SampleIdentifier,
         odo-dt:IdentifiedProductName,
         odo-dt:SpectralCount .
@@ -271,10 +273,15 @@ odo-dt:MinFilterSizeInMicrons a owl:NamedIndividual,
     rdfs:label "Minimum Filter Size in Microns"@en ;
     rdfs:comment "The minimum filter size measured in microns."@en .
 
+odo-dt:ProteinIdentifier a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Protein Identifier"@en ;
+    rdfs:comment "Uniquely identifies one peotein within a dataset."@en .
+
 odo-dt:SampleIdentifier a owl:NamedIndividual,
         odo:Parameter ;
     rdfs:label "Sample Identifier"@en ;
-    rdfs:comment "Unqiuely identifies one sample within a dataset."@en .
+    rdfs:comment "Uniquely identifies one sample within a dataset."@en .
 
 odo-dt:BestNCBITaxonIdentifier a owl:NamedIndividual,
         odo:Parameter ;
@@ -411,9 +418,9 @@ odo-dt:PeptideSpectralCounts_ProteinIdentifier a owl:NamedIndividual,
     ## Axiom:
     ## if a odo-dt:OceanProteinPortalDataType,
     ## and odo-dt:PepetideSpectralCounts odo-dt:measures odo-dt:PeptideSpectralCounts_ProteinIdentifier ;
-    ## then, odo-dt:PeptideSpectralCounts_ProteinIdentifier owl:allValuesFrom ( odo-dt:ProteinSpectralCounts odo-dt:measures odo-dt:SampleIdentifier ).
+    ## then, odo-dt:PeptideSpectralCounts_ProteinIdentifier owl:allValuesFrom ( odo-dt:ProteinSpectralCounts odo-dt:measures odo-dt:ProteinIdentifier ).
     ## 
-    prov:wasInfluencedBy odo-dt:SampleIdentifier ;
+    prov:wasInfluencedBy odo-dt:ProteinIdentifier ;
     rdfs:label "Peptide Protein Identifier"@en ;
     rdfs:comment "Representative of the protein from which this peptide came from."@en .
 
@@ -422,9 +429,9 @@ odo-dt:PeptideSpectralCounts_ProteinAccessionId a owl:NamedIndividual,
     ## Axiom:
     ## if a odo-dt:OceanProteinPortalDataType,
     ## and odo-dt:PepetideSpectralCounts odo-dt:measures odo-dt:PeptideSpectralCounts_ProteinAccessionId ;
-    ## then, odo-dt:PeptideSpectralCounts_ProteinAccessionId owl:allValuesFrom ( odo-dt:ProteinSpectralCounts odo-dt:measures odo-dt:SampleIdentifier ).
+    ## then, odo-dt:PeptideSpectralCounts_ProteinAccessionId owl:allValuesFrom ( odo-dt:ProteinSpectralCounts odo-dt:measures odo-dt:ProteinIdentifier ).
     ## 
-    prov:wasInfluencedBy odo-dt:SampleIdentifier ;
+    prov:wasInfluencedBy odo-dt:ProteinIdentifier ;
     skos:related odo-dt:PeptideSpectralCounts_ProteinAccessionId ;
     rdfs:label "Protein Accession Identifier"@en ;
     rdfs:comment "Representative of all the possible proteins from which this peptide came from."@en .
