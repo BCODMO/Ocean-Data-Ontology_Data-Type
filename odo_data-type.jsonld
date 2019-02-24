@@ -1,0 +1,1376 @@
+{
+  "@context": {
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "odo-dt": "http://ocean-data.org/schema/data-type/v1.0/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "ns0:Plus3HSpectraCount",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Number of identified +3H spectra"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Number of identified +3H spectra"
+      }
+    },
+    {
+      "@id": "ns0:TotalIonChromatogram",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Total Ion Chromatogram"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Total Ion Chromatogram"
+      }
+    },
+    {
+      "@id": "ns0:SpectralCount",
+      "@type": [
+        "owl:NamedIndividual",
+        "http://ocean-data.org/schema/Parameter"
+      ],
+      "owl:sameAs": {
+        "@id": "https://lod.bco-dmo.org/id/parameter/685524"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The spectral count for an identifified protein."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Spectral Count"
+      }
+    },
+    {
+      "@id": "ns0:MinFilterSize_Microns",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The minimum filter size measured in microns."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Minimum Filter Size in Microns"
+      },
+      "skos:related": {
+        "@id": "ns0:MaxFilterSizeInMicrons"
+      }
+    },
+    {
+      "@id": "ns0:ProteinIdentifier",
+      "@type": [
+        "owl:NamedIndividual",
+        "ns0:Identifier",
+        "http://ocean-data.org/schema/Parameter"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Uniquely identifies one peotein within a dataset."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Protein Identifier"
+      }
+    },
+    {
+      "@id": "ns0:Longitude_DecimalDegrees",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Longitude in decimal degrees where the values are bounded by -180 (West) and 1800 (East)."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Longitude in Decical Degrees"
+      }
+    },
+    {
+      "@id": "ns0:Depth_Meters",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A depth measurement made in meters."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Depth in Meters"
+      }
+    },
+    {
+      "@id": "ns0:Date",
+      "@type": [
+        "owl:NamedIndividual",
+        "http://ocean-data.org/schema/Parameter"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A year, month, and day represented in some recognized format."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Date"
+      }
+    },
+    {
+      "@id": "ns0:SubjectArea",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en-us",
+        "@value": "A certain field of study used to group or filter Data Types"
+      },
+      "rdfs:label": {
+        "@language": "en-us",
+        "@value": "SubjectArea"
+      }
+    },
+    {
+      "@id": "ns0:PeptideSpectralCounts",
+      "@type": [
+        "owl:NamedIndividual",
+        "ns0:DataType"
+      ],
+      "ns0:measures": [
+        {
+          "@id": "ns0:Plus2HSpectraCount"
+        },
+        {
+          "@id": "ns0:OtherIdentifiedProteins"
+        },
+        {
+          "@id": "ns0:Depth_Meters"
+        },
+        {
+          "@id": "ns0:TotalIonChromatogram"
+        },
+        {
+          "@id": "ns0:CruiseStationIdentifier"
+        },
+        {
+          "@id": "ns0:PeptideGeneticSequenceIdentifier"
+        },
+        {
+          "@id": "ns0:Date"
+        },
+        {
+          "@id": "ns0:PeptideStartIndex"
+        },
+        {
+          "@id": "ns0:Latitude_DecimalDegrees"
+        },
+        {
+          "@id": "ns0:Plus4HSpectraCount"
+        },
+        {
+          "@id": "ns0:AbsoluteUnits_FemtomolePerLiter"
+        },
+        {
+          "@id": "ns0:ProteinMolecularWeight_Daltons"
+        },
+        {
+          "@id": "ns0:BestSequestXCorrScore"
+        },
+        {
+          "@id": "ns0:BestIdProbability"
+        },
+        {
+          "@id": "ns0:Longitude_DecimalDegrees"
+        },
+        {
+          "@id": "ns0:MinFilterSize_Microns"
+        },
+        {
+          "@id": "ns0:Time"
+        },
+        {
+          "@id": "ns0:DateTime"
+        },
+        {
+          "@id": "ns0:CruiseIdentifier"
+        },
+        {
+          "@id": "ns0:PeptideSpectralCountSum"
+        },
+        {
+          "@id": "ns0:MaxFilterSize_Microns"
+        },
+        {
+          "@id": "ns0:TotalPrecursorIntensity"
+        },
+        {
+          "@id": "ns0:MedianRetentionTime"
+        },
+        {
+          "@id": "ns0:Plus3HSpectraCount"
+        },
+        {
+          "@id": "ns0:BestSequestDCnScore"
+        },
+        {
+          "@id": "ns0:ProteinIdentifier"
+        },
+        {
+          "@id": "ns0:PeptideStopIndex"
+        },
+        {
+          "@id": "ns0:SampleIdentifier"
+        }
+      ],
+      "ns0:recommends": [
+        {
+          "@id": "ns0:Time"
+        },
+        {
+          "@id": "ns0:PeptideSpectralCountSum"
+        }
+      ],
+      "ns0:requires": [
+        {
+          "@id": "ns0:PeptideGeneticSequenceIdentifier"
+        },
+        {
+          "@id": "ns0:ProteinIdentifier"
+        },
+        {
+          "@id": "ns0:PeptideStartIndex"
+        },
+        {
+          "@id": "ns0:CruiseStationIdentifier"
+        },
+        {
+          "@id": "ns0:MinFilterSize_Microns"
+        },
+        {
+          "@id": "ns0:Latitude_DecimalDegrees"
+        },
+        {
+          "@id": "ns0:PeptideStopIndex"
+        },
+        {
+          "@id": "ns0:Date"
+        },
+        {
+          "@id": "ns0:Depth_Meters"
+        },
+        {
+          "@id": "ns0:CruiseIdentifier"
+        },
+        {
+          "@id": "ns0:Longitude_DecimalDegrees"
+        },
+        {
+          "@id": "ns0:MaxFilterSize_Microns"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "en-us",
+        "@value": "Tabular File of Peptide Spectral Counts"
+      }
+    },
+    {
+      "@id": "skos:related",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "http://ocean-data.org/schema/Parameter",
+      "@type": "prov:Entity"
+    },
+    {
+      "@id": "ns0:DateTime",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A date time measurement."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Date Time"
+      },
+      "skos:narrower": {
+        "@id": "http://lod.bco-dmo.org/id/parameter/1909"
+      }
+    },
+    {
+      "@id": "dc1:publisher",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "ns0:SampleIdentifier",
+      "@type": [
+        "owl:NamedIndividual",
+        "http://ocean-data.org/schema/Parameter",
+        "ns0:Identifier"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Uniquely identifies one sample within a dataset."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Sample Identifier"
+      }
+    },
+    {
+      "@id": "ns0:Proteomics",
+      "@type": [
+        "ns0:SubjectArea",
+        "owl:NamedIndividual"
+      ],
+      "rdfs:label": {
+        "@language": "en-us",
+        "@value": "Proteomics"
+      }
+    },
+    {
+      "@id": "dc1:source",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "ns0:ProteinMolecularWeight_Daltons",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The molecular weight measured in Daltons of the related protein."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Protein Molecular Weight in Daltons"
+      },
+      "skos:exactMatch": {
+        "@id": "ns0:MolecularWeightInDaltons"
+      }
+    },
+    {
+      "@id": "dc:publisher",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "ns0:recommends",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en-us",
+        "@value": "Specifies that a DataType recommends that the associated Parameter be present, but does not require it."
+      },
+      "rdfs:domain": {
+        "@id": "ns0:DataType"
+      },
+      "rdfs:label": {
+        "@language": "en-us",
+        "@value": "recommends"
+      },
+      "rdfs:range": {
+        "@id": "http://ocean-data.org/schema/Parameter"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "ns0:measures"
+      }
+    },
+    {
+      "@id": "_:N9dc40ecd1ff4430f92228e5dd28f47d5",
+      "@type": "owl:Restriction",
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "2"
+      },
+      "owl:onProperty": {
+        "@id": "http://ocean-data.org/schema/aggregates"
+      }
+    },
+    {
+      "@id": "ns0:Latitude_DecimalDegrees",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Latitude in decimal degrees where the values are bounded by -90 (South) and 90 (North)."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Latitude in Decimal Degress"
+      }
+    },
+    {
+      "@id": "ns0:BestProteinIdentifierProbability",
+      "@type": [
+        "owl:NamedIndividual",
+        "http://ocean-data.org/schema/Parameter"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Metric of peptide quality."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Best Peptide identification probability"
+      }
+    },
+    {
+      "@id": "ns0:AbsoluteUnits_FemtomolePerLiter",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Absolute Units in femtomole per liter"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Absolute Units in femtomole per liter"
+      }
+    },
+    {
+      "@id": "ns0:FASTA-ProteinIdentifications",
+      "@type": [
+        "owl:NamedIndividual",
+        "ns0:DataType"
+      ],
+      "ns0:measures": [
+        {
+          "@id": "ns0:ProteinGeneticSequenceIdentifier"
+        },
+        {
+          "@id": "ns0:ProteinIdentifier"
+        }
+      ],
+      "ns0:requires": [
+        {
+          "@id": "ns0:ProteinGeneticSequenceIdentifier"
+        },
+        {
+          "@id": "ns0:ProteinIdentifier"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "en-us",
+        "@value": "FASTA File of Protein Identifications"
+      }
+    },
+    {
+      "@id": "ns0:IdentifiedProductName",
+      "@type": [
+        "owl:NamedIndividual",
+        "http://ocean-data.org/schema/Parameter"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The best product name for an identification made in a smaple (best hit annotation)."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Identified Product Name"
+      },
+      "skos:related": {
+        "@id": "ns0:ProteinIdentifier"
+      }
+    },
+    {
+      "@id": "ns0:MaxFilterSize_Microns",
+      "@type": [
+        "owl:NamedIndividual",
+        "http://ocean-data.org/schema/Parameter"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The maximum filter size measured in microns."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Maximum Filter Size in Microns"
+      },
+      "skos:related": {
+        "@id": "ns0:MinFilterSizeInMicrons"
+      }
+    },
+    {
+      "@id": "ns0:PFamsDescription",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The PFams description related to an identified PFams Identifier."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "PFams Description"
+      },
+      "skos:related": {
+        "@id": "ns0:PFamsIdentifier"
+      }
+    },
+    {
+      "@id": "ns0:UniprotIdentifier",
+      "@type": [
+        "owl:NamedIndividual",
+        "ns0:Identifier",
+        "http://ocean-data.org/schema/Parameter"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Representative of a Uniprot identifier."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Uniprot Identifier"
+      }
+    },
+    {
+      "@id": "ns0:BestNCBITaxonIdentifier",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual",
+        "ns0:Identifier"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Representative of the best taxon identifier at NCBI that could be associated to an identiciation."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Best NCBI Taxon Identifier"
+      }
+    },
+    {
+      "@id": "ns0:Plus4HSpectraCount",
+      "@type": [
+        "owl:NamedIndividual",
+        "http://ocean-data.org/schema/Parameter"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Number of identified +4H spectra"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Number of identified +4H spectra"
+      }
+    },
+    {
+      "@id": "ns0:aggregates",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en-us",
+        "@value": "Aggregates means that the domain DataType is a new DataType that requires at least one instance of the aggregates range."
+      },
+      "rdfs:domain": {
+        "@id": "ns0:DataType"
+      },
+      "rdfs:label": {
+        "@language": "en-us",
+        "@value": "aggregates"
+      },
+      "rdfs:range": {
+        "@id": "ns0:DataType"
+      }
+    },
+    {
+      "@id": "prov:wasInfluencedBy",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "http://ocean-data.org/schema/data-type/v1.0",
+      "@type": "owl:Ontology",
+      "dc1:creator": {
+        "@id": "http://orcid.org/0000-0003-4486-9448"
+      },
+      "dc1:issued": {
+        "@type": "xsd:date",
+        "@value": "2017-09-04"
+      },
+      "dc1:publisher": {
+        "@id": "http://lod.bco-dmo.org/id/affiliation/191"
+      },
+      "dc1:source": {
+        "@type": "xsd:anyURI",
+        "@value": "https://github.com/BCODMO/Ocean-Data-Ontology_Data-Type"
+      },
+      "dc:creator": "Adam Shepherd",
+      "dc:publisher": "Biological and Chemical Oceanography Data Management Office (BCO-DMO)",
+      "owl:imports": {
+        "@id": "http://ocean-data.org/schema/"
+      },
+      "owl:versionInfo": "0.1.0",
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "An ontology for describing data types used by BCO-DMO"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Ocean Data Ontology - Data Types Schema"
+      },
+      "rdfs:seeAlso": {
+        "@id": "http://info.deepcarbon.net/schema#DataType"
+      }
+    },
+    {
+      "@id": "ns0:PeptideGeneticSequenceIdentifier",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "ns0:Identifier",
+        "owl:NamedIndividual"
+      ],
+      "ns0:specializationOf": {
+        "@id": "ns0:GeneticSequenceIdentifier"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A genetic sequence identifying a peptide."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Peptide Genetic Sequence Identifier"
+      }
+    },
+    {
+      "@id": "ns0:Plus2HSpectraCount",
+      "@type": [
+        "owl:NamedIndividual",
+        "http://ocean-data.org/schema/Parameter"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Number of identified +2H spectra"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Number of identified +2H spectra"
+      }
+    },
+    {
+      "@id": "ns0:GeneticSequenceIdentifier",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual",
+        "ns0:Identifier"
+      ],
+      "owl:sameAs": {
+        "@id": "http://lod.bco-dmo.org/id/parameter/684377"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A genetic sequence; e.g. the order of nucleotides in DNA or RNA."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Genetic Sequence Identifier"
+      }
+    },
+    {
+      "@id": "ns0:extends",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en-us",
+        "@value": "Extends means that the domain DataType is a specialization of the range DataType by inheriting the range's Parameters but also incluing new Parameters as part of the specialization."
+      },
+      "rdfs:domain": {
+        "@id": "ns0:DataType"
+      },
+      "rdfs:label": {
+        "@language": "en-us",
+        "@value": "extends"
+      },
+      "rdfs:range": {
+        "@id": "ns0:DataType"
+      }
+    },
+    {
+      "@id": "ns0:CruiseStationIdentifier",
+      "@type": [
+        "ns0:Identifier",
+        "owl:NamedIndividual",
+        "http://ocean-data.org/schema/Parameter"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Representative of a particular station from a cruise."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Station Identifier"
+      }
+    },
+    {
+      "@id": "ns0:KeggDescription",
+      "@type": [
+        "owl:NamedIndividual",
+        "http://ocean-data.org/schema/Parameter"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The Kegg description related to an identified Kegg Identifier."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kegg Orthology Description"
+      },
+      "skos:related": {
+        "@id": "ns0:KeggIdentifier"
+      }
+    },
+    {
+      "@id": "ns0:dataValueDelimiter",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en-us",
+        "@value": "For parameters whose data value is a list of multiple values, this property defines a string that determines how that value should be parsed into a list of values by specifying the string identifying where the value should be split."
+      },
+      "rdfs:domain": {
+        "@id": "http://ocean-data.org/schema/Parameter"
+      },
+      "rdfs:label": {
+        "@language": "en-us",
+        "@value": "delimiter"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "ns0:MolecularWeight_Daltons",
+      "@type": [
+        "owl:NamedIndividual",
+        "http://ocean-data.org/schema/Parameter"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The molecular weight measured in Daltons."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Molecular Weight in Daltons"
+      }
+    },
+    {
+      "@id": "dc1:issued",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "ns0:Identifier",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An identifier of some 'thing'. Identifiers can be used as keys between datasets, data files or other data representations."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Identifier"
+      }
+    },
+    {
+      "@id": "ns0:specializationOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en-us",
+        "@value": "This parameter is narrower version of its range. It a specialization of its range by because of some detail such as a specific unit of measure or becuase it was observed using a specific instrument."
+      },
+      "rdfs:domain": {
+        "@id": "http://ocean-data.org/schema/Parameter"
+      },
+      "rdfs:label": {
+        "@language": "en-us",
+        "@value": "specializationOf"
+      },
+      "rdfs:range": {
+        "@id": "http://ocean-data.org/schema/Parameter"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "prov:specializationOf"
+      }
+    },
+    {
+      "@id": "ns0:KeggIdentifier",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual",
+        "ns0:Identifier"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Kegg identifier or accession."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kegg Orthology Identifier"
+      }
+    },
+    {
+      "@id": "ns0:requires",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en-us",
+        "@value": "Specifies that a DataType must include the associated Parameter."
+      },
+      "rdfs:domain": {
+        "@id": "ns0:DataType"
+      },
+      "rdfs:label": {
+        "@language": "en-us",
+        "@value": "requires"
+      },
+      "rdfs:range": {
+        "@id": "http://ocean-data.org/schema/Parameter"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "ns0:measures"
+      }
+    },
+    {
+      "@id": "ns0:BestSequestXCorrScore",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Metric of peptide quality."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Best SEQUEST XCorr score"
+      }
+    },
+    {
+      "@id": "ns0:ProteinSpectralCounts",
+      "@type": [
+        "ns0:DataType",
+        "owl:NamedIndividual"
+      ],
+      "ns0:measures": [
+        {
+          "@id": "ns0:SampleIdentifier"
+        },
+        {
+          "@id": "ns0:BestNCBITaxonIdentifier"
+        },
+        {
+          "@id": "ns0:OtherIdentifiedProteins"
+        },
+        {
+          "@id": "ns0:Depth_Meters"
+        },
+        {
+          "@id": "ns0:MaxFilterSize_Microns"
+        },
+        {
+          "@id": "ns0:PFamsDescription"
+        },
+        {
+          "@id": "ns0:ProteinIdentifier"
+        },
+        {
+          "@id": "ns0:DateTime"
+        },
+        {
+          "@id": "ns0:Time"
+        },
+        {
+          "@id": "ns0:PFamsIdentifier"
+        },
+        {
+          "@id": "ns0:MolecularWeight_Daltons"
+        },
+        {
+          "@id": "ns0:UniprotIdentifier"
+        },
+        {
+          "@id": "ns0:CruiseIdentifier"
+        },
+        {
+          "@id": "ns0:KeggName"
+        },
+        {
+          "@id": "ns0:KeggIdentifier"
+        },
+        {
+          "@id": "ns0:IdentifiedProductName"
+        },
+        {
+          "@id": "ns0:SpectralCount"
+        },
+        {
+          "@id": "ns0:KeggDescription"
+        },
+        {
+          "@id": "ns0:MinFilterSize_Microns"
+        },
+        {
+          "@id": "ns0:Latitude_DecimalDegrees"
+        },
+        {
+          "@id": "ns0:Longitude_DecimalDegrees"
+        },
+        {
+          "@id": "ns0:Date"
+        },
+        {
+          "@id": "ns0:BestNCBITaxonName"
+        },
+        {
+          "@id": "ns0:EnzymeCommissionIdentifier"
+        },
+        {
+          "@id": "ns0:CruiseStationIdentifier"
+        }
+      ],
+      "ns0:recommends": {
+        "@id": "ns0:Time"
+      },
+      "ns0:requires": [
+        {
+          "@id": "ns0:MinFilterSize_Microns"
+        },
+        {
+          "@id": "ns0:CruiseStationIdentifier"
+        },
+        {
+          "@id": "ns0:SpectralCount"
+        },
+        {
+          "@id": "ns0:MaxFilterSize_Microns"
+        },
+        {
+          "@id": "ns0:ProteinIdentifier"
+        },
+        {
+          "@id": "ns0:Longitude_DecimalDegrees"
+        },
+        {
+          "@id": "ns0:CruiseIdentifier"
+        },
+        {
+          "@id": "ns0:IdentifiedProductName"
+        },
+        {
+          "@id": "ns0:SampleIdentifier"
+        },
+        {
+          "@id": "ns0:Date"
+        },
+        {
+          "@id": "ns0:Depth_Meters"
+        },
+        {
+          "@id": "ns0:Latitude_DecimalDegrees"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "en-us",
+        "@value": "Protein Spectral Counts"
+      }
+    },
+    {
+      "@id": "skos:narrower",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "skos:broader",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "prov:specializationOf",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "dc1:creator",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "ns0:PFamsIdentifier",
+      "@type": [
+        "owl:NamedIndividual",
+        "ns0:Identifier",
+        "http://ocean-data.org/schema/Parameter"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Representative of a PFams identifier or accession."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "PFams Identifier"
+      }
+    },
+    {
+      "@id": "ns0:CruiseIdentifier",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "ns0:Identifier",
+        "owl:NamedIndividual"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Representative of a cruise or some other named deployment."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Cruise Identifier"
+      }
+    },
+    {
+      "@id": "ns0:dataValueFormat",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en-us",
+        "@value": "A string, indicating a format for the data value that enables correct processing of the value. For example, a date value may have a format such as 'YYYY-MM-DD'. Since the a format specified here are implementation specific, this definition does not enforce any particular range on this property."
+      },
+      "rdfs:domain": {
+        "@id": "http://ocean-data.org/schema/Parameter"
+      },
+      "rdfs:label": {
+        "@language": "en-us",
+        "@value": "dataValueFormat"
+      },
+      "rdfs:range": {
+        "@id": "owl:Thing"
+      }
+    },
+    {
+      "@id": "ns0:ProteinGeneticSequenceIdentifier",
+      "@type": [
+        "owl:NamedIndividual",
+        "http://ocean-data.org/schema/Parameter",
+        "ns0:Identifier"
+      ],
+      "ns0:specializationOf": {
+        "@id": "ns0:GeneticSequenceIdentifier"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A genetic sequence identifying a protein."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Protein Genetic Sequence Identifier"
+      }
+    },
+    {
+      "@id": "ns0:Time",
+      "@type": [
+        "owl:NamedIndividual",
+        "http://ocean-data.org/schema/Parameter"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An hour, minutes, and seconds represented in some recognized format."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Date"
+      }
+    },
+    {
+      "@id": "ns0:TotalPrecursorIntensity",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Total Precursor Intensity"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Total Precursor Intensity"
+      }
+    },
+    {
+      "@id": "ns0:EnzymeCommissionIdentifier",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual",
+        "ns0:Identifier"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Representative of a Enzyme Commission identifier."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Enzyme Commission Identifier"
+      }
+    },
+    {
+      "@id": "ns0:Ocean-Proteomics",
+      "@type": [
+        "ns0:SubjectArea",
+        "owl:NamedIndividual"
+      ],
+      "rdfs:label": {
+        "@language": "en-us",
+        "@value": "Ocean Proteomics"
+      },
+      "skos:broader": {
+        "@id": "ns0:Proteomics"
+      }
+    },
+    {
+      "@id": "ns0:KeggName",
+      "@type": [
+        "owl:NamedIndividual",
+        "http://ocean-data.org/schema/Parameter"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The Kegg pathway related to an identified Kegg Identifier."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kegg Orthology Name"
+      },
+      "skos:related": {
+        "@id": "ns0:KeggIdentifier"
+      }
+    },
+    {
+      "@id": "ns0:BestNCBITaxonName",
+      "@type": [
+        "owl:NamedIndividual",
+        "http://ocean-data.org/schema/Parameter"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The best taxonomic species name at NCBI related to a Taxon identifier."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Best NCBI Taxon Name"
+      },
+      "skos:related": {
+        "@id": "ns0:BestNCBITaxonIdentifier"
+      }
+    },
+    {
+      "@id": "dc:creator",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "ns0:DataType",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A data type can include more meaning beyond the syntax, such as who created the\n  data type, the source standard that the data type derives from,\n  the operations that can be done on datasets of that data type, and\n  typical scientific domains, software programs and/or instruments\n  that use the data type, etc. The intent is that any humans or\n  machines that when they encounter that data type can quickly\n  'understand' or be in a situation to at least 'process' details\n  within the dataset without even downloading that dataset."
+      },
+      "rdfs:label": {
+        "@language": "en-us",
+        "@value": "DataType"
+      },
+      "rdfs:subClassOf": {
+        "@id": "_:N9dc40ecd1ff4430f92228e5dd28f47d5"
+      }
+    },
+    {
+      "@id": "ns0:subjectArea",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en-us",
+        "@value": "Specifies that the SubjectArea pertains to the observations made for a DataType."
+      },
+      "rdfs:domain": {
+        "@id": "ns0:DataType"
+      },
+      "rdfs:label": {
+        "@language": "en-us",
+        "@value": "subjectArea"
+      },
+      "rdfs:range": {
+        "@id": "ns0:SubjectArea"
+      }
+    },
+    {
+      "@id": "skos:exactMatch",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "ns0:MedianRetentionTime",
+      "@type": [
+        "owl:NamedIndividual",
+        "http://ocean-data.org/schema/Parameter"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Median Retention Time"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Median Retention Time"
+      }
+    },
+    {
+      "@id": "ns0:PeptideSpectralCountSum",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual"
+      ],
+      "prov:wasInfluencedBy": [
+        {
+          "@id": "ns0:Plus3HSpectraCount"
+        },
+        {
+          "@id": "ns0:Plus2HSpectraCount"
+        },
+        {
+          "@id": "ns0:Plus4HSpectraCount"
+        }
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Sum of +2,+3,+4 data, = total unnormalized spectral counts - Quantitative Value"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Spectral Count Sum"
+        },
+        {
+          "@language": "en",
+          "@value": "Sum of the spectral counts"
+        }
+      ]
+    },
+    {
+      "@id": "ns0:OceanProteinPortalDataType",
+      "@type": [
+        "ns0:DataType",
+        "owl:NamedIndividual"
+      ],
+      "ns0:aggregates": [
+        {
+          "@id": "ns0:ProteinSpectralCounts"
+        },
+        {
+          "@id": "ns0:PeptideSpectralCounts"
+        },
+        {
+          "@id": "ns0:FASTA-ProteinIdentifications"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "en-us",
+        "@value": "Ocean Protein Portal Data Type"
+      }
+    },
+    {
+      "@id": "ns0:PeptideStopIndex",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual"
+      ],
+      "prov:wasInfluencedBy": {
+        "@id": "ns0:PeptideStartIndex"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Data useful in creating peptide coverage map"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Peptide stop index"
+      }
+    },
+    {
+      "@id": "ns0:PeptideStartIndex",
+      "@type": [
+        "http://ocean-data.org/schema/Parameter",
+        "owl:NamedIndividual"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Data useful in creating peptide coverage map"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Peptide start index"
+      }
+    },
+    {
+      "@id": "ns0:BestSequestDCnScore",
+      "@type": [
+        "owl:NamedIndividual",
+        "http://ocean-data.org/schema/Parameter"
+      ],
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Metric of peptide quality."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Best SEQUEST DCn score"
+      }
+    },
+    {
+      "@id": "ns0:measures",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en-us",
+        "@value": "Specifies that a DataType should include the associated Parameter."
+      },
+      "rdfs:domain": {
+        "@id": "ns0:DataType"
+      },
+      "rdfs:label": {
+        "@language": "en-us",
+        "@value": "measures"
+      },
+      "rdfs:range": {
+        "@id": "http://ocean-data.org/schema/Parameter"
+      }
+    },
+    {
+      "@id": "ns0:dataType",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en-us",
+        "@value": "Specifies that a Dataset meets the criteria for a certain DataType."
+      },
+      "rdfs:domain": {
+        "@id": "http://ocean-data.org/schema/Dataset"
+      },
+      "rdfs:label": {
+        "@language": "en-us",
+        "@value": "dataType"
+      },
+      "rdfs:range": {
+        "@id": "ns0:DataType"
+      }
+    }
+  ]
+}
