@@ -39,7 +39,6 @@ dct:publisher a owl:AnnotationProperty .
 dct:issued a owl:AnnotationProperty .
 dct:source a owl:AnnotationProperty .
 prov:specializationOf a owl:AnnotationProperty .
-prov:wasInfluencedBy a owl:AnnotationProperty .
 skos:related a owl:AnnotationProperty .
 skos:broader a owl:AnnotationProperty .
 skos:narrower a owl:AnnotationProperty .
@@ -426,14 +425,14 @@ odo-dt:PeptideStartIndex a owl:NamedIndividual,
 
 odo-dt:PeptideStopIndex a owl:NamedIndividual,
         odo:Parameter ;
-    prov:wasInfluencedBy odo-dt:PeptideStartIndex ;
+    skos:related odo-dt:PeptideStartIndex ;
     rdfs:label "Peptide stop index"@en ;
     rdfs:comment "Data useful in creating peptide coverage map"@en .
 
 odo-dt:PeptideSpectralCountSum a owl:NamedIndividual,
         odo:Parameter ;
     rdfs:label "Spectral Count Sum"@en ;
-    prov:wasInfluencedBy odo-dt:Plus2HSpectraCount,
+    skos:related odo-dt:Plus2HSpectraCount,
         odo-dt:Plus3HSpectraCount,
         odo-dt:Plus4HSpectraCount ;
     rdfs:label "Sum of the spectral counts"@en ;
