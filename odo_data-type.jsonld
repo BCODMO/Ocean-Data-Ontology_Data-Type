@@ -12,7 +12,7 @@
   },
   "@graph": [
     {
-      "@id": "ns0:Plus3HSpectraCount",
+      "@id": "odo-dt:Plus3HSpectraCount",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual"
@@ -27,7 +27,7 @@
       }
     },
     {
-      "@id": "ns0:TotalIonChromatogram",
+      "@id": "odo-dt:TotalIonChromatogram",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual"
@@ -42,7 +42,7 @@
       }
     },
     {
-      "@id": "ns0:SpectralCount",
+      "@id": "odo-dt:SpectralCount",
       "@type": [
         "owl:NamedIndividual",
         "http://ocean-data.org/schema/Parameter"
@@ -60,7 +60,7 @@
       }
     },
     {
-      "@id": "ns0:MinFilterSize_Microns",
+      "@id": "odo-dt:MinFilterSize_Microns",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual"
@@ -74,14 +74,14 @@
         "@value": "Minimum Filter Size in Microns"
       },
       "skos:related": {
-        "@id": "ns0:MaxFilterSizeInMicrons"
+        "@id": "odo-dt:MaxFilterSizeInMicrons"
       }
     },
     {
-      "@id": "ns0:ProteinIdentifier",
+      "@id": "odo-dt:ProteinIdentifier",
       "@type": [
         "owl:NamedIndividual",
-        "ns0:Identifier",
+        "odo-dt:Identifier",
         "http://ocean-data.org/schema/Parameter"
       ],
       "rdfs:comment": {
@@ -94,7 +94,7 @@
       }
     },
     {
-      "@id": "ns0:Longitude_DecimalDegrees",
+      "@id": "odo-dt:Longitude_DecimalDegrees",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual"
@@ -109,7 +109,7 @@
       }
     },
     {
-      "@id": "ns0:Depth_Meters",
+      "@id": "odo-dt:Depth_Meters",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual"
@@ -124,7 +124,7 @@
       }
     },
     {
-      "@id": "ns0:Date",
+      "@id": "odo-dt:Date",
       "@type": [
         "owl:NamedIndividual",
         "http://ocean-data.org/schema/Parameter"
@@ -139,7 +139,7 @@
       }
     },
     {
-      "@id": "ns0:SubjectArea",
+      "@id": "odo-dt:SubjectArea",
       "@type": "owl:Class",
       "rdfs:comment": {
         "@language": "en-us",
@@ -151,141 +151,141 @@
       }
     },
     {
-      "@id": "ns0:PeptideSpectralCounts",
+      "@id": "odo-dt:PeptideSpectralCounts",
       "@type": [
         "owl:NamedIndividual",
-        "ns0:DataType"
+        "odo-dt:DataType"
       ],
-      "ns0:measures": [
+      "odo-dt:measures": [
         {
-          "@id": "ns0:Plus2HSpectraCount"
+          "@id": "odo-dt:Plus2HSpectraCount"
         },
         {
-          "@id": "ns0:OtherIdentifiedProteins"
+          "@id": "odo-dt:OtherIdentifiedProteins"
         },
         {
-          "@id": "ns0:Depth_Meters"
+          "@id": "odo-dt:Depth_Meters"
         },
         {
-          "@id": "ns0:TotalIonChromatogram"
+          "@id": "odo-dt:TotalIonChromatogram"
         },
         {
-          "@id": "ns0:CruiseStationIdentifier"
+          "@id": "odo-dt:CruiseStationIdentifier"
         },
         {
-          "@id": "ns0:PeptideGeneticSequenceIdentifier"
+          "@id": "odo-dt:PeptideGeneticSequenceIdentifier"
         },
         {
-          "@id": "ns0:Date"
+          "@id": "odo-dt:Date"
         },
         {
-          "@id": "ns0:PeptideStartIndex"
+          "@id": "odo-dt:PeptideStartIndex"
         },
         {
-          "@id": "ns0:Latitude_DecimalDegrees"
+          "@id": "odo-dt:Latitude_DecimalDegrees"
         },
         {
-          "@id": "ns0:Plus4HSpectraCount"
+          "@id": "odo-dt:Plus4HSpectraCount"
         },
         {
-          "@id": "ns0:AbsoluteUnits_FemtomolePerLiter"
+          "@id": "odo-dt:AbsoluteUnits_FemtomolePerLiter"
         },
         {
-          "@id": "ns0:ProteinMolecularWeight_Daltons"
+          "@id": "odo-dt:ProteinMolecularWeight_Daltons"
         },
         {
-          "@id": "ns0:BestSequestXCorrScore"
+          "@id": "odo-dt:BestSequestXCorrScore"
         },
         {
-          "@id": "ns0:BestIdProbability"
+          "@id": "odo-dt:BestIdProbability"
         },
         {
-          "@id": "ns0:Longitude_DecimalDegrees"
+          "@id": "odo-dt:Longitude_DecimalDegrees"
         },
         {
-          "@id": "ns0:MinFilterSize_Microns"
+          "@id": "odo-dt:MinFilterSize_Microns"
         },
         {
-          "@id": "ns0:Time"
+          "@id": "odo-dt:Time"
         },
         {
-          "@id": "ns0:DateTime"
+          "@id": "odo-dt:DateTime"
         },
         {
-          "@id": "ns0:CruiseIdentifier"
+          "@id": "odo-dt:CruiseIdentifier"
         },
         {
-          "@id": "ns0:PeptideSpectralCountSum"
+          "@id": "odo-dt:PeptideSpectralCountSum"
         },
         {
-          "@id": "ns0:MaxFilterSize_Microns"
+          "@id": "odo-dt:MaxFilterSize_Microns"
         },
         {
-          "@id": "ns0:TotalPrecursorIntensity"
+          "@id": "odo-dt:TotalPrecursorIntensity"
         },
         {
-          "@id": "ns0:MedianRetentionTime"
+          "@id": "odo-dt:MedianRetentionTime"
         },
         {
-          "@id": "ns0:Plus3HSpectraCount"
+          "@id": "odo-dt:Plus3HSpectraCount"
         },
         {
-          "@id": "ns0:BestSequestDCnScore"
+          "@id": "odo-dt:BestSequestDCnScore"
         },
         {
-          "@id": "ns0:ProteinIdentifier"
+          "@id": "odo-dt:ProteinIdentifier"
         },
         {
-          "@id": "ns0:PeptideStopIndex"
+          "@id": "odo-dt:PeptideStopIndex"
         },
         {
-          "@id": "ns0:SampleIdentifier"
+          "@id": "odo-dt:SampleIdentifier"
         }
       ],
-      "ns0:recommends": [
+      "odo-dt:recommends": [
         {
-          "@id": "ns0:Time"
+          "@id": "odo-dt:Time"
         },
         {
-          "@id": "ns0:PeptideSpectralCountSum"
+          "@id": "odo-dt:PeptideSpectralCountSum"
         }
       ],
-      "ns0:requires": [
+      "odo-dt:requires": [
         {
-          "@id": "ns0:PeptideGeneticSequenceIdentifier"
+          "@id": "odo-dt:PeptideGeneticSequenceIdentifier"
         },
         {
-          "@id": "ns0:ProteinIdentifier"
+          "@id": "odo-dt:ProteinIdentifier"
         },
         {
-          "@id": "ns0:PeptideStartIndex"
+          "@id": "odo-dt:PeptideStartIndex"
         },
         {
-          "@id": "ns0:CruiseStationIdentifier"
+          "@id": "odo-dt:CruiseStationIdentifier"
         },
         {
-          "@id": "ns0:MinFilterSize_Microns"
+          "@id": "odo-dt:MinFilterSize_Microns"
         },
         {
-          "@id": "ns0:Latitude_DecimalDegrees"
+          "@id": "odo-dt:Latitude_DecimalDegrees"
         },
         {
-          "@id": "ns0:PeptideStopIndex"
+          "@id": "odo-dt:PeptideStopIndex"
         },
         {
-          "@id": "ns0:Date"
+          "@id": "odo-dt:Date"
         },
         {
-          "@id": "ns0:Depth_Meters"
+          "@id": "odo-dt:Depth_Meters"
         },
         {
-          "@id": "ns0:CruiseIdentifier"
+          "@id": "odo-dt:CruiseIdentifier"
         },
         {
-          "@id": "ns0:Longitude_DecimalDegrees"
+          "@id": "odo-dt:Longitude_DecimalDegrees"
         },
         {
-          "@id": "ns0:MaxFilterSize_Microns"
+          "@id": "odo-dt:MaxFilterSize_Microns"
         }
       ],
       "rdfs:label": {
@@ -302,7 +302,7 @@
       "@type": "prov:Entity"
     },
     {
-      "@id": "ns0:DateTime",
+      "@id": "odo-dt:DateTime",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual"
@@ -320,15 +320,15 @@
       }
     },
     {
-      "@id": "dc1:publisher",
+      "@id": "dcterms:publisher",
       "@type": "owl:AnnotationProperty"
     },
     {
-      "@id": "ns0:SampleIdentifier",
+      "@id": "odo-dt:SampleIdentifier",
       "@type": [
         "owl:NamedIndividual",
         "http://ocean-data.org/schema/Parameter",
-        "ns0:Identifier"
+        "odo-dt:Identifier"
       ],
       "rdfs:comment": {
         "@language": "en",
@@ -340,9 +340,9 @@
       }
     },
     {
-      "@id": "ns0:Proteomics",
+      "@id": "odo-dt:Proteomics",
       "@type": [
-        "ns0:SubjectArea",
+        "odo-dt:SubjectArea",
         "owl:NamedIndividual"
       ],
       "rdfs:label": {
@@ -351,11 +351,11 @@
       }
     },
     {
-      "@id": "dc1:source",
+      "@id": "dcterms:source",
       "@type": "owl:AnnotationProperty"
     },
     {
-      "@id": "ns0:ProteinMolecularWeight_Daltons",
+      "@id": "odo-dt:ProteinMolecularWeight_Daltons",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual"
@@ -369,7 +369,7 @@
         "@value": "Protein Molecular Weight in Daltons"
       },
       "skos:exactMatch": {
-        "@id": "ns0:MolecularWeightInDaltons"
+        "@id": "odo-dt:MolecularWeightInDaltons"
       }
     },
     {
@@ -377,14 +377,14 @@
       "@type": "owl:AnnotationProperty"
     },
     {
-      "@id": "ns0:recommends",
+      "@id": "odo-dt:recommends",
       "@type": "owl:ObjectProperty",
       "rdfs:comment": {
         "@language": "en-us",
         "@value": "Specifies that a DataType recommends that the associated Parameter be present, but does not require it."
       },
       "rdfs:domain": {
-        "@id": "ns0:DataType"
+        "@id": "odo-dt:DataType"
       },
       "rdfs:label": {
         "@language": "en-us",
@@ -394,7 +394,7 @@
         "@id": "http://ocean-data.org/schema/Parameter"
       },
       "rdfs:subPropertyOf": {
-        "@id": "ns0:measures"
+        "@id": "odo-dt:measures"
       }
     },
     {
@@ -409,7 +409,7 @@
       }
     },
     {
-      "@id": "ns0:Latitude_DecimalDegrees",
+      "@id": "odo-dt:Latitude_DecimalDegrees",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual"
@@ -424,7 +424,7 @@
       }
     },
     {
-      "@id": "ns0:BestProteinIdentifierProbability",
+      "@id": "odo-dt:BestProteinIdentifierProbability",
       "@type": [
         "owl:NamedIndividual",
         "http://ocean-data.org/schema/Parameter"
@@ -439,7 +439,7 @@
       }
     },
     {
-      "@id": "ns0:AbsoluteUnits_FemtomolePerLiter",
+      "@id": "odo-dt:AbsoluteUnits_FemtomolePerLiter",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual"
@@ -454,25 +454,25 @@
       }
     },
     {
-      "@id": "ns0:FASTA-ProteinIdentifications",
+      "@id": "odo-dt:FASTA-ProteinIdentifications",
       "@type": [
         "owl:NamedIndividual",
-        "ns0:DataType"
+        "odo-dt:DataType"
       ],
-      "ns0:measures": [
+      "odo-dt:measures": [
         {
-          "@id": "ns0:ProteinGeneticSequenceIdentifier"
+          "@id": "odo-dt:ProteinGeneticSequenceIdentifier"
         },
         {
-          "@id": "ns0:ProteinIdentifier"
+          "@id": "odo-dt:ProteinIdentifier"
         }
       ],
-      "ns0:requires": [
+      "odo-dt:requires": [
         {
-          "@id": "ns0:ProteinGeneticSequenceIdentifier"
+          "@id": "odo-dt:ProteinGeneticSequenceIdentifier"
         },
         {
-          "@id": "ns0:ProteinIdentifier"
+          "@id": "odo-dt:ProteinIdentifier"
         }
       ],
       "rdfs:label": {
@@ -481,7 +481,7 @@
       }
     },
     {
-      "@id": "ns0:IdentifiedProductName",
+      "@id": "odo-dt:IdentifiedProductName",
       "@type": [
         "owl:NamedIndividual",
         "http://ocean-data.org/schema/Parameter"
@@ -495,11 +495,11 @@
         "@value": "Identified Product Name"
       },
       "skos:related": {
-        "@id": "ns0:ProteinIdentifier"
+        "@id": "odo-dt:ProteinIdentifier"
       }
     },
     {
-      "@id": "ns0:MaxFilterSize_Microns",
+      "@id": "odo-dt:MaxFilterSize_Microns",
       "@type": [
         "owl:NamedIndividual",
         "http://ocean-data.org/schema/Parameter"
@@ -513,11 +513,11 @@
         "@value": "Maximum Filter Size in Microns"
       },
       "skos:related": {
-        "@id": "ns0:MinFilterSizeInMicrons"
+        "@id": "odo-dt:MinFilterSizeInMicrons"
       }
     },
     {
-      "@id": "ns0:PFamsDescription",
+      "@id": "odo-dt:PFamsDescription",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual"
@@ -531,14 +531,14 @@
         "@value": "PFams Description"
       },
       "skos:related": {
-        "@id": "ns0:PFamsIdentifier"
+        "@id": "odo-dt:PFamsIdentifier"
       }
     },
     {
-      "@id": "ns0:UniprotIdentifier",
+      "@id": "odo-dt:UniprotIdentifier",
       "@type": [
         "owl:NamedIndividual",
-        "ns0:Identifier",
+        "odo-dt:Identifier",
         "http://ocean-data.org/schema/Parameter"
       ],
       "rdfs:comment": {
@@ -551,11 +551,11 @@
       }
     },
     {
-      "@id": "ns0:BestNCBITaxonIdentifier",
+      "@id": "odo-dt:BestNCBITaxonIdentifier",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual",
-        "ns0:Identifier"
+        "odo-dt:Identifier"
       ],
       "rdfs:comment": {
         "@language": "en",
@@ -567,7 +567,7 @@
       }
     },
     {
-      "@id": "ns0:Plus4HSpectraCount",
+      "@id": "odo-dt:Plus4HSpectraCount",
       "@type": [
         "owl:NamedIndividual",
         "http://ocean-data.org/schema/Parameter"
@@ -582,21 +582,21 @@
       }
     },
     {
-      "@id": "ns0:aggregates",
+      "@id": "odo-dt:aggregates",
       "@type": "owl:ObjectProperty",
       "rdfs:comment": {
         "@language": "en-us",
         "@value": "Aggregates means that the domain DataType is a new DataType that requires at least one instance of the aggregates range."
       },
       "rdfs:domain": {
-        "@id": "ns0:DataType"
+        "@id": "odo-dt:DataType"
       },
       "rdfs:label": {
         "@language": "en-us",
         "@value": "aggregates"
       },
       "rdfs:range": {
-        "@id": "ns0:DataType"
+        "@id": "odo-dt:DataType"
       }
     },
     {
@@ -606,17 +606,17 @@
     {
       "@id": "http://ocean-data.org/schema/data-type/v1.0",
       "@type": "owl:Ontology",
-      "dc1:creator": {
+      "dcterms:creator": {
         "@id": "http://orcid.org/0000-0003-4486-9448"
       },
-      "dc1:issued": {
+      "dcterms:issued": {
         "@type": "xsd:date",
         "@value": "2017-09-04"
       },
-      "dc1:publisher": {
+      "dcterms:publisher": {
         "@id": "http://lod.bco-dmo.org/id/affiliation/191"
       },
-      "dc1:source": {
+      "dcterms:source": {
         "@type": "xsd:anyURI",
         "@value": "https://github.com/BCODMO/Ocean-Data-Ontology_Data-Type"
       },
@@ -639,14 +639,14 @@
       }
     },
     {
-      "@id": "ns0:PeptideGeneticSequenceIdentifier",
+      "@id": "odo-dt:PeptideGeneticSequenceIdentifier",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
-        "ns0:Identifier",
+        "odo-dt:Identifier",
         "owl:NamedIndividual"
       ],
-      "ns0:specializationOf": {
-        "@id": "ns0:GeneticSequenceIdentifier"
+      "odo-dt:specializationOf": {
+        "@id": "odo-dt:GeneticSequenceIdentifier"
       },
       "rdfs:comment": {
         "@language": "en",
@@ -658,7 +658,7 @@
       }
     },
     {
-      "@id": "ns0:Plus2HSpectraCount",
+      "@id": "odo-dt:Plus2HSpectraCount",
       "@type": [
         "owl:NamedIndividual",
         "http://ocean-data.org/schema/Parameter"
@@ -673,11 +673,11 @@
       }
     },
     {
-      "@id": "ns0:GeneticSequenceIdentifier",
+      "@id": "odo-dt:GeneticSequenceIdentifier",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual",
-        "ns0:Identifier"
+        "odo-dt:Identifier"
       ],
       "owl:sameAs": {
         "@id": "http://lod.bco-dmo.org/id/parameter/684377"
@@ -692,27 +692,27 @@
       }
     },
     {
-      "@id": "ns0:extends",
+      "@id": "odo-dt:extends",
       "@type": "owl:ObjectProperty",
       "rdfs:comment": {
         "@language": "en-us",
         "@value": "Extends means that the domain DataType is a specialization of the range DataType by inheriting the range's Parameters but also incluing new Parameters as part of the specialization."
       },
       "rdfs:domain": {
-        "@id": "ns0:DataType"
+        "@id": "odo-dt:DataType"
       },
       "rdfs:label": {
         "@language": "en-us",
         "@value": "extends"
       },
       "rdfs:range": {
-        "@id": "ns0:DataType"
+        "@id": "odo-dt:DataType"
       }
     },
     {
-      "@id": "ns0:CruiseStationIdentifier",
+      "@id": "odo-dt:CruiseStationIdentifier",
       "@type": [
-        "ns0:Identifier",
+        "odo-dt:Identifier",
         "owl:NamedIndividual",
         "http://ocean-data.org/schema/Parameter"
       ],
@@ -726,7 +726,7 @@
       }
     },
     {
-      "@id": "ns0:KeggDescription",
+      "@id": "odo-dt:KeggDescription",
       "@type": [
         "owl:NamedIndividual",
         "http://ocean-data.org/schema/Parameter"
@@ -740,11 +740,11 @@
         "@value": "Kegg Orthology Description"
       },
       "skos:related": {
-        "@id": "ns0:KeggIdentifier"
+        "@id": "odo-dt:KeggIdentifier"
       }
     },
     {
-      "@id": "ns0:dataValueDelimiter",
+      "@id": "odo-dt:dataValueDelimiter",
       "@type": "owl:DatatypeProperty",
       "rdfs:comment": {
         "@language": "en-us",
@@ -762,7 +762,7 @@
       }
     },
     {
-      "@id": "ns0:MolecularWeight_Daltons",
+      "@id": "odo-dt:MolecularWeight_Daltons",
       "@type": [
         "owl:NamedIndividual",
         "http://ocean-data.org/schema/Parameter"
@@ -777,11 +777,11 @@
       }
     },
     {
-      "@id": "dc1:issued",
+      "@id": "dcterms:issued",
       "@type": "owl:AnnotationProperty"
     },
     {
-      "@id": "ns0:Identifier",
+      "@id": "odo-dt:Identifier",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual"
@@ -796,7 +796,7 @@
       }
     },
     {
-      "@id": "ns0:specializationOf",
+      "@id": "odo-dt:specializationOf",
       "@type": "owl:ObjectProperty",
       "rdfs:comment": {
         "@language": "en-us",
@@ -817,11 +817,11 @@
       }
     },
     {
-      "@id": "ns0:KeggIdentifier",
+      "@id": "odo-dt:KeggIdentifier",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual",
-        "ns0:Identifier"
+        "odo-dt:Identifier"
       ],
       "rdfs:comment": {
         "@language": "en",
@@ -833,14 +833,14 @@
       }
     },
     {
-      "@id": "ns0:requires",
+      "@id": "odo-dt:requires",
       "@type": "owl:ObjectProperty",
       "rdfs:comment": {
         "@language": "en-us",
         "@value": "Specifies that a DataType must include the associated Parameter."
       },
       "rdfs:domain": {
-        "@id": "ns0:DataType"
+        "@id": "odo-dt:DataType"
       },
       "rdfs:label": {
         "@language": "en-us",
@@ -850,11 +850,11 @@
         "@id": "http://ocean-data.org/schema/Parameter"
       },
       "rdfs:subPropertyOf": {
-        "@id": "ns0:measures"
+        "@id": "odo-dt:measures"
       }
     },
     {
-      "@id": "ns0:BestSequestXCorrScore",
+      "@id": "odo-dt:BestSequestXCorrScore",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual"
@@ -869,127 +869,127 @@
       }
     },
     {
-      "@id": "ns0:ProteinSpectralCounts",
+      "@id": "odo-dt:ProteinSpectralCounts",
       "@type": [
-        "ns0:DataType",
+        "odo-dt:DataType",
         "owl:NamedIndividual"
       ],
-      "ns0:measures": [
+      "odo-dt:measures": [
         {
-          "@id": "ns0:SampleIdentifier"
+          "@id": "odo-dt:SampleIdentifier"
         },
         {
-          "@id": "ns0:BestNCBITaxonIdentifier"
+          "@id": "odo-dt:BestNCBITaxonIdentifier"
         },
         {
-          "@id": "ns0:OtherIdentifiedProteins"
+          "@id": "odo-dt:OtherIdentifiedProteins"
         },
         {
-          "@id": "ns0:Depth_Meters"
+          "@id": "odo-dt:Depth_Meters"
         },
         {
-          "@id": "ns0:MaxFilterSize_Microns"
+          "@id": "odo-dt:MaxFilterSize_Microns"
         },
         {
-          "@id": "ns0:PFamsDescription"
+          "@id": "odo-dt:PFamsDescription"
         },
         {
-          "@id": "ns0:ProteinIdentifier"
+          "@id": "odo-dt:ProteinIdentifier"
         },
         {
-          "@id": "ns0:DateTime"
+          "@id": "odo-dt:DateTime"
         },
         {
-          "@id": "ns0:Time"
+          "@id": "odo-dt:Time"
         },
         {
-          "@id": "ns0:PFamsIdentifier"
+          "@id": "odo-dt:PFamsIdentifier"
         },
         {
-          "@id": "ns0:MolecularWeight_Daltons"
+          "@id": "odo-dt:MolecularWeight_Daltons"
         },
         {
-          "@id": "ns0:UniprotIdentifier"
+          "@id": "odo-dt:UniprotIdentifier"
         },
         {
-          "@id": "ns0:CruiseIdentifier"
+          "@id": "odo-dt:CruiseIdentifier"
         },
         {
-          "@id": "ns0:KeggName"
+          "@id": "odo-dt:KeggName"
         },
         {
-          "@id": "ns0:KeggIdentifier"
+          "@id": "odo-dt:KeggIdentifier"
         },
         {
-          "@id": "ns0:IdentifiedProductName"
+          "@id": "odo-dt:IdentifiedProductName"
         },
         {
-          "@id": "ns0:SpectralCount"
+          "@id": "odo-dt:SpectralCount"
         },
         {
-          "@id": "ns0:KeggDescription"
+          "@id": "odo-dt:KeggDescription"
         },
         {
-          "@id": "ns0:MinFilterSize_Microns"
+          "@id": "odo-dt:MinFilterSize_Microns"
         },
         {
-          "@id": "ns0:Latitude_DecimalDegrees"
+          "@id": "odo-dt:Latitude_DecimalDegrees"
         },
         {
-          "@id": "ns0:Longitude_DecimalDegrees"
+          "@id": "odo-dt:Longitude_DecimalDegrees"
         },
         {
-          "@id": "ns0:Date"
+          "@id": "odo-dt:Date"
         },
         {
-          "@id": "ns0:BestNCBITaxonName"
+          "@id": "odo-dt:BestNCBITaxonName"
         },
         {
-          "@id": "ns0:EnzymeCommissionIdentifier"
+          "@id": "odo-dt:EnzymeCommissionIdentifier"
         },
         {
-          "@id": "ns0:CruiseStationIdentifier"
+          "@id": "odo-dt:CruiseStationIdentifier"
         }
       ],
-      "ns0:recommends": {
-        "@id": "ns0:Time"
+      "odo-dt:recommends": {
+        "@id": "odo-dt:Time"
       },
-      "ns0:requires": [
+      "odo-dt:requires": [
         {
-          "@id": "ns0:MinFilterSize_Microns"
+          "@id": "odo-dt:MinFilterSize_Microns"
         },
         {
-          "@id": "ns0:CruiseStationIdentifier"
+          "@id": "odo-dt:CruiseStationIdentifier"
         },
         {
-          "@id": "ns0:SpectralCount"
+          "@id": "odo-dt:SpectralCount"
         },
         {
-          "@id": "ns0:MaxFilterSize_Microns"
+          "@id": "odo-dt:MaxFilterSize_Microns"
         },
         {
-          "@id": "ns0:ProteinIdentifier"
+          "@id": "odo-dt:ProteinIdentifier"
         },
         {
-          "@id": "ns0:Longitude_DecimalDegrees"
+          "@id": "odo-dt:Longitude_DecimalDegrees"
         },
         {
-          "@id": "ns0:CruiseIdentifier"
+          "@id": "odo-dt:CruiseIdentifier"
         },
         {
-          "@id": "ns0:IdentifiedProductName"
+          "@id": "odo-dt:IdentifiedProductName"
         },
         {
-          "@id": "ns0:SampleIdentifier"
+          "@id": "odo-dt:SampleIdentifier"
         },
         {
-          "@id": "ns0:Date"
+          "@id": "odo-dt:Date"
         },
         {
-          "@id": "ns0:Depth_Meters"
+          "@id": "odo-dt:Depth_Meters"
         },
         {
-          "@id": "ns0:Latitude_DecimalDegrees"
+          "@id": "odo-dt:Latitude_DecimalDegrees"
         }
       ],
       "rdfs:label": {
@@ -1010,14 +1010,14 @@
       "@type": "owl:AnnotationProperty"
     },
     {
-      "@id": "dc1:creator",
+      "@id": "dcterms:creator",
       "@type": "owl:AnnotationProperty"
     },
     {
-      "@id": "ns0:PFamsIdentifier",
+      "@id": "odo-dt:PFamsIdentifier",
       "@type": [
         "owl:NamedIndividual",
-        "ns0:Identifier",
+        "odo-dt:Identifier",
         "http://ocean-data.org/schema/Parameter"
       ],
       "rdfs:comment": {
@@ -1030,10 +1030,10 @@
       }
     },
     {
-      "@id": "ns0:CruiseIdentifier",
+      "@id": "odo-dt:CruiseIdentifier",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
-        "ns0:Identifier",
+        "odo-dt:Identifier",
         "owl:NamedIndividual"
       ],
       "rdfs:comment": {
@@ -1046,7 +1046,7 @@
       }
     },
     {
-      "@id": "ns0:dataValueFormat",
+      "@id": "odo-dt:dataValueFormat",
       "@type": "owl:DatatypeProperty",
       "rdfs:comment": {
         "@language": "en-us",
@@ -1064,14 +1064,14 @@
       }
     },
     {
-      "@id": "ns0:ProteinGeneticSequenceIdentifier",
+      "@id": "odo-dt:ProteinGeneticSequenceIdentifier",
       "@type": [
         "owl:NamedIndividual",
         "http://ocean-data.org/schema/Parameter",
-        "ns0:Identifier"
+        "odo-dt:Identifier"
       ],
-      "ns0:specializationOf": {
-        "@id": "ns0:GeneticSequenceIdentifier"
+      "odo-dt:specializationOf": {
+        "@id": "odo-dt:GeneticSequenceIdentifier"
       },
       "rdfs:comment": {
         "@language": "en",
@@ -1083,7 +1083,7 @@
       }
     },
     {
-      "@id": "ns0:Time",
+      "@id": "odo-dt:Time",
       "@type": [
         "owl:NamedIndividual",
         "http://ocean-data.org/schema/Parameter"
@@ -1098,7 +1098,7 @@
       }
     },
     {
-      "@id": "ns0:TotalPrecursorIntensity",
+      "@id": "odo-dt:TotalPrecursorIntensity",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual"
@@ -1113,11 +1113,11 @@
       }
     },
     {
-      "@id": "ns0:EnzymeCommissionIdentifier",
+      "@id": "odo-dt:EnzymeCommissionIdentifier",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual",
-        "ns0:Identifier"
+        "odo-dt:Identifier"
       ],
       "rdfs:comment": {
         "@language": "en",
@@ -1129,9 +1129,9 @@
       }
     },
     {
-      "@id": "ns0:Ocean-Proteomics",
+      "@id": "odo-dt:Ocean-Proteomics",
       "@type": [
-        "ns0:SubjectArea",
+        "odo-dt:SubjectArea",
         "owl:NamedIndividual"
       ],
       "rdfs:label": {
@@ -1139,11 +1139,11 @@
         "@value": "Ocean Proteomics"
       },
       "skos:broader": {
-        "@id": "ns0:Proteomics"
+        "@id": "odo-dt:Proteomics"
       }
     },
     {
-      "@id": "ns0:KeggName",
+      "@id": "odo-dt:KeggName",
       "@type": [
         "owl:NamedIndividual",
         "http://ocean-data.org/schema/Parameter"
@@ -1157,11 +1157,11 @@
         "@value": "Kegg Orthology Name"
       },
       "skos:related": {
-        "@id": "ns0:KeggIdentifier"
+        "@id": "odo-dt:KeggIdentifier"
       }
     },
     {
-      "@id": "ns0:BestNCBITaxonName",
+      "@id": "odo-dt:BestNCBITaxonName",
       "@type": [
         "owl:NamedIndividual",
         "http://ocean-data.org/schema/Parameter"
@@ -1175,7 +1175,7 @@
         "@value": "Best NCBI Taxon Name"
       },
       "skos:related": {
-        "@id": "ns0:BestNCBITaxonIdentifier"
+        "@id": "odo-dt:BestNCBITaxonIdentifier"
       }
     },
     {
@@ -1183,7 +1183,7 @@
       "@type": "owl:AnnotationProperty"
     },
     {
-      "@id": "ns0:DataType",
+      "@id": "odo-dt:DataType",
       "@type": "owl:Class",
       "rdfs:comment": {
         "@language": "en-US",
@@ -1198,21 +1198,21 @@
       }
     },
     {
-      "@id": "ns0:subjectArea",
+      "@id": "odo-dt:subjectArea",
       "@type": "owl:ObjectProperty",
       "rdfs:comment": {
         "@language": "en-us",
         "@value": "Specifies that the SubjectArea pertains to the observations made for a DataType."
       },
       "rdfs:domain": {
-        "@id": "ns0:DataType"
+        "@id": "odo-dt:DataType"
       },
       "rdfs:label": {
         "@language": "en-us",
         "@value": "subjectArea"
       },
       "rdfs:range": {
-        "@id": "ns0:SubjectArea"
+        "@id": "odo-dt:SubjectArea"
       }
     },
     {
@@ -1220,7 +1220,7 @@
       "@type": "owl:AnnotationProperty"
     },
     {
-      "@id": "ns0:MedianRetentionTime",
+      "@id": "odo-dt:MedianRetentionTime",
       "@type": [
         "owl:NamedIndividual",
         "http://ocean-data.org/schema/Parameter"
@@ -1235,20 +1235,20 @@
       }
     },
     {
-      "@id": "ns0:PeptideSpectralCountSum",
+      "@id": "odo-dt:PeptideSpectralCountSum",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual"
       ],
       "prov:wasInfluencedBy": [
         {
-          "@id": "ns0:Plus3HSpectraCount"
+          "@id": "odo-dt:Plus3HSpectraCount"
         },
         {
-          "@id": "ns0:Plus2HSpectraCount"
+          "@id": "odo-dt:Plus2HSpectraCount"
         },
         {
-          "@id": "ns0:Plus4HSpectraCount"
+          "@id": "odo-dt:Plus4HSpectraCount"
         }
       ],
       "rdfs:comment": {
@@ -1267,20 +1267,20 @@
       ]
     },
     {
-      "@id": "ns0:OceanProteinPortalDataType",
+      "@id": "odo-dt:OceanProteinPortalDataType",
       "@type": [
-        "ns0:DataType",
+        "odo-dt:DataType",
         "owl:NamedIndividual"
       ],
-      "ns0:aggregates": [
+      "odo-dt:aggregates": [
         {
-          "@id": "ns0:ProteinSpectralCounts"
+          "@id": "odo-dt:ProteinSpectralCounts"
         },
         {
-          "@id": "ns0:PeptideSpectralCounts"
+          "@id": "odo-dt:PeptideSpectralCounts"
         },
         {
-          "@id": "ns0:FASTA-ProteinIdentifications"
+          "@id": "odo-dt:FASTA-ProteinIdentifications"
         }
       ],
       "rdfs:label": {
@@ -1289,13 +1289,13 @@
       }
     },
     {
-      "@id": "ns0:PeptideStopIndex",
+      "@id": "odo-dt:PeptideStopIndex",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual"
       ],
       "prov:wasInfluencedBy": {
-        "@id": "ns0:PeptideStartIndex"
+        "@id": "odo-dt:PeptideStartIndex"
       },
       "rdfs:comment": {
         "@language": "en",
@@ -1307,7 +1307,7 @@
       }
     },
     {
-      "@id": "ns0:PeptideStartIndex",
+      "@id": "odo-dt:PeptideStartIndex",
       "@type": [
         "http://ocean-data.org/schema/Parameter",
         "owl:NamedIndividual"
@@ -1322,7 +1322,7 @@
       }
     },
     {
-      "@id": "ns0:BestSequestDCnScore",
+      "@id": "odo-dt:BestSequestDCnScore",
       "@type": [
         "owl:NamedIndividual",
         "http://ocean-data.org/schema/Parameter"
@@ -1337,14 +1337,14 @@
       }
     },
     {
-      "@id": "ns0:measures",
+      "@id": "odo-dt:measures",
       "@type": "owl:ObjectProperty",
       "rdfs:comment": {
         "@language": "en-us",
         "@value": "Specifies that a DataType should include the associated Parameter."
       },
       "rdfs:domain": {
-        "@id": "ns0:DataType"
+        "@id": "odo-dt:DataType"
       },
       "rdfs:label": {
         "@language": "en-us",
@@ -1355,7 +1355,7 @@
       }
     },
     {
-      "@id": "ns0:dataType",
+      "@id": "odo-dt:dataType",
       "@type": "owl:ObjectProperty",
       "rdfs:comment": {
         "@language": "en-us",
@@ -1369,7 +1369,7 @@
         "@value": "dataType"
       },
       "rdfs:range": {
-        "@id": "ns0:DataType"
+        "@id": "odo-dt:DataType"
       }
     }
   ]
