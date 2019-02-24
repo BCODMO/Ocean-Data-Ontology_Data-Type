@@ -43,6 +43,7 @@ prov:wasInfluencedBy a owl:AnnotationProperty .
 skos:related a owl:AnnotationProperty .
 skos:broader a owl:AnnotationProperty .
 skos:narrower a owl:AnnotationProperty .
+skos:exactMatch a owl:AnnotationProperty .
 
 #### Classes
 
@@ -151,19 +152,19 @@ odo-dt:ProteinSpectralCounts a odo-dt:DataType,
     odo-dt:measures odo-dt:SampleIdentifier,
         odo-dt:CruiseIdentifier,
         odo-dt:CruiseStationIdentifier,
-        odo-dt:LatitudeDecimalDegrees,
-        odo-dt:LongitudeDecimalDegrees,
-        odo-dt:DepthMeters,
+        odo-dt:Latitude_DecimalDegrees,
+        odo-dt:Longitude_DecimalDegrees,
+        odo-dt:Depth_Meters,
         odo-dt:Date,
         odo-dt:Time,
         odo-dt:DateTime,
-        odo-dt:MinFilterSizeInMicrons,
-        odo-dt:MaxFilterSizeInMicrons,
+        odo-dt:MinFilterSize_Microns,
+        odo-dt:MaxFilterSize_Microns,
         odo-dt:ProteinIdentifier,
         odo-dt:IdentifiedProductName,
         odo-dt:OtherIdentifiedProteins,
         odo-dt:SpectralCount,
-        odo-dt:MolecularWeightInDaltons,
+        odo-dt:MolecularWeight_Daltons,
         odo-dt:BestNCBITaxonName,
         odo-dt:BestNCBITaxonIdentifier,
         odo-dt:KeggIdentifier,
@@ -176,10 +177,12 @@ odo-dt:ProteinSpectralCounts a odo-dt:DataType,
     odo-dt:requires odo-dt:SampleIdentifier,
         odo-dt:CruiseIdentifier,
         odo-dt:CruiseStationIdentifier,
-        odo-dt:LatitudeDecimalDegrees,
-        odo-dt:LongitudeDecimalDegrees,
-        odo-dt:DepthMeters,
+        odo-dt:Latitude_DecimalDegrees,
+        odo-dt:Longitude_DecimalDegrees,
+        odo-dt:Depth_Meters,
         odo-dt:Date,
+        odo-dt:MinFilterSize_Microns,
+        odo-dt:MaxFilterSize_Microns,
         odo-dt:ProteinIdentifier,
         odo-dt:IdentifiedProductName,
         odo-dt:SpectralCount ;
@@ -199,38 +202,43 @@ odo-dt:PeptideSpectralCounts a odo-dt:DataType,
     odo-dt:measures odo-dt:SampleIdentifier,
         odo-dt:CruiseIdentifier,
         odo-dt:CruiseStationIdentifier,
-        odo-dt:LatitudeDecimalDegrees,
-        odo-dt:LongitudeDecimalDegrees,
-        odo-dt:DepthMeters,
+        odo-dt:Latitude_DecimalDegrees,
+        odo-dt:Longitude_DecimalDegrees,
+        odo-dt:Depth_Meters,
         odo-dt:Date,
         odo-dt:Time,
         odo-dt:DateTime,
-        odo-dt:PeptideSpectralCountSum,
+        odo-dt:MinFilterSize_Microns,
+        odo-dt:MaxFilterSize_Microns,
         odo-dt:PeptideGeneticSequenceIdentifier,
-        odo-dt:PeptideSpectralCounts_ProteinIdentifier,
-        odo-dt:PeptideSpectralCounts_ProteinAccessionIdentifiers,
-        odo-dt:MolecularWeightInDaltons,
-        odo-dt:MinFilterSizeInMicrons,
-        odo-dt:MaxFilterSizeInMicrons,
+        odo-dt:PeptideStartIndex,
+        odo-dt:PeptideStopIndex,
+        odo-dt:ProteinIdentifier,
+        odo-dt:OtherIdentifiedProteins,
+        odo-dt:PeptideSpectralCountSum,
+        odo-dt:ProteinMolecularWeight_Daltons,
         odo-dt:BestIdProbability,
         odo-dt:BestSequestXCorrScore,
         odo-dt:BestSequestDCnScore,
+        odo-dt:MedianRetentionTime,
         odo-dt:Plus2HSpectraCount,
         odo-dt:Plus3HSpectraCount,
         odo-dt:Plus4HSpectraCount,
-        odo-dt:MedianRetentionTime,
         odo-dt:TotalPrecursorIntensity,
         odo-dt:TotalIonChromatogram ,
-        odo-dt:PeptideStartIndex,
-        odo-dt:PeptideStopIndex ,
         odo-dt:AbsoluteUnits_FemtomolePerLiter ;
     odo-dt:requires odo-dt:CruiseIdentifier,
         odo-dt:CruiseStationIdentifier,
-        odo-dt:LatitudeDecimalDegrees,
-        odo-dt:LongitudeDecimalDegrees,
-        odo-dt:DepthMeters,
+        odo-dt:Latitude_DecimalDegrees,
+        odo-dt:Longitude_DecimalDegrees,
+        odo-dt:Depth_Meters,
         odo-dt:Date,
-        odo-dt:PeptideGeneticSequenceIdentifier ;
+        odo-dt:MinFilterSize_Microns,
+        odo-dt:MaxFilterSize_Microns,
+        odo-dt:ProteinIdentifier,
+        odo-dt:PeptideGeneticSequenceIdentifier,
+        odo-dt:PeptideStartIndex,
+        odo-dt:PeptideStopIndex ;
     odo-dt:recommends odo-dt:Time,
         odo-dt:PeptideSpectralCountSum .
 
@@ -245,35 +253,42 @@ odo-dt:Proteomics a odo-dt:SubjectArea,
     owl:NamedIndividual ;
     rdfs:label "Proteomics"@en-us .
     
-
 ### Parameter ###
 
+odo-dt:Identifier a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Identifier"@en ;
+    rdfs:comment "An identifier of some 'thing'. Identifiers can be used as keys between datasets, data files or other data representations."@en .
+
 odo-dt:SampleIdentifier a owl:NamedIndividual,
+        odo-dt:Identifier, 
         odo:Parameter ;
     rdfs:label "Sample Identifier"@en ;
     rdfs:comment "Uniquely identifies one sample within a dataset."@en .
 
 odo-dt:CruiseIdentifier a owl:NamedIndividual,
+        odo-dt:Identifier, 
         odo:Parameter ;
     rdfs:label "Cruise Identifier"@en ;
     rdfs:comment "Representative of a cruise or some other named deployment."@en .
 
 odo-dt:CruiseStationIdentifier a owl:NamedIndividual,
+        odo-dt:Identifier, 
         odo:Parameter ;
     rdfs:label "Station Identifier"@en ;
     rdfs:comment "Representative of a particular station from a cruise."@en .
 
-odo-dt:LatitudeDecimalDegrees a owl:NamedIndividual,
+odo-dt:Latitude_DecimalDegrees a owl:NamedIndividual,
         odo:Parameter ;
     rdfs:label "Latitude in Decimal Degress"@en ;
     rdfs:comment "Latitude in decimal degrees where the values are bounded by -90 (South) and 90 (North)."@en .
 
-odo-dt:LongitudeDecimalDegrees a owl:NamedIndividual,
+odo-dt:Longitude_DecimalDegrees a owl:NamedIndividual,
         odo:Parameter ;
     rdfs:label "Longitude in Decical Degrees"@en ;
     rdfs:comment "Longitude in decimal degrees where the values are bounded by -180 (West) and 1800 (East)."@en .
 
-odo-dt:DepthMeters a owl:NamedIndividual,
+odo-dt:Depth_Meters a owl:NamedIndividual,
         odo:Parameter ;
     rdfs:label "Depth in Meters"@en ;
     rdfs:comment "A depth measurement made in meters."@en .
@@ -281,42 +296,56 @@ odo-dt:DepthMeters a owl:NamedIndividual,
 odo-dt:Date a owl:NamedIndividual,
         odo:Parameter ;
     rdfs:label "Date"@en ;
-    rdfs:comment "A a year month and day in some recognized format."@en .
+    rdfs:comment "A year, month, and day represented in some recognized format."@en .
+
+odo-dt:Time a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Date"@en ;
+    rdfs:comment "An hour, minutes, and seconds represented in some recognized format."@en .
 
 odo-dt:DateTime a owl:NamedIndividual,
         odo:Parameter ;
     skos:narrower <http://lod.bco-dmo.org/id/parameter/1909> ;
-    rdfs:label "ISO Date/Time UTC"@en ;
-    rdfs:comment "A ISO date time measurement made in UTC."@en .
+    rdfs:label "Date Time"@en ;
+    rdfs:comment "A date time measurement."@en .
 
-odo-dt:MaxFilterSizeInMicrons a owl:NamedIndividual,
+odo-dt:MaxFilterSize_Microns a owl:NamedIndividual,
         odo:Parameter ;
     skos:related odo-dt:MinFilterSizeInMicrons ;
     rdfs:label "Maximum Filter Size in Microns"@en ;
     rdfs:comment "The maximum filter size measured in microns."@en .
 
-odo-dt:MinFilterSizeInMicrons a owl:NamedIndividual,
+odo-dt:MinFilterSize_Microns a owl:NamedIndividual,
         odo:Parameter ;
     skos:related odo-dt:MaxFilterSizeInMicrons ;
     rdfs:label "Minimum Filter Size in Microns"@en ;
     rdfs:comment "The minimum filter size measured in microns."@en .
 
 odo-dt:ProteinIdentifier a owl:NamedIndividual,
+        odo-dt:Identifier, 
         odo:Parameter ;
     rdfs:label "Protein Identifier"@en ;
     rdfs:comment "Uniquely identifies one peotein within a dataset."@en .
 
 odo-dt:IdentifiedProductName a owl:NamedIndividual,
         odo:Parameter ;
+    skos:related odo-dt:ProteinIdentifier ;
     rdfs:label "Identified Product Name"@en ;
     rdfs:comment "The best product name for an identification made in a smaple (best hit annotation)."@en .
 
-odo-dt:MolecularWeightInDaltons a owl:NamedIndividual,
+odo-dt:SpectralCount a owl:NamedIndividual,
         odo:Parameter ;
-    rdfs:label "Molecular Weight in Daltons (Da)"@en ;
+    owl:sameAs <https://lod.bco-dmo.org/id/parameter/685524> ;
+    rdfs:label "Spectral Count"@en ;
+    rdfs:comment "The spectral count for an identifified protein."@en .
+
+odo-dt:MolecularWeight_Daltons a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Molecular Weight in Daltons"@en ;
     rdfs:comment "The molecular weight measured in Daltons."@en .
 
 odo-dt:BestNCBITaxonIdentifier a owl:NamedIndividual,
+        odo-dt:Identifier, 
         odo:Parameter ;
     rdfs:label "Best NCBI Taxon Identifier"@en ;
     rdfs:comment "Representative of the best taxon identifier at NCBI that could be associated to an identiciation."@en .
@@ -328,9 +357,10 @@ odo-dt:BestNCBITaxonName a owl:NamedIndividual,
     rdfs:comment "The best taxonomic species name at NCBI related to a Taxon identifier."@en .
 
 odo-dt:KeggIdentifier a owl:NamedIndividual,
+        odo-dt:Identifier, 
         odo:Parameter ;
     rdfs:label "Kegg Orthology Identifier"@en ;
-    rdfs:comment "Kegg identifier  or accession."@en .
+    rdfs:comment "Kegg identifier or accession."@en .
 
 odo-dt:KeggName a owl:NamedIndividual,
         odo:Parameter ;
@@ -345,6 +375,7 @@ odo-dt:KeggDescription a owl:NamedIndividual,
     rdfs:comment "The Kegg description related to an identified Kegg Identifier."@en .
 
 odo-dt:PFamsIdentifier a owl:NamedIndividual,
+        odo-dt:Identifier, 
         odo:Parameter ;
     rdfs:label "PFams Identifier"@en ;
     rdfs:comment "Representative of a PFams identifier or accession."@en .
@@ -356,38 +387,63 @@ odo-dt:PFamsDescription a owl:NamedIndividual,
     rdfs:comment "The PFams description related to an identified PFams Identifier."@en .
 
 odo-dt:EnzymeCommissionIdentifier a owl:NamedIndividual,
+        odo-dt:Identifier, 
         odo:Parameter ;
     rdfs:label "Enzyme Commission Identifier"@en ;
     rdfs:comment "Representative of a Enzyme Commission identifier."@en .
 
 odo-dt:UniprotIdentifier a owl:NamedIndividual,
+        odo-dt:Identifier, 
         odo:Parameter ;
     rdfs:label "Uniprot Identifier"@en ;
     rdfs:comment "Representative of a Uniprot identifier."@en .
 
-odo-dt:SpectralCount a owl:NamedIndividual,
-        odo:Parameter ;
-    owl:sameAs <https://lod.bco-dmo.org/id/parameter/685524> ;
-    rdfs:label "Spectral Count"@en ;
-    rdfs:comment "The spectral count for an identifified protein."@en .
-
 odo-dt:GeneticSequenceIdentifier a owl:NamedIndividual,
+        odo-dt:Identifier, 
         odo:Parameter ;
     owl:sameAs <http://lod.bco-dmo.org/id/parameter/684377> ;
     rdfs:label "Genetic Sequence Identifier"@en ;
     rdfs:comment "A genetic sequence; e.g. the order of nucleotides in DNA or RNA."@en .
 
 odo-dt:ProteinGeneticSequenceIdentifier a owl:NamedIndividual,
+        odo-dt:Identifier,
         odo:Parameter ;
     odo-dt:specializationOf odo-dt:GeneticSequenceIdentifier ;
     rdfs:label "Protein Genetic Sequence Identifier"@en ;
     rdfs:comment "A genetic sequence identifying a protein."@en .
 
 odo-dt:PeptideGeneticSequenceIdentifier a owl:NamedIndividual,
+        odo-dt:Identifier, 
         odo:Parameter ;
     odo-dt:specializationOf odo-dt:GeneticSequenceIdentifier ;
     rdfs:label "Peptide Genetic Sequence Identifier"@en ;
     rdfs:comment "A genetic sequence identifying a peptide."@en .
+
+odo-dt:PeptideStartIndex a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Peptide start index"@en ;
+    rdfs:comment "Data useful in creating peptide coverage map"@en .
+
+odo-dt:PeptideStopIndex a owl:NamedIndividual,
+        odo:Parameter ;
+    prov:wasInfluencedBy odo-dt:PeptideStartIndex ;
+    rdfs:label "Peptide stop index"@en ;
+    rdfs:comment "Data useful in creating peptide coverage map"@en .
+
+odo-dt:PeptideSpectralCountSum a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Spectral Count Sum"@en ;
+    prov:wasInfluencedBy odo-dt:Plus2HSpectraCount,
+        odo-dt:Plus3HSpectraCount,
+        odo-dt:Plus4HSpectraCount ;
+    rdfs:label "Sum of the spectral counts"@en ;
+    rdfs:comment "Sum of +2,+3,+4 data, = total unnormalized spectral counts - Quantitative Value"@en .
+
+odo-dt:ProteinMolecularWeight_Daltons a owl:NamedIndividual,
+        odo:Parameter ;
+    skos:exactMatch odo-dt:MolecularWeightInDaltons ;
+    rdfs:label "Protein Molecular Weight in Daltons"@en ;
+    rdfs:comment "The molecular weight measured in Daltons of the related protein."@en .
 
 odo-dt:BestProteinIdentifierProbability a owl:NamedIndividual,
         odo:Parameter ;
@@ -410,25 +466,6 @@ odo-dt:MedianRetentionTime a owl:NamedIndividual,
     rdfs:label "Median Retention Time"@en ;
     rdfs:comment "Median Retention Time"@en .
 
-odo-dt:PeptideSpectralCountSum a owl:NamedIndividual,
-        odo:Parameter ;
-    rdfs:label "Spectral Count Sum"@en ;
-    prov:wasInfluencedBy odo-dt:Plus2HSpectraCount,
-        odo-dt:Plus3HSpectraCount,
-        odo-dt:Plus4HSpectraCount ;
-    rdfs:label "Sum of the spectral counts"@en ;
-    rdfs:comment "Sum of +2,+3,+4 data, = total unnormalized spectral counts - Quantitative Value"@en .
-
-odo-dt:TotalPrecursorIntensity a owl:NamedIndividual,
-        odo:Parameter ;
-    rdfs:label "Total Precursor Intensity"@en ;
-    rdfs:comment "Total Precursor Intensity"@en .
-
-odo-dt:TotalIonChromatogram a owl:NamedIndividual,
-        odo:Parameter ;
-    rdfs:label "Total Ion Chromatogram"@en ;
-    rdfs:comment "Total Ion Chromatogram"@en .
-
 odo-dt:Plus2HSpectraCount a owl:NamedIndividual,
         odo:Parameter ;
     rdfs:label "Number of identified +2H spectra"@en ;
@@ -444,41 +481,17 @@ odo-dt:Plus4HSpectraCount a owl:NamedIndividual,
     rdfs:label "Number of identified +4H spectra"@en ;
     rdfs:comment "Number of identified +4H spectra"@en .
 
+odo-dt:TotalPrecursorIntensity a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Total Precursor Intensity"@en ;
+    rdfs:comment "Total Precursor Intensity"@en .
+
+odo-dt:TotalIonChromatogram a owl:NamedIndividual,
+        odo:Parameter ;
+    rdfs:label "Total Ion Chromatogram"@en ;
+    rdfs:comment "Total Ion Chromatogram"@en .
+
 odo-dt:AbsoluteUnits_FemtomolePerLiter a owl:NamedIndividual,
         odo:Parameter ;
     rdfs:label "Absolute Units in femtomole per liter"@en ;
     rdfs:comment "Absolute Units in femtomole per liter"@en .
-
-odo-dt:PeptideSpectralCounts_ProteinIdentifier a owl:NamedIndividual,
-        odo:Parameter ;
-    ## Axiom:
-    ## if a odo-dt:OceanProteinPortalDataType,
-    ## and odo-dt:PepetideSpectralCounts odo-dt:measures odo-dt:PeptideSpectralCounts_ProteinIdentifier ;
-    ## then, odo-dt:PeptideSpectralCounts_ProteinIdentifier owl:allValuesFrom ( odo-dt:ProteinSpectralCounts odo-dt:measures odo-dt:ProteinIdentifier ).
-    ## 
-    prov:wasInfluencedBy odo-dt:ProteinIdentifier ;
-    rdfs:label "Peptide Protein Identifier"@en ;
-    rdfs:comment "Representative of the protein from which this peptide came from."@en .
-
-odo-dt:PeptideSpectralCounts_ProteinAccessionId a owl:NamedIndividual,
-        odo:Parameter ;
-    ## Axiom:
-    ## if a odo-dt:OceanProteinPortalDataType,
-    ## and odo-dt:PepetideSpectralCounts odo-dt:measures odo-dt:PeptideSpectralCounts_ProteinAccessionId ;
-    ## then, odo-dt:PeptideSpectralCounts_ProteinAccessionId owl:allValuesFrom ( odo-dt:ProteinSpectralCounts odo-dt:measures odo-dt:ProteinIdentifier ).
-    ## 
-    prov:wasInfluencedBy odo-dt:ProteinIdentifier ;
-    skos:related odo-dt:PeptideSpectralCounts_ProteinAccessionId ;
-    rdfs:label "Protein Accession Identifier"@en ;
-    rdfs:comment "Representative of all the possible proteins from which this peptide came from."@en .
-
-odo-dt:PeptideSpectralCounts_StartIndex a owl:NamedIndividual,
-        odo:Parameter ;
-    rdfs:label "Peptide start index"@en ;
-    rdfs:comment "Data useful in creating peptide coverage map"@en .
-
-odo-dt:PeptideSpectralCounts_StopIndex a owl:NamedIndividual,
-        odo:Parameter ;
-    prov:wasInfluencedBy odo-dt:PeptideSpectralCounts_StartIndex ;
-    rdfs:label "Peptide stop index"@en ;
-    rdfs:comment "Data useful in creating peptide coverage map"@en .
