@@ -12,6 +12,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <http://schema.org/> .
 
 #### Ontology
 
@@ -26,7 +27,7 @@
     dct:issued "2017-09-04"^^xsd:date ;
     dct:source "https://github.com/BCODMO/Ocean-Data-Ontology_Data-Type"^^xsd:anyURI ;
     owl:imports <http://ocean-data.org/schema/> ;
-    owl:versionInfo "0.1.0" .
+    owl:versionInfo "1.0" .
 
 
 #### Annotation Properties
@@ -39,7 +40,8 @@ dct:publisher a owl:AnnotationProperty .
 dct:issued a owl:AnnotationProperty .
 dct:source a owl:AnnotationProperty .
 skos:altLabel a owl:AnnotationProperty .
-
+schema:contentUrl a owl:AnnontationProperty .
+schema:encodingFormat a owl:AnnontationProperty .
 
 #### Classes
 
@@ -57,6 +59,11 @@ odo-dt:DataType a owl:Class ;
 odo-dt:SubjectArea a owl:Class ;
     rdfs:label "SubjectArea"@en-US ;
     rdfs:comment "A certain field of study used to group or filter Data Types"@en-US .
+
+odo-dt:EntityRelationshipDiagram a owl:Class ;
+    rdfs:subClassOf schema:ImageObject ;
+    rdfs:label "EntityRelationshipDiagram"@en-US ;
+    rdfs:comment "An image that explains the entity-relationship model for a starting class."@en-US
 
 odo-dt:InferredParamter a owl:Class ;
     rdfs:subClassOf odo:Parameter ;
@@ -138,6 +145,13 @@ odo-dt:summationOf a owl:DatatypeProperty ;
     rdfs:domain odo:Parameter ;
     rdfs:range odo:Parameter .
 
+odo-dt:entityRelationshipDiagram a owl:ObjectProperty ;
+    rdfs:subPropertyOf schema:subjectOf ;
+    rdfs:label "entityRelationshipDiagram"@en-US ;
+    rdfs:comment "Specifies that a Class and its entity relationships are described by a diagram."@en-US ;
+    rdfs:domain owl:Class ;
+    rdfs:range odo-dt:EntityRelationshipDiagram .
+
 odo-dt:dataValueFormat a owl:DatatypeProperty ;
     rdfs:label "dataValueFormat"@en-US ;
     rdfs:comment """A string, indicating a format for the data value that enables correct processing of the value. 
@@ -159,6 +173,16 @@ odo-dt:dataValueDelimiter a owl:DatatypeProperty ;
 
 
 #### Named Individuals ####
+
+### Diagrams ###
+
+odo-dt:DataTypeDiagram a owl:NamedIndividual,
+        odo-dt:EntityRelationshipDiagram ;
+    odo-dt:diagramsEntityRelationshipsFor odo-dt:DataType ;
+    schema:contentUrl "http://ocean-data.org/schema/data-type/v1.0/diagram/DataType.png"^^xsd:anyURI ;
+    schema:encodingFormat "image/png"^^xsd:string ;
+    rdfs:label "Diagram of Ocean Data Ontology - Data Type Extension"@en-US ;
+    rdfs:comment "A diagram of the Ocean Data Ontology - Data Type Extension."@en-US .
 
 ### Subject Area ###
 
