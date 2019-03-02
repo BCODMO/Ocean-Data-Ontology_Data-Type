@@ -42,6 +42,7 @@ dct:source a owl:AnnotationProperty .
 skos:altLabel a owl:AnnotationProperty .
 schema:contentUrl a owl:AnnontationProperty .
 schema:encodingFormat a owl:AnnontationProperty .
+odo-dt:inferredParameter a owl:AnnontationProperty .
 
 #### Classes
 
@@ -63,7 +64,7 @@ odo-dt:SubjectArea a owl:Class ;
 odo-dt:EntityRelationshipDiagram a owl:Class ;
     rdfs:subClassOf schema:ImageObject ;
     rdfs:label "EntityRelationshipDiagram"@en-US ;
-    rdfs:comment "An image that explains the entity-relationship model for a starting class."@en-US
+    rdfs:comment "An image that explains the entity-relationship model for a starting class."@en-US .
 
 odo-dt:InferredParamter a owl:Class ;
     rdfs:subClassOf odo:Parameter ;
@@ -137,6 +138,11 @@ odo-dt:dependsOn a owl:ObjectProperty ;
     rdfs:domain odo:Parameter ;
     rdfs:range odo:Parameter ;
     rdfs:subPropertyOf skos:related .
+
+odo-dt:inferredParameter a owl:ObjectProperty ;
+    rdfs:label "inferredParameter"@en-US ;
+    rdfs:comment "This inferred parameter stores the value of the parameter in range."@en-US ;
+    rdfs:range odo:InferredParameter .
 
 odo-dt:summationOf a owl:DatatypeProperty ;
     rdfs:subPropertyOf skos:related ;
@@ -401,10 +407,40 @@ odo-dt:TotalIonChromatogram a owl:NamedIndividual,
 #### Axioms
 [] a owl:Restriction ;
     rdfs:subClassOf odo-dt:DataType ;
-    owl:onProperty :aggregates ;
+    owl:onProperty odo-dt:aggregates ;
     owl:minCardinality "2"^^xsd:nonNegativeInteger .
 
 [] a owl:Restriction ;
     rdfs:subClassOf odo:Parameter ;
-    owl:onProperty :summationOf ;
+    owl:onProperty odo-dt:summationOf ;
     owl:minCardinality "2"^^xsd:nonNegativeInteger .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf odo-dt:InferredParameter ;
+    owl:onProperty odo-dt:inferredValueTarget ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf odo-dt:InferredParameter ;
+    owl:onProperty odo-dt:inferredValueTargetProperty ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger .
+
+# Trying to say the the dc:title field of an odo:Cruise connected to an odo:Dataset through odo:fromDeployment is the
+# value of an inferred odo-dt:CruiseIdentifier
+odo-dt:datasetCruiseIdentifier a owl:DatatypeProperty ;
+    owl:propertyChainAxiom odo-dt:hasCruiseIdentifierPath ;
+    odo-dt:inferredParameter odo-dt:CruiseIdentifier ;
+    rdfs:domain odo:Dataset ;
+    rdfs:range xsd:string .   
+[] a owl:Axiom ;
+    owl:annotatedSource odo-dt:hasCruiseIdentifierPath ;
+    owl:annotatedProperty owl:propertyChainAxiom ;
+    owl:annotatedTarget odo-dt:cruiseIdentifierProperty ;
+    rdfs:comment "A cruise's title is the inferred value of the 'CruiseIdentifier' parameter for a dataset."@en-US .
+odo-dt:hasCruiseIdentifierPath owl:propertyChainAxiom [
+        rdf:first odo:fromDeployment ;
+        rdf:rest odo-dt:cruiseIdentifierProperty 
+    ] .
+odo-dt:cruiseIdentifierProperty 
+    rdf:first dc:title ;
+    rdf:rest rdf:nil .
