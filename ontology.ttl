@@ -52,17 +52,11 @@ odo-dt:DataType a owl:Class ;
   that use the data type, etc. The intent is that any humans or
   machines that when they encounter that data type can quickly
   'understand' or be in a situation to at least 'process' details
-  within the dataset without even downloading that dataset."""@en-US ;
-    rdfs:subClassOf [ 
-        a owl:Restriction ;
-        owl:minCardinality "2"^^xsd:nonNegativeInteger ;
-        owl:onProperty odo:aggregates ;
-    ] .
+  within the dataset without even downloading that dataset."""@en-US .
 
 odo-dt:SubjectArea a owl:Class ;
     rdfs:label "SubjectArea"@en-US ;
     rdfs:comment "A certain field of study used to group or filter Data Types"@en-US .
-
 
 #### Object Properties
 
@@ -123,6 +117,13 @@ odo-dt:dependsOn a owl:ObjectProperty ;
     rdfs:domain odo:Parameter ;
     rdfs:range odo:Parameter ;
     rdfs:subPropertyOf skos:related .
+
+odo-dt:summationOf a owl:DatatypeProperty ;
+    rdfs:subPropertyOf skos:related ;
+    rdfs:label "summationOf"@en-US ;
+    rdfs:comment "The value of this Parameter is the summation of Parameters attached by this property."@en-US ;
+    rdfs:domain odo:Parameter ;
+    rdfs:range odo:Parameter .
 
 odo-dt:dataValueFormat a owl:DatatypeProperty ;
     rdfs:label "dataValueFormat"@en-US ;
@@ -351,3 +352,15 @@ odo-dt:TotalIonChromatogram a owl:NamedIndividual,
     skos:altLabel "TIC" ;
     rdfs:label "Total Ion Chromatogram"@en-US ;
     rdfs:comment "Total Ion Chromatogram"@en-US .
+
+
+#### Axioms
+[] a owl:Restriction ;
+    rdfs:subClassOf odo-dt:DataType ;
+    owl:onProperty :aggregates ;
+    owl:minCardinality "2"^^xsd:nonNegativeInteger .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf odo:Parameter ;
+    owl:onProperty :summationOf ;
+    owl:minCardinality "2"^^xsd:nonNegativeInteger .
