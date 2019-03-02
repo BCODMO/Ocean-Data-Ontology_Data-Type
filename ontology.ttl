@@ -46,17 +46,25 @@ skos:altLabel a owl:AnnotationProperty .
 odo-dt:DataType a owl:Class ;
     rdfs:label "DataType"@en-US ;
     rdfs:comment """A data type can include more meaning beyond the syntax, such as who created the
-  data type, the source standard that the data type derives from,
-  the operations that can be done on datasets of that data type, and
-  typical scientific domains, software programs and/or instruments
-  that use the data type, etc. The intent is that any humans or
-  machines that when they encounter that data type can quickly
-  'understand' or be in a situation to at least 'process' details
-  within the dataset without even downloading that dataset."""@en-US .
+        data type, the source standard that the data type derives from,
+        the operations that can be done on datasets of that data type, and
+        typical scientific domains, software programs and/or instruments
+        that use the data type, etc. The intent is that any humans or
+        machines that when they encounter that data type can quickly
+        'understand' or be in a situation to at least 'process' details
+        within the dataset without even downloading that dataset."""@en-US .
 
 odo-dt:SubjectArea a owl:Class ;
     rdfs:label "SubjectArea"@en-US ;
     rdfs:comment "A certain field of study used to group or filter Data Types"@en-US .
+
+odo-dt:InferredParamter a owl:Class ;
+    rdfs:subClassOf odo:Parameter ;
+    rdfs:label "InferredParamter"@en-US ;
+    rdfs:comment """An inferred parameter is a parameter whoa value is not explicitly recorded in the Dataset, 
+        but that can be inferred based on its data type and related metadata. For example, dataset collected on a Cruise 
+        might not explicitly record the cruise in the dataset, but that it can be inferred through the metadata: 
+        (odo:Dataset -> odo:fromDeployment [ dc:title ])."""@en-US .
 
 #### Object Properties
 
@@ -74,13 +82,15 @@ odo-dt:subjectArea a owl:ObjectProperty ;
 
 odo-dt:extends a owl:ObjectProperty ;
     rdfs:label "extends"@en-US ;
-    rdfs:comment "Extends means that the domain DataType is a specialization of the range DataType by inheriting the range's Parameters but also incluing new Parameters as part of the specialization."@en-US ;
+    rdfs:comment """Extends means that the domain DataType is a specialization of the range DataType 
+        by inheriting the range's Parameters but also incluing new Parameters as part of the specialization."""@en-US ;
     rdfs:domain odo-dt:DataType ;
     rdfs:range odo-dt:DataType .
 
 odo-dt:aggregates a owl:ObjectProperty ;
     rdfs:label "aggregates"@en-US ;
-    rdfs:comment "Aggregates means that the domain DataType is a new DataType that requires at least one instance of the aggregates range."@en-US ;
+    rdfs:comment """Aggregates means that the domain DataType is a new DataType that requires 
+        at least one instance of the aggregates range."""@en-US ;
     rdfs:domain odo-dt:DataType ;
     rdfs:range odo-dt:DataType .
 
@@ -99,14 +109,17 @@ odo-dt:requires a owl:ObjectProperty ;
 
 odo-dt:recommends a owl:ObjectProperty ;
     rdfs:label "recommends"@en-US ;
-    rdfs:comment "Specifies that a DataType recommends that the associated Parameter be present, but does not require it."@en-US ;
+    rdfs:comment """Specifies that a DataType recommends that the associated Parameter be present, 
+        but does not require it."""@en-US ;
     rdfs:domain odo-dt:DataType ;
     rdfs:range odo:Parameter ;
     rdfs:subPropertyOf odo-dt:measures .
 
 odo-dt:specializationOf a owl:ObjectProperty ;
     rdfs:label "specializationOf"@en-US ;
-    rdfs:comment "This parameter is narrower version of its range. It a specialization of its range by because of some detail such as a specific unit of measure or becuase it was observed using a specific instrument."@en-US ;
+    rdfs:comment """This parameter is narrower version of its range. It a specialization of its range 
+        by because of some detail such as a specific unit of measure or becuase it was observed 
+        using a specific instrument."""@en-US ;
     rdfs:domain odo:Parameter ;
     rdfs:range odo:Parameter ;
     rdfs:subPropertyOf rdfs:subClassOf .
@@ -127,7 +140,9 @@ odo-dt:summationOf a owl:DatatypeProperty ;
 
 odo-dt:dataValueFormat a owl:DatatypeProperty ;
     rdfs:label "dataValueFormat"@en-US ;
-    rdfs:comment "A string, indicating a format for the data value that enables correct processing of the value. For example, a date value may have a format such as 'YYYY-MM-DD'. Since the a format specified here are implementation specific, this definition does not enforce any particular range on this property."@en-US ;
+    rdfs:comment """A string, indicating a format for the data value that enables correct processing of the value. 
+        For example, a date value may have a format such as 'YYYY-MM-DD'. Since the a format specified here are 
+        implementation specific, this definition does not enforce any particular range on this property."""@en-US ;
     rdfs:domain odo:Parameter ;
     rdfs:range owl:Thing .
 
@@ -136,7 +151,9 @@ odo-dt:dataValueFormat a owl:DatatypeProperty ;
 
 odo-dt:dataValueDelimiter a owl:DatatypeProperty ;
     rdfs:label "delimiter"@en-US ;
-    rdfs:comment "For parameters whose data value is a list of multiple values, this property defines a string that determines how that value should be parsed into a list of values by specifying the string identifying where the value should be split."@en-US ;
+    rdfs:comment """For parameters whose data value is a list of multiple values, this property defines a string 
+        that determines how that value should be parsed into a list of values by specifying the string identifying 
+        where the value should be split."""@en-US ;
     rdfs:domain odo:Parameter ;
     rdfs:range xsd:string .
 
@@ -155,13 +172,15 @@ odo-dt:CruiseResults a owl:NamedIndividual,
         odo:DataType ;
     rdfs:label "Cruise Results"@en-US ;
     rdfs:comment "A dataset collected from one or more cruises."@en-US ;
+    odo-dt:measures odo-dt:CruiseIdentifier .
 
 ### Parameter ###
 
 odo-dt:Identifier a owl:NamedIndividual,
         odo:Parameter ;
     rdfs:label "Identifier"@en-US ;
-    rdfs:comment "An identifier of some 'thing'. Identifiers can be used as keys between datasets, data files or other data representations."@en-US .
+    rdfs:comment """An identifier of some 'thing'. Identifiers can be used as keys between datasets, 
+        data files or other data representations."""@en-US .
 
 odo-dt:Name a owl:NamedIndividual,
         odo:Parameter ;
@@ -259,6 +278,7 @@ odo-dt:StationIdentifier a owl:NamedIndividual,
 odo-dt:CruiseIdentifier a owl:NamedIndividual,
         odo:Parameter ;
     odo-dt:specializationOf odo-dt:Identifier ;
+    
     rdfs:label "Cruise Identifier"@en-US ;
     rdfs:comment "Representative of a cruise or some other named deployment."@en-US .
 
