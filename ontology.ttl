@@ -430,6 +430,8 @@ odo-dt:TotalIonChromatogram a owl:NamedIndividual,
 odo-dt:datasetCruiseIdentifier a owl:DatatypeProperty ;
     owl:propertyChainAxiom odo-dt:hasCruiseIdentifierPath ;
     odo-dt:inferredParameter odo-dt:CruiseIdentifier ;
+    rdfs:label "datasetCruiseIdentifier"@en-US ;
+    rdfs:comment "Specifies the inferred Cruise Identifier(s) based on the dataset metadata."@en-US ;
     rdfs:domain odo:Dataset ;
     rdfs:range xsd:string .   
 [] a owl:Axiom ;
