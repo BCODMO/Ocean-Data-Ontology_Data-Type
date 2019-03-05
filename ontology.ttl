@@ -219,7 +219,7 @@ odo-dt:Name a owl:NamedIndividual,
 
 odo-dt:Description a owl:NamedIndividual,
         odo:Parameter ;
-    rdfs:label "Dewscription"@en-US ;
+    rdfs:label "Description"@en-US ;
     rdfs:comment "A descirption of a thing."@en-US .
 
 odo-dt:Probability a owl:NamedIndividual,
