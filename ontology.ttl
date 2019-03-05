@@ -199,7 +199,7 @@ odo-dt:Proteomics a owl:NamedIndividual ,
 
 ### Data Types ###
 odo-dt:CruiseResults a owl:NamedIndividual,
-        odo:DataType ;
+        odo-dt:DataType ;
     rdfs:label "Cruise Results"@en-US ;
     rdfs:comment "A dataset collected from one or more cruises."@en-US ;
     odo-dt:measures odo-dt:CruiseIdentifier .
