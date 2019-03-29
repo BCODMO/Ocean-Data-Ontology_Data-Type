@@ -1,0 +1,2213 @@
+@prefix : <http://ocean-data.org/schema/data-type/v1.0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://ocean-data.org/schema/data-type/v1.0/> .
+
+<http://ocean-data.org/schema/data-type/v1.0/> rdf:type owl:Ontology ;
+                                                owl:imports <https://ocean-data.org/schema/ontology.xml> ;
+                                                <http://purl.org/dc/elements/1.1/creator> "Adam Shepherd" ;
+                                                <http://purl.org/dc/elements/1.1/publisher> "Biological and Chemical Oceanography Data Management Office (BCO-DMO)" ;
+                                                <http://purl.org/dc/terms/creator> <http://orcid.org/0000-0003-4486-9448> ;
+                                                <http://purl.org/dc/terms/issued> "2017-09-04"^^xsd:date ;
+                                                <http://purl.org/dc/terms/publisher> <http://lod.bco-dmo.org/id/affiliation/191> ;
+                                                <http://purl.org/dc/terms/source> "https://github.com/BCODMO/Ocean-Data-Ontology_Data-Type"^^xsd:anyURI ;
+                                                rdfs:comment "An ontology for describing data types used by BCO-DMO"@en-us ;
+                                                rdfs:label "Ocean Data Ontology - Data Type Extension"@en-us ;
+                                                rdfs:seeAlso <http://info.deepcarbon.net/schema#DataType> ;
+                                                owl:versionInfo "1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasPart
+<http://purl.org/dc/terms/hasPart> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#About
+rdf:About rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource
+rdf:Resource rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#defintion
+<http://www.w3.org/2004/02/skos/core#defintion> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+<http://www.w3.org/2004/02/skos/core#related> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#wktLiteral
+<http://www.opengis.net/ont/geosparql#wktLiteral> rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML
+rdf:HTML rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://ocean-data.org/schema/archiver
+<http://ocean-data.org/schema/archiver> rdf:type owl:ObjectProperty ,
+                                                 owl:FunctionalProperty ;
+                                        rdfs:domain <http://ocean-data.org/schema/ArchiveRecord> ;
+                                        rdfs:range <http://ocean-data.org/schema/Organization> ;
+                                        rdfs:comment "The Organization acting as the archiver of some research product."@en-us ;
+                                        rdfs:label "archiver"@en-us .
+
+
+###  http://ocean-data.org/schema/archives
+<http://ocean-data.org/schema/archives> rdf:type owl:ObjectProperty ;
+                                        owl:inverseOf <http://ocean-data.org/schema/isArchivedBy> ;
+                                        rdf:type owl:FunctionalProperty ;
+                                        rdfs:domain <http://ocean-data.org/schema/ArchiveRecord> ;
+                                        rdfs:range <http://ocean-data.org/schema/CreativeWork> ;
+                                        rdfs:comment "The CreativeWork archived by some Organization described in this record."@en-us ;
+                                        rdfs:label "archives"@en-us .
+
+
+###  http://ocean-data.org/schema/checksumAlgorithm
+<http://ocean-data.org/schema/checksumAlgorithm> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://ocean-data.org/schema/DigitalDocument> ;
+                                                 rdfs:range owl:Thing ;
+                                                 rdfs:comment "The algorithm of some cryptographic hash"@en-us ;
+                                                 rdfs:label "checksumAlgorithm"@en-us .
+
+
+###  http://ocean-data.org/schema/crossrefRelation
+<http://ocean-data.org/schema/crossrefRelation> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://ocean-data.org/schema/CreativeWorkRelationType> ;
+                                                rdfs:range <http://ocean-data.org/schema/CrossrefRelation> ;
+                                                rdfs:comment "The type of relationship defined by Crossref."@en-us ;
+                                                rdfs:label "crossrefRelation"@en-us .
+
+
+###  http://ocean-data.org/schema/currentState
+<http://ocean-data.org/schema/currentState> rdf:type owl:ObjectProperty ,
+                                                     owl:FunctionalProperty ;
+                                            rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                                            rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <http://www.w3.org/2004/02/skos/core#member> ;
+                                                                                owl:allValuesFrom <http://ocean-data.org/schema/CurrentState>
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ] ;
+                                            rdfs:comment "A term describing the current state of the dataset."@en-us ;
+                                            rdfs:label "currentState"@en-us .
+
+
+###  http://ocean-data.org/schema/dataFile
+<http://ocean-data.org/schema/dataFile> rdf:type owl:ObjectProperty ;
+                                        owl:inverseOf <http://ocean-data.org/schema/serializes> ;
+                                        rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                                        rdfs:range <http://ocean-data.org/schema/DataFile> ;
+                                        rdfs:comment "A data file recording the observations and measurements for a dataset."@en-us ;
+                                        rdfs:label "dataFile"@en-us .
+
+
+###  http://ocean-data.org/schema/datasetType
+<http://ocean-data.org/schema/datasetType> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                                           rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.w3.org/2004/02/skos/core#member> ;
+                                                                               owl:allValuesFrom <http://ocean-data.org/schema/DatasetType>
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                           rdfs:comment "The type of dataset."@en-us ;
+                                           rdfs:label "datasetType"@en-us .
+
+
+###  http://ocean-data.org/schema/forOrganization
+<http://ocean-data.org/schema/forOrganization> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://ocean-data.org/schema/Role> ;
+                                               rdfs:range <http://ocean-data.org/schema/Organization> .
+
+
+###  http://ocean-data.org/schema/fromCollection
+<http://ocean-data.org/schema/fromCollection> rdf:type owl:ObjectProperty ;
+                                              owl:inverseOf <http://ocean-data.org/schema/hasInventory> ;
+                                              rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                                              rdfs:range <http://ocean-data.org/schema/DatasetCollection> .
+
+
+###  http://ocean-data.org/schema/fromDeployment
+<http://ocean-data.org/schema/fromDeployment> rdf:type owl:ObjectProperty ,
+                                                       owl:FunctionalProperty ;
+                                              rdfs:domain <http://ocean-data.org/schema/DeploymentDataset> ;
+                                              rdfs:range <http://ocean-data.org/schema/Deployment> ;
+                                              rdfs:comment " The deployment from which this dataset was collected."@en-us ;
+                                              rdfs:label "fromDeployment"@en-us .
+
+
+###  http://ocean-data.org/schema/fromInstrument
+<http://ocean-data.org/schema/fromInstrument> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                                              rdfs:range <http://ocean-data.org/schema/Instrument> ;
+                                              rdfs:comment "This dataset was collected from an instrument that is located on the platform during this deployment."@en-us ;
+                                              rdfs:label "fromInstrument"@en-us .
+
+
+###  http://ocean-data.org/schema/funded
+<http://ocean-data.org/schema/funded> rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf <http://ocean-data.org/schema/fundedBy> ;
+                                      rdfs:domain <http://ocean-data.org/schema/Award> ;
+                                      rdfs:range [ rdf:type owl:Class ;
+                                                   owl:unionOf ( <http://ocean-data.org/schema/CreativeWork>
+                                                                 <http://ocean-data.org/schema/ResearchActivity>
+                                                               )
+                                                 ] ;
+                                      rdfs:comment "Funded the research actvity or product."@en-us ;
+                                      rdfs:label "funded"@en-us .
+
+
+###  http://ocean-data.org/schema/fundedBy
+<http://ocean-data.org/schema/fundedBy> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain [ rdf:type owl:Class ;
+                                                      owl:unionOf ( <http://ocean-data.org/schema/CreativeWork>
+                                                                    <http://ocean-data.org/schema/ResearchActivity>
+                                                                  )
+                                                    ] ;
+                                        rdfs:range <http://ocean-data.org/schema/Award> ;
+                                        rdfs:comment "Specifies how a research activity or product was funded"@en-us ;
+                                        rdfs:label "fundedBy"@en-us .
+
+
+###  http://ocean-data.org/schema/generatedWork
+<http://ocean-data.org/schema/generatedWork> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://www.w3.org/ns/prov#generated> ;
+                                             rdfs:domain <http://ocean-data.org/schema/ResearchActivity> ;
+                                             rdfs:range <http://ocean-data.org/schema/CreativeWork> ;
+                                             rdfs:comment "A creative work, research product, that was generated due to some research activity."@en-us ;
+                                             rdfs:label "generatedWork"@en-us .
+
+
+###  http://ocean-data.org/schema/hasAgentWithRole
+<http://ocean-data.org/schema/hasAgentWithRole> rdf:type owl:ObjectProperty ;
+                                                owl:inverseOf <http://ocean-data.org/schema/roleAbout> ;
+                                                rdfs:domain [ rdf:type owl:Class ;
+                                                              owl:unionOf ( <http://ocean-data.org/schema/Award>
+                                                                            <http://ocean-data.org/schema/Dataset>
+                                                                            <http://ocean-data.org/schema/Deployment>
+                                                                            <http://ocean-data.org/schema/Organization>
+                                                                            <http://ocean-data.org/schema/ResearchActivity>
+                                                                          )
+                                                            ] ;
+                                                rdfs:range <http://ocean-data.org/schema/Role> ;
+                                                rdfs:comment "Specifies role some agent played on a certain research activity or product."@en-us ;
+                                                rdfs:label "hasAgentWithRole"@en-us .
+
+
+###  http://ocean-data.org/schema/hasAuthoritativePublisher
+<http://ocean-data.org/schema/hasAuthoritativePublisher> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <http://ocean-data.org/schema/CreativeWork> ;
+                                                         rdfs:range <http://ocean-data.org/schema/Agent> ;
+                                                         rdfs:comment "The Agent that is the authoritative source for some Creative Work. Was using dcterms:publisher."@en-us ;
+                                                         rdfs:label "hasAuthoritativePublisher"@en-us .
+
+
+###  http://ocean-data.org/schema/hasAward
+<http://ocean-data.org/schema/hasAward> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain [ rdf:type owl:Class ;
+                                                      owl:unionOf ( <http://ocean-data.org/schema/Dataset>
+                                                                    <http://ocean-data.org/schema/FundingSource>
+                                                                    <http://ocean-data.org/schema/Project>
+                                                                  )
+                                                    ] ;
+                                        rdfs:range <http://ocean-data.org/schema/Award> ;
+                                        rdfs:comment "Whether an activity (Project) or Entity (Dataset or Funding Source) is attached to an award. This should probably be brokenn into different terms - :Dataset 'fundedBy' :Award; :FundingSource 'provesAward' :Award; :Award 'fundsActivity' :Project"@en-us ;
+                                        rdfs:label "hasAward"@en-us ;
+                                        owl:deprecated "true"^^xsd:boolean ;
+                                        <http://www.w3.org/2004/02/skos/core#related> <http://ocean-data.org/schema/fundedBy> ,
+                                                                                      <http://ocean-data.org/schema/providesAward> .
+
+
+###  http://ocean-data.org/schema/hasCoordinatedDeployment
+<http://ocean-data.org/schema/hasCoordinatedDeployment> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <http://ocean-data.org/schema/Deployment> ;
+                                                        rdfs:range <http://ocean-data.org/schema/Deployment> ;
+                                                        rdfs:comment "A disparate deployment that coordinated in conjuction with this subject for data collection"@en-us ;
+                                                        rdfs:label "hasCoordinatedDeployment"@en-us .
+
+
+###  http://ocean-data.org/schema/hasCruiseTrajectory
+<http://ocean-data.org/schema/hasCruiseTrajectory> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://ocean-data.org/schema/Cruise> ;
+                                                   rdfs:range <http://www.opengis.net/ont/geosparql#Feature> ;
+                                                   rdfs:comment "The set of ordered coordinates forming a geometry (usually MultiPoint) representing the path taken by a Cruise."@en-us ;
+                                                   rdfs:label "hasCruiseTrajectory"@en-us .
+
+
+###  http://ocean-data.org/schema/hasDataset
+<http://ocean-data.org/schema/hasDataset> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain [ rdf:type owl:Class ;
+                                                        owl:unionOf ( <http://ocean-data.org/schema/Award>
+                                                                      <http://ocean-data.org/schema/DeploymentDataset>
+                                                                      <http://ocean-data.org/schema/Project>
+                                                                    )
+                                                      ] ;
+                                          rdfs:range <http://ocean-data.org/schema/Dataset> .
+
+
+###  http://ocean-data.org/schema/hasDeploymentDates
+<http://ocean-data.org/schema/hasDeploymentDates> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <http://ocean-data.org/schema/Deployment> ;
+                                                  rdfs:range <http://www.w3.org/2006/time#TemporalEntity> ;
+                                                  rdfs:comment "A date range for the start and end of a deployment"@en-us ;
+                                                  rdfs:label "hasDeploymentDates"@en-us .
+
+
+###  http://ocean-data.org/schema/hasFundingSource
+<http://ocean-data.org/schema/hasFundingSource> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://ocean-data.org/schema/Award> ;
+                                                rdfs:range <http://ocean-data.org/schema/Organization> ;
+                                                rdfs:comment "The source of funding for an award"@en-us ;
+                                                rdfs:label "hasFundingSource"@en-us .
+
+
+###  http://ocean-data.org/schema/hasIdentifier
+<http://ocean-data.org/schema/hasIdentifier> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://ocean-data.org/schema/CreativeWork> ;
+                                             rdfs:range <http://ocean-data.org/schema/Identifier> ;
+                                             rdfs:comment "An identifier for a Creative Work."@en-us .
+
+
+###  http://ocean-data.org/schema/hasInventory
+<http://ocean-data.org/schema/hasInventory> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <http://ocean-data.org/schema/DatasetCollection> ;
+                                            rdfs:range <http://ocean-data.org/schema/Dataset> ;
+                                            rdfs:comment "Defines the Datasets that are part of this collection"@en-us ,
+                                                         "fix" ;
+                                            rdfs:label "hasInventory"@en-us .
+
+
+###  http://ocean-data.org/schema/hasParentProgram
+<http://ocean-data.org/schema/hasParentProgram> rdf:type owl:ObjectProperty ;
+                                                owl:inverseOf <http://ocean-data.org/schema/hasProject> ;
+                                                rdfs:domain <http://ocean-data.org/schema/Project> ;
+                                                rdfs:range <http://ocean-data.org/schema/Program> ;
+                                                rdfs:comment "The Program which made the Project possible"@en-us ;
+                                                rdfs:label "hasParentProgram"@en-us .
+
+
+###  http://ocean-data.org/schema/hasPlatformTitle
+<http://ocean-data.org/schema/hasPlatformTitle> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://ocean-data.org/schema/Platform> ;
+                                                rdfs:range <http://ocean-data.org/schema/PlatformTitle> ;
+                                                rdfs:comment "The title of a Platform"@en-us ;
+                                                rdfs:label "hasPlatformTitle"@en-us .
+
+
+###  http://ocean-data.org/schema/hasProgramDates
+<http://ocean-data.org/schema/hasProgramDates> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://ocean-data.org/schema/Program> ;
+                                               rdfs:range <http://www.w3.org/2006/time#TemporalEntity> ;
+                                               rdfs:comment "A date range for the start and end of a program"@en-us ;
+                                               rdfs:label "hasProgramDates"@en-us .
+
+
+###  http://ocean-data.org/schema/hasProject
+<http://ocean-data.org/schema/hasProject> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <http://ocean-data.org/schema/Program> ;
+                                          rdfs:range <http://ocean-data.org/schema/Project> ;
+                                          rdfs:comment "A Project that is a part of this Program"@en-us ;
+                                          rdfs:label "hasProject"@en-us .
+
+
+###  http://ocean-data.org/schema/hasProjectDates
+<http://ocean-data.org/schema/hasProjectDates> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://ocean-data.org/schema/Project> ;
+                                               rdfs:range <http://www.w3.org/2006/time#TemporalEntity> ;
+                                               rdfs:comment "A date range for the start and end of a project"@en-us ;
+                                               rdfs:label "hasProjectDates"@en-us .
+
+
+###  http://ocean-data.org/schema/hasRole
+<http://ocean-data.org/schema/hasRole> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <http://ocean-data.org/schema/Agent> ;
+                                       rdfs:range <http://ocean-data.org/schema/Role> .
+
+
+###  http://ocean-data.org/schema/hasUnitOfMeasure
+<http://ocean-data.org/schema/hasUnitOfMeasure> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain [ rdf:type owl:Class ;
+                                                              owl:unionOf ( <http://ocean-data.org/schema/DatasetMonitoredProperty>
+                                                                            <http://ocean-data.org/schema/MonitoredProperty>
+                                                                          )
+                                                            ] ;
+                                                rdfs:range <http://ocean-data.org/schema/UnitOfMeasure> ;
+                                                rdfs:comment "The unit of Measure used for a certain MonitoredProperty. In the case of MonitoredProperty where these are conceptual, the unit of measure is considered to the default, or convention, for that property. For DatasetMonitoredProperty, the unit of measure is what was actually used within the Dataset."@en-us ;
+                                                rdfs:label "hasUnitOfMeasure"@en-us .
+
+
+###  http://ocean-data.org/schema/isArchivedBy
+<http://ocean-data.org/schema/isArchivedBy> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <http://ocean-data.org/schema/CreativeWork> ;
+                                            rdfs:range <http://ocean-data.org/schema/ArchiveRecord> ;
+                                            rdfs:comment "An ArchiveRecord that stores soem CreativeWork"@en-us ;
+                                            rdfs:label "isArchivedBy"@en-us .
+
+
+###  http://ocean-data.org/schema/isDeployed
+<http://ocean-data.org/schema/isDeployed> rdf:type owl:ObjectProperty ;
+                                          owl:inverseOf <http://ocean-data.org/schema/ofPlatform> ;
+                                          rdfs:domain <http://ocean-data.org/schema/Platform> ;
+                                          rdfs:range <http://ocean-data.org/schema/Deployment> ;
+                                          rdfs:comment "This Platform was deployed on the Deployment"@en-us ,
+                                                       "fix" ;
+                                          rdfs:label "isDeployed"@en-us .
+
+
+###  http://ocean-data.org/schema/isInstanceOf
+<http://ocean-data.org/schema/isInstanceOf> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://ocean-data.org/schema/DatasetInstrument>
+                                                                        <http://ocean-data.org/schema/DatasetMonitoredProperty>
+                                                                      )
+                                                        ] ;
+                                            rdfs:range [ rdf:type owl:Class ;
+                                                         owl:unionOf ( <http://ocean-data.org/schema/Instrument>
+                                                                       <http://ocean-data.org/schema/MonitoredProperty>
+                                                                     )
+                                                       ] ;
+                                            rdfs:comment "Defines the concept for which the subject is a realized instance."@en-us ;
+                                            rdfs:label "isInstanceOf"@en-us .
+
+
+###  http://ocean-data.org/schema/lastKnownAffiliation
+<http://ocean-data.org/schema/lastKnownAffiliation> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <http://ocean-data.org/schema/Person> ;
+                                                    rdfs:range <http://ocean-data.org/schema/Organization> ;
+                                                    rdfs:comment " The last known organization, or affiliation, for a Person."@en-us ;
+                                                    rdfs:label "lastKnownAffiliation"@en-us .
+
+
+###  http://ocean-data.org/schema/matches
+<http://ocean-data.org/schema/matches> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#exactMatch> ;
+                                       rdf:type owl:SymmetricProperty ;
+                                       rdfs:domain owl:Thing ;
+                                       rdfs:range owl:Thing ;
+                                       rdfs:comment "A symmetric match for linking between instance data of ODO and coreferences in external Linked Data sets.  equivalent to skos:exactMatch and owl:sameAs without the reasoning that makes them inherit each other's properties."@en-us ;
+                                       rdfs:label "matches"@en-us .
+
+
+###  http://ocean-data.org/schema/obsoletedBy
+<http://ocean-data.org/schema/obsoletedBy> rdf:type owl:ObjectProperty ,
+                                                    owl:FunctionalProperty ;
+                                           rdfs:domain owl:Thing ;
+                                           rdfs:range owl:Thing ;
+                                           rdfs:comment "Defines the resource that has replaced this resource."@en-us ;
+                                           rdfs:label "obsoletedBy"@en-us .
+
+
+###  http://ocean-data.org/schema/ofPlatform
+<http://ocean-data.org/schema/ofPlatform> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <http://ocean-data.org/schema/Deployment> ;
+                                          rdfs:range <http://ocean-data.org/schema/Platform> ;
+                                          rdfs:comment "A deployment of a certain Platform"@en-us ;
+                                          rdfs:label "ofPlatforn"@en-us .
+
+
+###  http://ocean-data.org/schema/performedBy
+<http://ocean-data.org/schema/performedBy> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://ocean-data.org/schema/Role> ;
+                                           rdfs:range <http://ocean-data.org/schema/Agent> ;
+                                           rdfs:comment "The Agent performing a certain Role in a research activity or on a research product."@en-us ;
+                                           rdfs:label "performedBy"@en-us .
+
+
+###  http://ocean-data.org/schema/performedRole
+<http://ocean-data.org/schema/performedRole> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://ocean-data.org/schema/Agent> ;
+                                             rdfs:range <http://ocean-data.org/schema/Role> ;
+                                             rdfs:comment "The roles performed by a certain Agent"@en-us ;
+                                             rdfs:label "performedRole"@en-us .
+
+
+###  http://ocean-data.org/schema/producedWork
+<http://ocean-data.org/schema/producedWork> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <http://ocean-data.org/schema/ResearchActivity> ;
+                                            rdfs:range <http://ocean-data.org/schema/CreativeWork> ;
+                                            rdfs:comment "The research activity produced the research product."@en-us ;
+                                            rdfs:label "producedWork"@en-us .
+
+
+###  http://ocean-data.org/schema/providesAward
+<http://ocean-data.org/schema/providesAward> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://ocean-data.org/schema/FundingSource> ;
+                                             rdfs:range <http://ocean-data.org/schema/Award> ;
+                                             rdfs:comment "A FundingSource provides an Award in support of some research activity."@en-us ;
+                                             rdfs:label "providesAward"@en-us .
+
+
+###  http://ocean-data.org/schema/relatedWork
+<http://ocean-data.org/schema/relatedWork> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://ocean-data.org/schema/CreativeWork> ;
+                                           rdfs:range <http://ocean-data.org/schema/CreativeWorkRelation> ;
+                                           rdfs:comment "A relationship between two Creative Works that details how they are related"@en-us ;
+                                           rdfs:label "relatedWork"@en-us .
+
+
+###  http://ocean-data.org/schema/relationshipType
+<http://ocean-data.org/schema/relationshipType> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://ocean-data.org/schema/CreativeWorkRelation> ;
+                                                rdfs:range <http://ocean-data.org/schema/CreativeWorkRelationType> ;
+                                                rdfs:comment "The type of relation between two Creative Works."@en-us ;
+                                                rdfs:label "relationshipType"@en-us .
+
+
+###  http://ocean-data.org/schema/roleAbout
+<http://ocean-data.org/schema/roleAbout> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain <http://ocean-data.org/schema/Role> ;
+                                         rdfs:range [ rdf:type owl:Class ;
+                                                      owl:unionOf ( <http://ocean-data.org/schema/Award>
+                                                                    <http://ocean-data.org/schema/Dataset>
+                                                                    <http://ocean-data.org/schema/Deployment>
+                                                                    <http://ocean-data.org/schema/Organization>
+                                                                    <http://ocean-data.org/schema/ResearchActivity>
+                                                                  )
+                                                    ] ;
+                                         rdfs:comment "The research activity or product of which this role is about. Was using dc:subject"@en-us ;
+                                         rdfs:label "roleAbout"@en-us .
+
+
+###  http://ocean-data.org/schema/roleType
+<http://ocean-data.org/schema/roleType> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <http://ocean-data.org/schema/Role> ;
+                                        rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://www.w3.org/2004/02/skos/core#member> ;
+                                                                            owl:allValuesFrom <http://ocean-data.org/schema/AgentRole>
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ;
+                                        rdfs:comment "The type of Role"@en-us ;
+                                        rdfs:label "roleType"@en-us .
+
+
+###  http://ocean-data.org/schema/serializes
+<http://ocean-data.org/schema/serializes> rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf owl:topObjectProperty ;
+                                          rdfs:domain <http://ocean-data.org/schema/DataFile> ;
+                                          rdfs:range <http://ocean-data.org/schema/Dataset> ;
+                                          rdfs:comment "The Dataset this datafile is a representation of"@en-us ;
+                                          rdfs:label "serializes"@en-us .
+
+
+###  http://ocean-data.org/schema/storesValuesFor
+<http://ocean-data.org/schema/storesValuesFor> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                                               rdfs:range <http://ocean-data.org/schema/DatasetMonitoredProperty> ;
+                                               rdfs:comment "This dataset stores values for the specified DatasetMonitoredProperty"@en-us ;
+                                               rdfs:label "storesValuesFor"@en-us .
+
+
+###  http://ocean-data.org/schema/usesIdentifierScheme
+<http://ocean-data.org/schema/usesIdentifierScheme> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <http://ocean-data.org/schema/Identifier> ;
+                                                    rdfs:range <http://ocean-data.org/schema/IdentifierScheme> ;
+                                                    rdfs:comment "The identifier scheme used by some identifer. this scheme defines the space in which the identifier was minted and should be ultimately have a unqiue value within."@en-us ;
+                                                    rdfs:label "usesIdentifierScheme"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/aggregates
+:aggregates rdf:type owl:ObjectProperty ;
+            rdfs:domain :DataType ;
+            rdfs:range :DataType ;
+            rdfs:comment """Aggregates means that the domain DataType is a new DataType that requires
+        at least one instance of the aggregates range."""@en-us ;
+            rdfs:label "aggregates"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/annotationOf
+:annotationOf rdf:type owl:ObjectProperty ;
+              rdfs:domain <http://ocean-data.org/schema/Parameter> ;
+              rdfs:range <http://ocean-data.org/schema/Parameter> ;
+              rdfs:comment "The defining Parameter is an annotation of the target Parameter"@en-us ;
+              rdfs:label "annotationOf"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/dataType
+:dataType rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+          rdfs:range :DataType ;
+          rdfs:comment "Specifies that a Dataset meets the criteria for a certain DataType."@en-us ;
+          rdfs:label "dataType"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/dependsOn
+:dependsOn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain <http://ocean-data.org/schema/Parameter> ;
+           rdfs:range <http://ocean-data.org/schema/Parameter> ;
+           rdfs:comment "This parameter depends on the existence on another parameter."@en-us ;
+           rdfs:label "dependsOn"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/extends
+:extends rdf:type owl:ObjectProperty ;
+         rdfs:domain :DataType ;
+         rdfs:range :DataType ;
+         rdfs:comment """Extends means that the domain DataType is a specialization of the range DataType
+        by inheriting the range's Parameters but also incluing new Parameters as part of the specialization."""@en-us ;
+         rdfs:label "extends"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/inferredParameter
+:inferredParameter rdf:type owl:ObjectProperty ;
+                   rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                   rdfs:range <http://ocean-data.org/schema/Parameter> ;
+                   rdfs:comment "This inferred parameter stores the value of the parameter in range."@en-us ;
+                   rdfs:label "inferredParameter"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/measures
+:measures rdf:type owl:ObjectProperty ;
+          rdfs:domain :DataType ;
+          rdfs:range <http://ocean-data.org/schema/Parameter> ;
+          rdfs:comment "Specifies that a DataType should include the associated Parameter."@en-us ;
+          rdfs:label "measures"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/recommends
+:recommends rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :measures ;
+            rdfs:domain :DataType ;
+            rdfs:range <http://ocean-data.org/schema/Parameter> ;
+            rdfs:comment """Specifies that a DataType recommends that the associated Parameter be present,
+        but does not require it."""@en-us ;
+            rdfs:label "recommends"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/requires
+:requires rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :measures ;
+          rdfs:domain :DataType ;
+          rdfs:range <http://ocean-data.org/schema/Parameter> ;
+          rdfs:comment "Specifies that a DataType must include the associated Parameter."@en-us ;
+          rdfs:label "requires"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/specializationOf
+:specializationOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain <http://ocean-data.org/schema/Parameter> ;
+                  rdfs:range <http://ocean-data.org/schema/Parameter> ;
+                  rdfs:comment """This parameter is narrower version of its range. It a specialization of its range
+        by because of some detail such as a specific unit of measure or becuase it was observed
+        using a specific instrument."""@en-us ;
+                  rdfs:label "specializationOf"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/subjectArea
+:subjectArea rdf:type owl:ObjectProperty ;
+             rdfs:domain :DataType ;
+             rdfs:range :SubjectArea ;
+             rdfs:comment "Specifies that the SubjectArea pertains to the observations made for a DataType."@en-us ;
+             rdfs:label "subjectArea"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/summationOf
+:summationOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :dependsOn ;
+             rdfs:domain <http://ocean-data.org/schema/Parameter> ;
+             rdfs:range <http://ocean-data.org/schema/Parameter> ;
+             rdfs:comment "The value of this Parameter is the summation of Parameters attached by this property."@en-us ;
+             rdfs:label "summationOf"@en-us .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+<http://www.w3.org/2004/02/skos/core#exactMatch> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#member
+<http://www.w3.org/2004/02/skos/core#member> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/prov#generated
+<http://www.w3.org/ns/prov#generated> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/prov#onBehalfOf
+<http://www.w3.org/ns/prov#onBehalfOf> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://ocean-data.org/schema/abstract
+<http://ocean-data.org/schema/abstract> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "A description of some research activity or research product."@en-us ;
+                                        rdfs:label "abstract"@en-us .
+
+
+###  http://ocean-data.org/schema/alternateName
+<http://ocean-data.org/schema/alternateName> rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain <http://ocean-data.org/schema/Platform> ;
+                                             rdfs:range xsd:string ;
+                                             rdfs:comment "An alternate name for some thing"@en-us ;
+                                             rdfs:label "alternateName"@en-us .
+
+
+###  http://ocean-data.org/schema/archivedDate
+<http://ocean-data.org/schema/archivedDate> rdf:type owl:DatatypeProperty ,
+                                                     owl:FunctionalProperty ;
+                                            rdfs:domain <http://ocean-data.org/schema/ArchiveRecord> ;
+                                            rdfs:range xsd:date ;
+                                            rdfs:comment "The date an ArchiveRecord was minted"@en-us ;
+                                            rdfs:label "archivedDate"@en-us .
+
+
+###  http://ocean-data.org/schema/bytesize
+<http://ocean-data.org/schema/bytesize> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <http://ocean-data.org/schema/DigitalDocument> ;
+                                        rdfs:range xsd:long ;
+                                        rdfs:comment "The bytesize of some DigitalDocument"@en-us ;
+                                        rdfs:label "bytesize"@en-us .
+
+
+###  http://ocean-data.org/schema/checksum
+<http://ocean-data.org/schema/checksum> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <http://ocean-data.org/schema/DigitalDocument> ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "The checksum value of some DigitalDocument for some checksum algorithm"@en-us ;
+                                        rdfs:label "checksum"@en-us .
+
+
+###  http://ocean-data.org/schema/citationText
+<http://ocean-data.org/schema/citationText> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <http://ocean-data.org/schema/CreativeWork> ;
+                                            rdfs:range xsd:string ;
+                                            rdfs:comment "The citation text for a Creative Work."@en-us ;
+                                            rdfs:label "citationText"@en-us .
+
+
+###  http://ocean-data.org/schema/conversionDescription
+<http://ocean-data.org/schema/conversionDescription> rdf:type owl:DatatypeProperty ,
+                                                              owl:FunctionalProperty ;
+                                                     rdfs:domain <http://ocean-data.org/schema/DatasetMonitoredProperty> ;
+                                                     rdfs:range xsd:string ;
+                                                     rdfs:comment "Describes how the values can be converted."@en-us ;
+                                                     rdfs:label "conversionDescription"@en-us .
+
+
+###  http://ocean-data.org/schema/datasetTitle
+<http://ocean-data.org/schema/datasetTitle> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                                            rdfs:range xsd:string ;
+                                            rdfs:comment "the title of a Dataset. was using dc:title or dct:title"@en-us ;
+                                            rdfs:label "datasetTitle"@en-us .
+
+
+###  http://ocean-data.org/schema/downloadUrl
+<http://ocean-data.org/schema/downloadUrl> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain <http://ocean-data.org/schema/DigitalDocument> ;
+                                           rdfs:range xsd:anyURI ;
+                                           rdfs:comment "The URL at which you can download some DigitalDocument"@en-us ;
+                                           rdfs:label "downloadUrl"@en-us .
+
+
+###  http://ocean-data.org/schema/firstName
+<http://ocean-data.org/schema/firstName> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <http://ocean-data.org/schema/Person> ;
+                                         rdfs:range xsd:string ;
+                                         rdfs:comment "First name of a Person"@en-us ;
+                                         rdfs:label "firstName"@en-us .
+
+
+###  http://ocean-data.org/schema/fullName
+<http://ocean-data.org/schema/fullName> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <http://ocean-data.org/schema/Person> ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "Full name of a Person"@en-us ;
+                                        rdfs:label "fullName"@en-us .
+
+
+###  http://ocean-data.org/schema/hasAcquisitionDescription
+<http://ocean-data.org/schema/hasAcquisitionDescription> rdf:type owl:DatatypeProperty ,
+                                                                  owl:FunctionalProperty ;
+                                                         rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                                                         rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                      owl:unionOf ( rdf:HTML
+                                                                                    xsd:string
+                                                                                  )
+                                                                    ] ;
+                                                         rdfs:comment "A textual description of the methodology used to acquire the data."@en-us ;
+                                                         rdfs:label "hasAcquisitionDescription"@en-us .
+
+
+###  http://ocean-data.org/schema/hasAcronym
+<http://ocean-data.org/schema/hasAcronym> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain [ rdf:type owl:Class ;
+                                                        owl:unionOf ( <http://ocean-data.org/schema/FundingSource>
+                                                                      <http://ocean-data.org/schema/Organization>
+                                                                      <http://ocean-data.org/schema/Program>
+                                                                      <http://ocean-data.org/schema/Project>
+                                                                    )
+                                                      ] ;
+                                          rdfs:range xsd:string ;
+                                          rdfs:comment "An acronym, or shortened name, for a Thing."@en-us ;
+                                          rdfs:label "hasAcronym"@en-us .
+
+
+###  http://ocean-data.org/schema/hasAwardNumber
+<http://ocean-data.org/schema/hasAwardNumber> rdf:type owl:DatatypeProperty ,
+                                                       owl:FunctionalProperty ;
+                                              rdfs:domain <http://ocean-data.org/schema/Award> ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:comment "The award Number, or Identifier, for an award. Should be reified into an Identifier resource"@en-us ;
+                                              rdfs:label "hasAwardNumber"@en-us .
+
+
+###  http://ocean-data.org/schema/hasAwardURL
+<http://ocean-data.org/schema/hasAwardURL> rdf:type owl:DatatypeProperty ,
+                                                    owl:FunctionalProperty ;
+                                           rdfs:domain <http://ocean-data.org/schema/Award> ;
+                                           rdfs:range xsd:anyURI ;
+                                           rdfs:comment "The url to some landing page at, or authoritative for, the funding source providing the award"@en-us ;
+                                           rdfs:label "hasAwardURL"@en-us .
+
+
+###  http://ocean-data.org/schema/hasBriefDescription
+<http://ocean-data.org/schema/hasBriefDescription> rdf:type owl:DatatypeProperty ,
+                                                            owl:FunctionalProperty ;
+                                                   rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                                                   rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                owl:unionOf ( rdf:HTML
+                                                                              xsd:string
+                                                                            )
+                                                              ] ;
+                                                   rdfs:comment "A brief description of a Dataset"@en-us ;
+                                                   rdfs:label "hasBriefDescription"@en-us .
+
+
+###  http://ocean-data.org/schema/hasDataManagementPlan
+<http://ocean-data.org/schema/hasDataManagementPlan> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <http://ocean-data.org/schema/Project> ;
+                                                     rdfs:range xsd:anyURI ;
+                                                     rdfs:comment "Specifies the URL to the Project's Data Management Plan."@en-us ,
+                                                                  "fix" ;
+                                                     rdfs:label "hasDataManagementPlan"@en-us .
+
+
+###  http://ocean-data.org/schema/hasDatasetDescription
+<http://ocean-data.org/schema/hasDatasetDescription> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                                                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                  owl:unionOf ( rdf:HTML
+                                                                                xsd:string
+                                                                              )
+                                                                ] ;
+                                                     rdfs:comment "A description of the dataset."@en-us ;
+                                                     rdfs:label "hasDatasetDescription"@en-us .
+
+
+###  http://ocean-data.org/schema/hasDatasetURL
+<http://ocean-data.org/schema/hasDatasetURL> rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                                             rdfs:range xsd:anyURI ;
+                                             rdfs:comment "Specifies the URL to inspect the data."@en-us ;
+                                             rdfs:label "hasDatasetURL"@en-us .
+
+
+###  http://ocean-data.org/schema/hasDeploymentDescription
+<http://ocean-data.org/schema/hasDeploymentDescription> rdf:type owl:DatatypeProperty ,
+                                                                 owl:FunctionalProperty ;
+                                                        rdfs:domain <http://ocean-data.org/schema/Deployment> ;
+                                                        rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                     owl:unionOf ( rdf:HTML
+                                                                                   xsd:string
+                                                                                 )
+                                                                   ] ;
+                                                        rdfs:comment "Specifies the URL to inspect the data."@en-us ;
+                                                        rdfs:label "hasDeploymentDescription"@en-us .
+
+
+###  http://ocean-data.org/schema/hasLocation
+<http://ocean-data.org/schema/hasLocation> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain [ rdf:type owl:Class ;
+                                                         owl:unionOf ( <http://ocean-data.org/schema/Dataset>
+                                                                       <http://ocean-data.org/schema/Deployment>
+                                                                       <http://ocean-data.org/schema/ResearchActivity>
+                                                                     )
+                                                       ] ;
+                                           rdfs:range xsd:string ;
+                                           rdfs:comment "A textual description of some location. Typically its a generic description, and this should probably be made into an ObjectProperty."@en-us ,
+                                                        "fix" ;
+                                           rdfs:label "hasLocation"@en-us .
+
+
+###  http://ocean-data.org/schema/hasLogo
+<http://ocean-data.org/schema/hasLogo> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain [ rdf:type owl:Class ;
+                                                     owl:unionOf ( <http://ocean-data.org/schema/Organization>
+                                                                   <http://ocean-data.org/schema/ResearchActivity>
+                                                                 )
+                                                   ] ;
+                                       rdfs:range xsd:anyURI ;
+                                       rdfs:comment "A URL to an image file of a log for som research activity or organization."@en-us ;
+                                       rdfs:label "hasLogo"@en-us ;
+                                       <http://www.w3.org/2004/02/skos/core#related> <http://ocean-data.org/schema/hasSmallLogoURL> .
+
+
+###  http://ocean-data.org/schema/hasLogoURL
+<http://ocean-data.org/schema/hasLogoURL> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain [ rdf:type owl:Class ;
+                                                        owl:unionOf ( <http://ocean-data.org/schema/Organization>
+                                                                      <http://ocean-data.org/schema/ResearchActivity>
+                                                                    )
+                                                      ] ;
+                                          rdfs:range xsd:anyURI ;
+                                          rdfs:comment "The official logo URL"@en-us ;
+                                          rdfs:label "hasLogoURL"@en-us ;
+                                          <http://www.w3.org/2004/02/skos/core#related> <http://ocean-data.org/schema/hasSmallLogoURL> .
+
+
+###  http://ocean-data.org/schema/hasNoDataValue
+<http://ocean-data.org/schema/hasNoDataValue> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://ocean-data.org/schema/MonitoredProperty> ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:comment "The value to expect in a Dataset when there was no data for the given record."@en-us ;
+                                              rdfs:label "hasNoDataValue"@en-us .
+
+
+###  http://ocean-data.org/schema/hasOrganizationSubName
+<http://ocean-data.org/schema/hasOrganizationSubName> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:domain <http://ocean-data.org/schema/Organization> ;
+                                                      rdfs:range xsd:string ;
+                                                      rdfs:comment "The sub-name of some organization"@en-us ;
+                                                      rdfs:label "hasOrganizationSubName"@en-us .
+
+
+###  http://ocean-data.org/schema/hasParameterShortDescription
+<http://ocean-data.org/schema/hasParameterShortDescription> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                                            rdfs:domain <http://ocean-data.org/schema/MonitoredProperty> ;
+                                                            rdfs:range xsd:string ;
+                                                            rdfs:comment "A short description of some monitored property"@en-us ;
+                                                            rdfs:label "hasParameterShortDescription"@en-us .
+
+
+###  http://ocean-data.org/schema/hasParameterShortName
+<http://ocean-data.org/schema/hasParameterShortName> rdf:type owl:DatatypeProperty ,
+                                                              owl:FunctionalProperty ;
+                                                     rdfs:domain <http://ocean-data.org/schema/MonitoredProperty> ;
+                                                     rdfs:range xsd:string ;
+                                                     rdfs:comment "A short name to describe a monitored property"@en-us ;
+                                                     rdfs:label "hasParameterShortName"@en-us .
+
+
+###  http://ocean-data.org/schema/hasPlatformURL
+<http://ocean-data.org/schema/hasPlatformURL> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://ocean-data.org/schema/Platform> ;
+                                              rdfs:range xsd:anyURI ;
+                                              rdfs:comment "The URL to the authoritative description of a Platform"@en-us ;
+                                              rdfs:label "hasPlatformUrl"@en-us .
+
+
+###  http://ocean-data.org/schema/hasProcessingDescription
+<http://ocean-data.org/schema/hasProcessingDescription> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                                        rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                                                        rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                     owl:unionOf ( rdf:HTML
+                                                                                   xsd:string
+                                                                                 )
+                                                                   ] ;
+                                                        rdfs:comment "The processing description for some Dataset"@en-us ;
+                                                        rdfs:label "hasProcessingDescription"@en-us .
+
+
+###  http://ocean-data.org/schema/hasProgramDescription
+<http://ocean-data.org/schema/hasProgramDescription> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <http://ocean-data.org/schema/Program> ;
+                                                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                  owl:unionOf ( rdf:HTML
+                                                                                xsd:string
+                                                                              )
+                                                                ] ;
+                                                     rdfs:comment "A description of a Program."@en-us ,
+                                                                  "hasProgramDescription"@en-us .
+
+
+###  http://ocean-data.org/schema/hasProjectDescription
+<http://ocean-data.org/schema/hasProjectDescription> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <http://ocean-data.org/schema/Project> ;
+                                                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                  owl:unionOf ( rdf:HTML
+                                                                                xsd:string
+                                                                              )
+                                                                ] ;
+                                                     rdfs:comment "The description of some Project"@en-us ;
+                                                     rdfs:label "hasProjectDescription"@en-us .
+
+
+###  http://ocean-data.org/schema/hasReportURL
+<http://ocean-data.org/schema/hasReportURL> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <http://ocean-data.org/schema/Deployment> ;
+                                            rdfs:range xsd:anyURI ;
+                                            rdfs:comment "The deployment report URL describing the activity of the deployment."@en-us ;
+                                            rdfs:label "hasReportURL"@en-us .
+
+
+###  http://ocean-data.org/schema/hasRoleWeight
+<http://ocean-data.org/schema/hasRoleWeight> rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain <http://ocean-data.org/schema/AgentRole> ;
+                                             rdfs:range xsd:int ;
+                                             rdfs:comment "The sort order in order of importance or meaning or rank."@en-us ;
+                                             rdfs:label "hasRoleWeight"@en-us .
+
+
+###  http://ocean-data.org/schema/hasSerialNumber
+<http://ocean-data.org/schema/hasSerialNumber> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <http://ocean-data.org/schema/DatasetInstrument> ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:comment "the serial number for some instrument used in collecting data."@en-us ;
+                                               rdfs:label "hasSerialNumber"@en-us .
+
+
+###  http://ocean-data.org/schema/hasSmallLogoURL
+<http://ocean-data.org/schema/hasSmallLogoURL> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                               rdfs:domain <http://ocean-data.org/schema/ResearchActivity> ;
+                                               rdfs:range xsd:anyURI ;
+                                               rdfs:comment "A URL to some smallish image file"@en-us ;
+                                               rdfs:label "hasSmallLogoURL"@en-us .
+
+
+###  http://ocean-data.org/schema/hasSynonym
+<http://ocean-data.org/schema/hasSynonym> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <http://ocean-data.org/schema/Deployment> ;
+                                          rdfs:range xsd:string ;
+                                          rdfs:label "hasSynonym"@en-us ,
+                                                     "the synonym for seom Deployment"@en-us .
+
+
+###  http://ocean-data.org/schema/honorific
+<http://ocean-data.org/schema/honorific> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <http://ocean-data.org/schema/Person> ;
+                                         rdfs:range xsd:string ;
+                                         rdfs:comment "Honorific for a Person."@en-us ;
+                                         rdfs:label "honorific"@en-us .
+
+
+###  http://ocean-data.org/schema/identifierValue
+<http://ocean-data.org/schema/identifierValue> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <http://ocean-data.org/schema/Identifier> ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:comment "The identifier's unqiue value within some scheme or domain."@en-us ;
+                                               rdfs:label "identifierValue"@en-us .
+
+
+###  http://ocean-data.org/schema/issueDate
+<http://ocean-data.org/schema/issueDate> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                                         rdfs:range xsd:date ;
+                                         rdfs:comment "The date which mints the specific version of a Dataset."@en-us ;
+                                         rdfs:label "issueDate"@en-us .
+
+
+###  http://ocean-data.org/schema/lastName
+<http://ocean-data.org/schema/lastName> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <http://ocean-data.org/schema/Person> ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "Last name of a Person"@en-us ;
+                                        rdfs:label "lastName"@en-us .
+
+
+###  http://ocean-data.org/schema/middleName
+<http://ocean-data.org/schema/middleName> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <http://ocean-data.org/schema/Person> ;
+                                          rdfs:range xsd:string ;
+                                          rdfs:comment "Middle name of a person"@en-us ;
+                                          rdfs:label "middleName"@en-us .
+
+
+###  http://ocean-data.org/schema/mimetype
+<http://ocean-data.org/schema/mimetype> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <http://ocean-data.org/schema/DigitalDocument> ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "The mimetype for some DigitalDocument"@en-us ,
+                                                     "fix" ;
+                                        rdfs:label "mimetype"@en-us .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://ocean-data.org/schema/mimetype> ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "fix" ;
+   rdfs:comment "should this be a controlled vocabulary?"@en-us
+ ] .
+
+
+###  http://ocean-data.org/schema/nickname
+<http://ocean-data.org/schema/nickname> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <http://ocean-data.org/schema/Person> ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "Nickname, or preferred name, of a Person"@en-us ;
+                                        rdfs:label "nickname"@en-us .
+
+
+###  http://ocean-data.org/schema/releaseDate
+<http://ocean-data.org/schema/releaseDate> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                                           rdfs:range xsd:date ;
+                                           rdfs:comment "The date the dataset will be available. Useful for reporting when a restricted dataset will become available."@en-us ;
+                                           rdfs:label "releaseDate"@en-us .
+
+
+###  http://ocean-data.org/schema/requiresConversion
+<http://ocean-data.org/schema/requiresConversion> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <http://ocean-data.org/schema/DatasetMonitoredProperty> ;
+                                                  rdfs:range xsd:boolean ;
+                                                  rdfs:comment "The values in the dataset for this property need to be converted."@en-us ;
+                                                  rdfs:label "requiresConversion"@en-us .
+
+
+###  http://ocean-data.org/schema/restricted
+<http://ocean-data.org/schema/restricted> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                                          rdfs:range xsd:boolean ;
+                                          rdfs:comment "Is the dataset restricted for access by the public."@en-us ;
+                                          rdfs:label "restricted"@en-us .
+
+
+###  http://ocean-data.org/schema/validated
+<http://ocean-data.org/schema/validated> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                                         rdfs:range xsd:boolean ;
+                                         rdfs:comment "Has the dataset been validated by the PI."@en-us ;
+                                         rdfs:label "validated"@en-us .
+
+
+###  http://ocean-data.org/schema/versionLabel
+<http://ocean-data.org/schema/versionLabel> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <http://ocean-data.org/schema/Dataset> ;
+                                            rdfs:range xsd:string ;
+                                            rdfs:comment "An string signifying the version of the dataset."@en-us ;
+                                            rdfs:label "versionLabel"@en-us .
+
+
+###  http://ocean-data.org/schema/webpage
+<http://ocean-data.org/schema/webpage> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain owl:Thing ;
+                                       rdfs:range xsd:anyURI ;
+                                       rdfs:comment "The canonical URL to the HTML page"@en-us ;
+                                       rdfs:label "webpage"@en-us .
+
+
+###  http://ocean-data.org/schema/wktLiteral
+<http://ocean-data.org/schema/wktLiteral> rdf:type owl:DatatypeProperty ;
+                                          rdfs:subPropertyOf <http://www.opengis.net/ont/geosparql#asWKT> ;
+                                          rdfs:domain [ rdf:type owl:Class ;
+                                                        owl:unionOf ( <http://ocean-data.org/schema/Dataset>
+                                                                      <http://ocean-data.org/schema/Deployment>
+                                                                    )
+                                                      ] ;
+                                          rdfs:range <http://www.opengis.net/ont/geosparql#wktLiteral> ;
+                                          rdfs:comment "A WKT representation of a geometry to use when avoiding Virtuoso's geometry validation."@en-us ;
+                                          rdfs:label "wktLiteral"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/dataValueDelimiter
+:dataValueDelimiter rdf:type owl:DatatypeProperty ;
+                    rdfs:domain <http://ocean-data.org/schema/Parameter> ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment """For parameters whose data value is a list of multiple values, this property defines a string
+        that determines how that value should be parsed into a list of values by specifying the string identifying
+        where the value should be split."""@en-us ;
+                    rdfs:label "delimiter"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/dataValueFormat
+:dataValueFormat rdf:type owl:DatatypeProperty ;
+                 rdfs:domain <http://ocean-data.org/schema/Parameter> ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "A string, indicating a format for the data value that enables correct processing of the value. For example, a date value may have a format such as 'YYYY-MM-DD'. Since the a format specified here are implementation specific, this definition does not enforce any particular range on this property."@en-us ;
+                 rdfs:label "dataValueFormat"@en-us .
+
+
+###  http://www.opengis.net/ont/geosparql#asWKT
+<http://www.opengis.net/ont/geosparql#asWKT> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://ocean-data.org/schema/Agent
+<http://ocean-data.org/schema/Agent> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+                                     rdfs:comment "A Person or Organization that performs some role within some period of time"@en-us ;
+                                     rdfs:label "Agent"@en-us .
+
+
+###  http://ocean-data.org/schema/AgentRole
+<http://ocean-data.org/schema/AgentRole> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                         rdfs:comment "The Role performed by some agent."@en-us ;
+                                         rdfs:label "Agent Role"@en-us .
+
+
+###  http://ocean-data.org/schema/Aircraft
+<http://ocean-data.org/schema/Aircraft> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://ocean-data.org/schema/Vehicle> ;
+                                        rdfs:comment "An aircraft."@en-us ;
+                                        rdfs:label "Aircraft"@en-us .
+
+
+###  http://ocean-data.org/schema/ArchiveRecord
+<http://ocean-data.org/schema/ArchiveRecord> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                                             rdfs:comment "A record describing a version of a Dataset in some Archive."@en-us ;
+                                             rdfs:label "Archive Record"@en-us .
+
+
+###  http://ocean-data.org/schema/AutonomousUnderwaterVehicle
+<http://ocean-data.org/schema/AutonomousUnderwaterVehicle> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://ocean-data.org/schema/UnmannedSubmarine> ;
+                                                           rdfs:comment "AUV"@en-us ;
+                                                           rdfs:label "AUV"@en-us .
+
+
+###  http://ocean-data.org/schema/Award
+<http://ocean-data.org/schema/Award> rdf:type owl:Class ;
+                                     rdfs:comment "A funding award provided by an Funding Source (Organization) to a Project. This Award may fund Datasets."@en-us ;
+                                     rdfs:label "Award"@en-us .
+
+
+###  http://ocean-data.org/schema/CreativeWork
+<http://ocean-data.org/schema/CreativeWork> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                                            rdfs:comment "The base class for any research product generated by some activity attributed to some Agent (example: Dataset, Publication, document, etc)."@en-us ;
+                                            rdfs:label "Creative Work"@en-us .
+
+
+###  http://ocean-data.org/schema/CreativeWorkRelation
+<http://ocean-data.org/schema/CreativeWorkRelation> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                                                    rdfs:comment "A relationship between two CreativeWorks"@en-us ;
+                                                    rdfs:label "CreativeWork Relation"@en-us .
+
+
+###  http://ocean-data.org/schema/CreativeWorkRelationType
+<http://ocean-data.org/schema/CreativeWorkRelationType> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                        rdfs:comment "Defines the type of relationship between two CreativeWorks such as Methods Paper, Results Paper, Different Version of the Data, etc"@en-us ;
+                                                        rdfs:label "CreativeWork Relation Type"@en-us .
+
+
+###  http://ocean-data.org/schema/CrossrefRelation
+<http://ocean-data.org/schema/CrossrefRelation> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                                                rdfs:comment "Defines The Crossref-specific elements of a relation between two CreativeWorks"@en-us ;
+                                                rdfs:label "Crossref Relation"@en-us .
+
+
+###  http://ocean-data.org/schema/Cruise
+<http://ocean-data.org/schema/Cruise> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://ocean-data.org/schema/Deployment> ;
+                                      rdfs:comment "A Vessel is deployed during a specific duration of time over a specific spacial coverage."@en-us ;
+                                      rdfs:label "Cruise"@en-us .
+
+
+###  http://ocean-data.org/schema/CurrentState
+<http://ocean-data.org/schema/CurrentState> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                            rdfs:comment "A controlled vocaublary of current states for a dataset"@en-us ;
+                                            rdfs:label "Current State"@en-us .
+
+
+###  http://ocean-data.org/schema/DataFile
+<http://ocean-data.org/schema/DataFile> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://ocean-data.org/schema/DigitalDocument> ;
+                                        rdfs:comment "A file that records data for some Dataset."@en-us ;
+                                        rdfs:label "Data File"@en-us .
+
+
+###  http://ocean-data.org/schema/DataManagementPlan
+<http://ocean-data.org/schema/DataManagementPlan> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://ocean-data.org/schema/DigitalDocument> ;
+                                                  rdfs:comment "A document that details a plan for managing data as a result of some research activity."@en-us ;
+                                                  rdfs:label "Data Management Plan"@en-us .
+
+
+###  http://ocean-data.org/schema/Dataset
+<http://ocean-data.org/schema/Dataset> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://ocean-data.org/schema/CreativeWork> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://ocean-data.org/schema/releaseDate> ;
+                                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://ocean-data.org/schema/restricted> ;
+                                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://ocean-data.org/schema/validated> ;
+                                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ;
+                                       rdfs:comment "A super class for discovering any type of oceanographic dataset."@en-us ;
+                                       rdfs:label "Dataset"@en-us .
+
+
+###  http://ocean-data.org/schema/DatasetCollection
+<http://ocean-data.org/schema/DatasetCollection> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://ocean-data.org/schema/Dataset> ;
+                                                 rdfs:comment "A collection of one or more Datasets. This was primarily used by the large Programs JGOFS and GLOBEC where it was valuable to annotate datasets by which deployment they belonged to. The same data observations made over multiple cruises would be have a DatasetCollection of multiple DeploymentDataset instances."@en-us ;
+                                                 rdfs:label "Dataset Collection"@en-us .
+
+
+###  http://ocean-data.org/schema/DatasetInstrument
+<http://ocean-data.org/schema/DatasetInstrument> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://ocean-data.org/schema/isInstanceOf> ;
+                                                                   owl:allValuesFrom <http://ocean-data.org/schema/Instrument>
+                                                                 ] ;
+                                                 rdfs:comment "odo:DatasetInstrument is an instance of a odo:Instrument but with project-specific label and definition known by the researcher."@en-us ;
+                                                 rdfs:label "Dataset Instrument"@en-us .
+
+
+###  http://ocean-data.org/schema/DatasetMonitoredProperty
+<http://ocean-data.org/schema/DatasetMonitoredProperty> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://ocean-data.org/schema/isInstanceOf> ;
+                                                                          owl:allValuesFrom <http://ocean-data.org/schema/MonitoredProperty>
+                                                                        ] ;
+                                                        rdfs:comment "odo:DatasetMonitoredProperty is an instance of a odo:MonitoredProperty but with project-specific label and definition known by the researcher."@en-us ;
+                                                        rdfs:label "Dataset Property"@en-us .
+
+
+###  http://ocean-data.org/schema/DatasetType
+<http://ocean-data.org/schema/DatasetType> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                           rdfs:comment "The type of Dataset. Can have multiple types. Could be defined by a group of parameters or the type sof platofrm used, etc."@en-us ;
+                                           rdfs:label "Dataset Type"@en-us .
+
+
+###  http://ocean-data.org/schema/Deployment
+<http://ocean-data.org/schema/Deployment> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://ocean-data.org/schema/ofPlatform> ;
+                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                            owl:onClass <http://ocean-data.org/schema/Platform>
+                                                          ] ;
+                                          rdfs:comment "A platform is deployed during a specific duration of time over a specific spacial coverage. For example, a boat is a platform. That boat is deployed (sent on a cruise) in order to collect data."@en-us ;
+                                          rdfs:label "Deployment"@en-us .
+
+
+###  http://ocean-data.org/schema/DeploymentDataset
+<http://ocean-data.org/schema/DeploymentDataset> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://ocean-data.org/schema/Dataset> ;
+                                                 rdfs:comment "A deployment dataset is a dataset that is collected on a specific deployment of a platform from a specific instrument on that platform."@en-us ;
+                                                 rdfs:label "Deployment Dataset"@en-us .
+
+
+###  http://ocean-data.org/schema/DeploymentDatasetCollection
+<http://ocean-data.org/schema/DeploymentDatasetCollection> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://ocean-data.org/schema/DatasetCollection> ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://ocean-data.org/schema/hasInventory> ;
+                                                                             owl:allValuesFrom <http://ocean-data.org/schema/DeploymentDataset>
+                                                                           ] ;
+                                                           rdfs:comment "A collection of one or more DeploymentDatssets."@en-us ;
+                                                           rdfs:label "DeploymentDatasetCollection"@en-us .
+
+
+###  http://ocean-data.org/schema/DigitalDocument
+<http://ocean-data.org/schema/DigitalDocument> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://ocean-data.org/schema/CreativeWork> ;
+                                               rdfs:comment "An electronic file or document."@en-us ;
+                                               rdfs:label "Digital Document"@en-us .
+
+
+###  http://ocean-data.org/schema/Dock
+<http://ocean-data.org/schema/Dock> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://ocean-data.org/schema/StationaryPlatform> ;
+                                    rdfs:comment "Dock"@en-us ;
+                                    rdfs:label "Dock"@en-us .
+
+
+###  http://ocean-data.org/schema/Drifter
+<http://ocean-data.org/schema/Drifter> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://ocean-data.org/schema/Platform> ;
+                                       rdfs:comment "Drifter"@en-us ;
+                                       rdfs:label "Drifter"@en-us .
+
+
+###  http://ocean-data.org/schema/Float
+<http://ocean-data.org/schema/Float> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://ocean-data.org/schema/Platform> ;
+                                     rdfs:comment "Float"@en-us ;
+                                     rdfs:label "Float"@en-us .
+
+
+###  http://ocean-data.org/schema/FundingSource
+<http://ocean-data.org/schema/FundingSource> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://ocean-data.org/schema/Organization> ;
+                                             rdfs:comment "An Organization that provides funding Awards to a Project."@en-us ;
+                                             rdfs:label "Funding Source"@en-us .
+
+
+###  http://ocean-data.org/schema/Glider
+<http://ocean-data.org/schema/Glider> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://ocean-data.org/schema/Platform> ;
+                                      rdfs:comment "Glider"@en-us ;
+                                      rdfs:label "Glider"@en-us .
+
+
+###  http://ocean-data.org/schema/GrantAward
+<http://ocean-data.org/schema/GrantAward> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://ocean-data.org/schema/Award> ;
+                                          rdfs:comment "An award made to one or more Agents to perform some Research Activity"@en-us ;
+                                          rdfs:label "Grant Award"@en-us .
+
+
+###  http://ocean-data.org/schema/Identifier
+<http://ocean-data.org/schema/Identifier> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                                          rdfs:comment "An unique value in some domain that identifies the applied thing"@en-us ;
+                                          rdfs:label "Identifier"@en-us .
+
+
+###  http://ocean-data.org/schema/IdentifierScheme
+<http://ocean-data.org/schema/IdentifierScheme> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                rdfs:comment "A scheme or domain for which an Identifier value uniquely identifies some thing. (example: DOI, ARK, ISBN, Handle, URI, etc)"@en-us ;
+                                                rdfs:label "Identifier Scheme"@en-us .
+
+
+###  http://ocean-data.org/schema/Instrument
+<http://ocean-data.org/schema/Instrument> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                          rdfs:comment "A pyshical device used to measure, gather, or collect data."@en-us ;
+                                          rdfs:label "Instrument"@en-us .
+
+
+###  http://ocean-data.org/schema/InterCrossrefRelation
+<http://ocean-data.org/schema/InterCrossrefRelation> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://ocean-data.org/schema/CrossrefRelation> ;
+                                                     rdfs:comment "Used to describe relations between items that are not the same work."@en-us ;
+                                                     rdfs:label "Inter Crossref Relation"@en-us .
+
+
+###  http://ocean-data.org/schema/IntraCrossrefRelation
+<http://ocean-data.org/schema/IntraCrossrefRelation> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://ocean-data.org/schema/CrossrefRelation> ;
+                                                     rdfs:comment "Used to define relations between items that are essentially the same work but may differ in format, language, revision ... etc"@en-us ;
+                                                     rdfs:label "Intra Crossref Relation"@en-us .
+
+
+###  http://ocean-data.org/schema/Island
+<http://ocean-data.org/schema/Island> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://ocean-data.org/schema/StationaryPlatform> ;
+                                      rdfs:comment "Island"@en-us ;
+                                      rdfs:label "Island"@en-us .
+
+
+###  http://ocean-data.org/schema/Laboratory
+<http://ocean-data.org/schema/Laboratory> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://ocean-data.org/schema/StationaryPlatform> ;
+                                          rdfs:comment "Laboratory"@en-us ;
+                                          rdfs:label "Laboratory"@en-us .
+
+
+###  http://ocean-data.org/schema/LaboratoryDataset
+<http://ocean-data.org/schema/LaboratoryDataset> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://ocean-data.org/schema/Dataset> ;
+                                                 rdfs:comment "A dataset generated in the Laboratory."@en-us ;
+                                                 rdfs:label "Laboratory Dataset"@en-us .
+
+
+###  http://ocean-data.org/schema/MannedSubmarine
+<http://ocean-data.org/schema/MannedSubmarine> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://ocean-data.org/schema/Submarine> ;
+                                               rdfs:comment "Manned Submarine"@en-us ;
+                                               rdfs:label "Manned Submarine"@en-us .
+
+
+###  http://ocean-data.org/schema/Model
+<http://ocean-data.org/schema/Model> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://ocean-data.org/schema/Platform> ;
+                                     rdfs:comment "Model"@en-us ;
+                                     rdfs:label "Model"@en-us .
+
+
+###  http://ocean-data.org/schema/MonitoredProperty
+<http://ocean-data.org/schema/MonitoredProperty> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                 rdfs:comment "A conceptual understanding of what was generally  observed or monitored and recorded in a dataset as a parameter."@en-us ;
+                                                 rdfs:label "Monitored Property"@en-us .
+
+
+###  http://ocean-data.org/schema/Mooring
+<http://ocean-data.org/schema/Mooring> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://ocean-data.org/schema/StationaryPlatform> ;
+                                       rdfs:comment "Mooring"@en-us ;
+                                       rdfs:label "Mooring"@en-us .
+
+
+###  http://ocean-data.org/schema/Organization
+<http://ocean-data.org/schema/Organization> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://ocean-data.org/schema/Agent> ;
+                                            rdfs:comment "A non-Person agent corresponding to instititutions such as research labs, companies, societies, etc."@en-us ;
+                                            rdfs:label "Organization"@en-us .
+
+
+###  http://ocean-data.org/schema/Parameter
+<http://ocean-data.org/schema/Parameter> rdf:type owl:Class .
+
+
+###  http://ocean-data.org/schema/Person
+<http://ocean-data.org/schema/Person> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://ocean-data.org/schema/Agent> ;
+                                      rdfs:comment "A non-Organization Agent corresponding to a human individual"@en-us ;
+                                      rdfs:label "Person"@en-us .
+
+
+###  http://ocean-data.org/schema/Platform
+<http://ocean-data.org/schema/Platform> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                                        rdfs:comment "A thing from which a Deployment occurs."@en-us ;
+                                        rdfs:label "Platform"@en-us .
+
+
+###  http://ocean-data.org/schema/PlatformTitle
+<http://ocean-data.org/schema/PlatformTitle> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                             rdfs:comment "A controlled vocabulary of platform titles/types."@en-us ,
+                                                          "fix" ;
+                                             rdfs:label "Platform Title"@en-us .
+
+
+###  http://ocean-data.org/schema/Program
+<http://ocean-data.org/schema/Program> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://ocean-data.org/schema/ResearchActivity> ;
+                                       rdfs:comment "A large-scale project that encompasses smaller Projects."@en-us ;
+                                       rdfs:label "Program"@en-us .
+
+
+###  http://ocean-data.org/schema/Project
+<http://ocean-data.org/schema/Project> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://ocean-data.org/schema/ResearchActivity> ;
+                                       rdfs:comment "A funded, scientific objective that may produce Datasets."@en-us ;
+                                       rdfs:label "Project"@en-us .
+
+
+###  http://ocean-data.org/schema/Publication
+<http://ocean-data.org/schema/Publication> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://ocean-data.org/schema/DigitalDocument> ;
+                                           rdfs:comment "A published CreativeWork such as a journal article, book chapter, or web page."@en-us ;
+                                           rdfs:label "Publication"@en-us .
+
+
+###  http://ocean-data.org/schema/RemotelyOperatedVehicle
+<http://ocean-data.org/schema/RemotelyOperatedVehicle> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://ocean-data.org/schema/UnmannedSubmarine> ;
+                                                       rdfs:comment "ROV"@en-us ;
+                                                       rdfs:label "ROV"@en-us .
+
+
+###  http://ocean-data.org/schema/ResearchActivity
+<http://ocean-data.org/schema/ResearchActivity> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
+                                                rdfs:comment "An activity for some period of time that under which  research is conducted"@en-us ;
+                                                rdfs:label "Research Activity"@en-us .
+
+
+###  http://ocean-data.org/schema/Role
+<http://ocean-data.org/schema/Role> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://www.w3.org/ns/prov#Influence> ;
+                                    rdfs:comment "A role is the influence of an Agent on a Research Activity or Research Product."@en-us ;
+                                    rdfs:label "Role"@en-us .
+
+
+###  http://ocean-data.org/schema/RoleType
+<http://ocean-data.org/schema/RoleType> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                        rdfs:comment "The type of Role perfomed by an Agent for some research activity or product."@en-us ;
+                                        rdfs:label "Role Type"@en-us .
+
+
+###  http://ocean-data.org/schema/Satellite
+<http://ocean-data.org/schema/Satellite> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://ocean-data.org/schema/Platform> ;
+                                         rdfs:comment "Satellite"@en-us ;
+                                         rdfs:label "Satellite"@en-us .
+
+
+###  http://ocean-data.org/schema/StationaryPlatform
+<http://ocean-data.org/schema/StationaryPlatform> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://ocean-data.org/schema/Platform> ;
+                                                  rdfs:comment "Stationary Platform"@en-us ;
+                                                  rdfs:label "Stationary Platform"@en-us .
+
+
+###  http://ocean-data.org/schema/StationaryVessel
+<http://ocean-data.org/schema/StationaryVessel> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://ocean-data.org/schema/StationaryPlatform> ,
+                                                                <http://ocean-data.org/schema/Vessel> ;
+                                                rdfs:comment "Stationary Vessel"@en-us ;
+                                                rdfs:label "Stationary Vessel"@en-us .
+
+
+###  http://ocean-data.org/schema/SubContractAward
+<http://ocean-data.org/schema/SubContractAward> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://ocean-data.org/schema/Award> ;
+                                                rdfs:comment "An award made to one or more Agents to perform work as part of a larger award."@en-us ;
+                                                rdfs:label "Sub-Contract Award"@en-us .
+
+
+###  http://ocean-data.org/schema/Submarine
+<http://ocean-data.org/schema/Submarine> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://ocean-data.org/schema/Vehicle> ;
+                                         rdfs:comment "Submarine"@en-us ;
+                                         rdfs:label "Submarine"@en-us .
+
+
+###  http://ocean-data.org/schema/SupplementalDocument
+<http://ocean-data.org/schema/SupplementalDocument> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://ocean-data.org/schema/DigitalDocument> ;
+                                                    rdfs:comment "A document that further contextualizes aor supports the understanding of another CreativeWork such as a cruise report."@en-us ;
+                                                    rdfs:label "Supplemental Document"@en-us .
+
+
+###  http://ocean-data.org/schema/Synthesis
+<http://ocean-data.org/schema/Synthesis> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://ocean-data.org/schema/Platform> ;
+                                         rdfs:comment "Synthesis"@en-us ;
+                                         rdfs:label "Synthesis"@en-us .
+
+
+###  http://ocean-data.org/schema/TowedVehicle
+<http://ocean-data.org/schema/TowedVehicle> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://ocean-data.org/schema/Vehicle> ;
+                                            rdfs:comment "Towed Vehicle"@en-us ;
+                                            rdfs:label "Towed Vehicle"@en-us .
+
+
+###  http://ocean-data.org/schema/UnitOfMeasure
+<http://ocean-data.org/schema/UnitOfMeasure> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                             rdfs:comment "A unit of measure"@en-us ;
+                                             rdfs:label "Unit of Measure"@en-us .
+
+
+###  http://ocean-data.org/schema/UnmannedSubmarine
+<http://ocean-data.org/schema/UnmannedSubmarine> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://ocean-data.org/schema/Submarine> ;
+                                                 rdfs:label "Unmanned Submarine"@en-us .
+
+
+###  http://ocean-data.org/schema/Vehicle
+<http://ocean-data.org/schema/Vehicle> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://ocean-data.org/schema/Platform> ;
+                                       rdfs:comment "Vehicle"@en-us ;
+                                       rdfs:label "Vehicle"@en-us .
+
+
+###  http://ocean-data.org/schema/Vessel
+<http://ocean-data.org/schema/Vessel> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://ocean-data.org/schema/Vehicle> ;
+                                      rdfs:comment "A vessel, boat, or ship."@en-us ;
+                                      rdfs:label "Vessel"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/DataType
+:DataType rdf:type owl:Class ;
+          rdfs:comment """A data type can include more meaning beyond the syntax, such as who created the
+        data type, the source standard that the data type derives from,
+        the operations that can be done on datasets of that data type, and
+        typical scientific domains, software programs and/or instruments
+        that use the data type, etc. The intent is that any humans or
+        machines that when they encounter that data type can quickly
+        'understand' or be in a situation to at least 'process' details
+        within the dataset without even downloading that dataset."""@en-us ;
+          rdfs:label "DataType"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/InferredParamter
+:InferredParamter rdf:type owl:Class ;
+                  rdfs:subClassOf <http://ocean-data.org/schema/Parameter> ;
+                  rdfs:comment """An inferred parameter is a parameter whoa value is not explicitly recorded in the Dataset,
+        but that can be inferred based on its data type and related metadata. For example, dataset collected on a Cruise
+        might not explicitly record the cruise in the dataset, but that it can be inferred through the metadata:
+        (odo:Dataset -> odo:fromDeployment [ dc:title ])."""@en-us ;
+                  rdfs:label "InferredParamter"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/SubjectArea
+:SubjectArea rdf:type owl:Class ;
+             rdfs:comment "A certain field of study used to group or filter Data Types"@en-us ;
+             rdfs:label "SubjectArea"@en-us .
+
+
+###  http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#TemporalEntity
+<http://www.w3.org/2006/time#TemporalEntity> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Activity
+<http://www.w3.org/ns/prov#Activity> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Influence
+<http://www.w3.org/ns/prov#Influence> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://ocean-data.org/schema/AnalystRole
+<http://ocean-data.org/schema/AnalystRole> rdf:type owl:NamedIndividual ,
+                                                    <http://ocean-data.org/schema/AgentRole> ;
+                                           rdfs:label "Analyst"@en-us .
+
+
+###  http://ocean-data.org/schema/BcoDmoDataManagerRole
+<http://ocean-data.org/schema/BcoDmoDataManagerRole> rdf:type owl:NamedIndividual ,
+                                                              <http://ocean-data.org/schema/AgentRole> ;
+                                                     rdfs:label "BCO-DMO Data Manager"@en-us .
+
+
+###  http://ocean-data.org/schema/BcoDmoIdentifier
+<http://ocean-data.org/schema/BcoDmoIdentifier> rdf:type owl:NamedIndividual ,
+                                                         <http://ocean-data.org/schema/IdentifierScheme> ;
+                                                rdfs:label "BCO-DMO"@en-us .
+
+
+###  http://ocean-data.org/schema/CaptainRole
+<http://ocean-data.org/schema/CaptainRole> rdf:type owl:NamedIndividual ,
+                                                    <http://ocean-data.org/schema/AgentRole> ;
+                                           rdfs:label "Captain"@en-us .
+
+
+###  http://ocean-data.org/schema/ChiefScientistRole
+<http://ocean-data.org/schema/ChiefScientistRole> rdf:type owl:NamedIndividual ,
+                                                           <http://ocean-data.org/schema/AgentRole> ;
+                                                  rdfs:label "Chief Scientist"@en-us .
+
+
+###  http://ocean-data.org/schema/Co-ChiefScientistRole
+<http://ocean-data.org/schema/Co-ChiefScientistRole> rdf:type owl:NamedIndividual ,
+                                                              <http://ocean-data.org/schema/AgentRole> ;
+                                                     rdfs:label "Co-Chief Scientist"@en-us .
+
+
+###  http://ocean-data.org/schema/Co-PrincipalInvestigatorRole
+<http://ocean-data.org/schema/Co-PrincipalInvestigatorRole> rdf:type owl:NamedIndividual ,
+                                                                     <http://ocean-data.org/schema/AgentRole> ;
+                                                            rdfs:label "Co-Principal Investigator"@en-us .
+
+
+###  http://ocean-data.org/schema/ContactRole
+<http://ocean-data.org/schema/ContactRole> rdf:type owl:NamedIndividual ,
+                                                    <http://ocean-data.org/schema/AgentRole> ;
+                                           rdfs:label "Contact"@en-us .
+
+
+###  http://ocean-data.org/schema/CuratorRole
+<http://ocean-data.org/schema/CuratorRole> rdf:type owl:NamedIndividual ,
+                                                    <http://ocean-data.org/schema/AgentRole> ;
+                                           rdfs:label "Curator"@en-us .
+
+
+###  http://ocean-data.org/schema/DOIIdentifierScheme
+<http://ocean-data.org/schema/DOIIdentifierScheme> rdf:type owl:NamedIndividual ,
+                                                            <http://ocean-data.org/schema/IdentifierScheme> ;
+                                                   rdfs:label "DOI"@en-us .
+
+
+###  http://ocean-data.org/schema/DataManagerRole
+<http://ocean-data.org/schema/DataManagerRole> rdf:type owl:NamedIndividual ,
+                                                        <http://ocean-data.org/schema/AgentRole> ;
+                                               rdfs:label "Data Manager"@en-us .
+
+
+###  http://ocean-data.org/schema/DataPublisherRole
+<http://ocean-data.org/schema/DataPublisherRole> rdf:type owl:NamedIndividual ,
+                                                          <http://ocean-data.org/schema/AgentRole> ;
+                                                 rdfs:label "Data Publisher"@en-us .
+
+
+###  http://ocean-data.org/schema/GuestRole
+<http://ocean-data.org/schema/GuestRole> rdf:type owl:NamedIndividual ,
+                                                  <http://ocean-data.org/schema/AgentRole> ;
+                                         rdfs:label "Guest"@en-us .
+
+
+###  http://ocean-data.org/schema/InternationalCollaboratorRole
+<http://ocean-data.org/schema/InternationalCollaboratorRole> rdf:type owl:NamedIndividual ,
+                                                                      <http://ocean-data.org/schema/AgentRole> ;
+                                                             rdfs:label "International Collaborator"@en-us .
+
+
+###  http://ocean-data.org/schema/LeadPrincipalInvestigatorRole
+<http://ocean-data.org/schema/LeadPrincipalInvestigatorRole> rdf:type owl:NamedIndividual ,
+                                                                      <http://ocean-data.org/schema/AgentRole> ;
+                                                             rdfs:label "Lead Principal Investigator"@en-us .
+
+
+###  http://ocean-data.org/schema/OriginatorRole
+<http://ocean-data.org/schema/OriginatorRole> rdf:type owl:NamedIndividual ,
+                                                       <http://ocean-data.org/schema/AgentRole> ;
+                                              rdfs:label "Originator"@en-us .
+
+
+###  http://ocean-data.org/schema/PrincipalInvestigatorRole
+<http://ocean-data.org/schema/PrincipalInvestigatorRole> rdf:type owl:NamedIndividual ,
+                                                                  <http://ocean-data.org/schema/AgentRole> ;
+                                                         rdfs:label "Principal Investigator"@en-us .
+
+
+###  http://ocean-data.org/schema/ProgramManagerRole
+<http://ocean-data.org/schema/ProgramManagerRole> rdf:type owl:NamedIndividual ,
+                                                           <http://ocean-data.org/schema/AgentRole> ;
+                                                  rdfs:label "Program Manager"@en-us .
+
+
+###  http://ocean-data.org/schema/ProjectCoordinatorRole
+<http://ocean-data.org/schema/ProjectCoordinatorRole> rdf:type owl:NamedIndividual ,
+                                                               <http://ocean-data.org/schema/AgentRole> ;
+                                                      rdfs:label "Project Coordinator"@en-us .
+
+
+###  http://ocean-data.org/schema/ScientistRole
+<http://ocean-data.org/schema/ScientistRole> rdf:type owl:NamedIndividual ,
+                                                      <http://ocean-data.org/schema/AgentRole> ;
+                                             rdfs:label "Scientist"@en-us .
+
+
+###  http://ocean-data.org/schema/StudentRole
+<http://ocean-data.org/schema/StudentRole> rdf:type owl:NamedIndividual ,
+                                                    <http://ocean-data.org/schema/AgentRole> ;
+                                           rdfs:label "Student"@en-us .
+
+
+###  http://ocean-data.org/schema/TechnicianRole
+<http://ocean-data.org/schema/TechnicianRole> rdf:type owl:NamedIndividual ,
+                                                       <http://ocean-data.org/schema/AgentRole> ;
+                                              rdfs:label "Technician"@en-us .
+
+
+###  http://ocean-data.org/schema/UnknownRole
+<http://ocean-data.org/schema/UnknownRole> rdf:type owl:NamedIndividual ,
+                                                    <http://ocean-data.org/schema/AgentRole> ;
+                                           rdfs:label "Unknown"@en-us .
+
+
+###  http://ocean-data.org/schema/forOrganization
+<http://ocean-data.org/schema/forOrganization> rdf:type owl:NamedIndividual .
+
+
+###  http://ocean-data.org/schema/fromCollection
+<http://ocean-data.org/schema/fromCollection> rdf:type owl:NamedIndividual .
+
+
+###  http://ocean-data.org/schema/hasDataset
+<http://ocean-data.org/schema/hasDataset> rdf:type owl:NamedIndividual .
+
+
+###  http://ocean-data.org/schema/hasRole
+<http://ocean-data.org/schema/hasRole> rdf:type owl:NamedIndividual .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/DataType_CruiseResults
+:DataType_CruiseResults rdf:type owl:NamedIndividual ,
+                                 :DataType ;
+                        :requires :Parameter_CruiseIdentifier ;
+                        rdfs:comment "A dataset collected from one or more cruises."@en-us ;
+                        rdfs:label "DataType - Cruise Results"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_Count
+:Parameter_Count rdf:type owl:NamedIndividual ,
+                          <http://ocean-data.org/schema/Parameter> ;
+                 rdfs:comment "A numberic quantity measuring the occurrence of some thing."@en-us ;
+                 rdfs:label "Parameter - Count"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_CruiseIdentifier
+:Parameter_CruiseIdentifier rdf:type owl:NamedIndividual ,
+                                     <http://ocean-data.org/schema/Parameter> ;
+                            rdfs:comment "Representative of a cruise or some other named deployment."@en-us ;
+                            rdfs:label "Parameter - Cruise Identifier"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_CruiseStationIdentifier
+:Parameter_CruiseStationIdentifier rdf:type owl:NamedIndividual ,
+                                            <http://ocean-data.org/schema/Parameter> ;
+                                   rdfs:comment "Representative of a particular station from a cruise."@en-us ;
+                                   rdfs:label "Parameter - Cruise Station Identifier"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_Date
+:Parameter_Date rdf:type owl:NamedIndividual ,
+                         <http://ocean-data.org/schema/Parameter> ;
+                rdfs:comment "A year, month, and day represented in some recognized format."@en-us ;
+                rdfs:label "Parameter - Date"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_DateTime
+:Parameter_DateTime rdf:type owl:NamedIndividual ,
+                             <http://ocean-data.org/schema/Parameter> ;
+                    <http://purl.org/dc/terms/hasPart> :Time ;
+                    rdfs:comment "A date time measurement."@en-us ;
+                    rdfs:label "Parameter - Date Time"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_Depth
+:Parameter_Depth rdf:type owl:NamedIndividual ,
+                          <http://ocean-data.org/schema/Parameter> ;
+                 rdfs:comment "A depth."@en-us ;
+                 rdfs:label "Parameter - Depth"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_Depth_Meters
+:Parameter_Depth_Meters rdf:type owl:NamedIndividual ,
+                                 <http://ocean-data.org/schema/Parameter> ;
+                        rdfs:comment "A depth measurement made in meters."@en-us ;
+                        rdfs:label "Parameter - Depth in Meters"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_Description
+:Parameter_Description rdf:type owl:NamedIndividual ,
+                                <http://ocean-data.org/schema/Parameter> ;
+                       rdfs:comment "A description of a thing."@en-us ;
+                       rdfs:label "Parameter - Description"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_FilterSize
+:Parameter_FilterSize rdf:type owl:NamedIndividual ,
+                               <http://ocean-data.org/schema/Parameter> ;
+                      rdfs:comment "The size of some filter."@en-us ;
+                      rdfs:label "Parameter - Filter Size"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_GeneticSequenceIdentifier
+:Parameter_GeneticSequenceIdentifier rdf:type owl:NamedIndividual ,
+                                              <http://ocean-data.org/schema/Parameter> ;
+                                     rdfs:comment "A genetic sequence; e.g. the order of nucleotides in DNA or RNA."@en-us ;
+                                     rdfs:label "Parameter - Genetic Sequence Identifier"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_IdentificationProbability
+:Parameter_IdentificationProbability rdf:type owl:NamedIndividual ,
+                                              <http://ocean-data.org/schema/Parameter> ;
+                                     rdfs:comment "Metric of peptide quality."@en-us ;
+                                     rdfs:label "Parameter - Best Peptide identification probability"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_Identifier
+:Parameter_Identifier rdf:type owl:NamedIndividual ,
+                               <http://ocean-data.org/schema/Parameter> ;
+                      rdfs:comment "Identifier"@en-us ;
+                      rdfs:label "Parameter - Identifier"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_Latitude
+:Parameter_Latitude rdf:type owl:NamedIndividual ,
+                             <http://ocean-data.org/schema/Parameter> ;
+                    rdfs:comment "Latitude."@en-us ;
+                    rdfs:label "Parameter - Latitude"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_Latitude_DecimalDegrees
+:Parameter_Latitude_DecimalDegrees rdf:type owl:NamedIndividual ,
+                                            <http://ocean-data.org/schema/Parameter> ;
+                                   rdfs:comment "Latitude in decimal degrees where the values are bounded by -90 (South) and 90 (North)."@en-us ;
+                                   rdfs:label "Parameter - Latitude in Decimal Degress"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_Longitude
+:Parameter_Longitude rdf:type owl:NamedIndividual ,
+                              <http://ocean-data.org/schema/Parameter> ;
+                     rdfs:comment "Longitude."@en-us ;
+                     rdfs:label "Parameter - Longitude"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_Longitude_DecimalDegrees
+:Parameter_Longitude_DecimalDegrees rdf:type owl:NamedIndividual ,
+                                             <http://ocean-data.org/schema/Parameter> ;
+                                    rdfs:comment "Longitude in decimal degrees where the values are bounded by -180 (West) and 1800 (East)."@en-us ;
+                                    rdfs:label "Parameter - Longitude in Decical Degrees"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_MaxFilterSize_Microns
+:Parameter_MaxFilterSize_Microns rdf:type owl:NamedIndividual ,
+                                          <http://ocean-data.org/schema/Parameter> ;
+                                 rdfs:comment "The maximum filter size measured in microns."@en-us ;
+                                 rdfs:label "Parameter - Maximum Filter Size in Microns"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_MaximumFilterSize
+:Parameter_MaximumFilterSize rdf:type owl:NamedIndividual ,
+                                      <http://ocean-data.org/schema/Parameter> ;
+                             rdfs:comment "The maximum size of some filter."@en-us ;
+                             rdfs:label "Parameter - Maximum Filter Size"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_MedianRetentionTime
+:Parameter_MedianRetentionTime rdf:type owl:NamedIndividual ,
+                                        <http://ocean-data.org/schema/Parameter> ;
+                               rdfs:comment "Median Retention Time"@en-us ;
+                               rdfs:label "Parameter - Median Retention Time"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_MinFilterSize_Microns
+:Parameter_MinFilterSize_Microns rdf:type owl:NamedIndividual ,
+                                          <http://ocean-data.org/schema/Parameter> ;
+                                 rdfs:comment "The minimum filter size measured in microns."@en-us ;
+                                 rdfs:label "Parameter - Minimum Filter Size in Microns"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_MinimumFilterSize
+:Parameter_MinimumFilterSize rdf:type owl:NamedIndividual ,
+                                      <http://ocean-data.org/schema/Parameter> ;
+                             rdfs:comment "The minimum size of some filter."@en-us ;
+                             rdfs:label "Parameter - Filter Size"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_MolecularWeight
+:Parameter_MolecularWeight rdf:type owl:NamedIndividual ,
+                                    <http://ocean-data.org/schema/Parameter> ;
+                           rdfs:comment "The molecular weight."@en-us ;
+                           rdfs:label "Parameter - Molecular Weight"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_MolecularWeight_Daltons
+:Parameter_MolecularWeight_Daltons rdf:type owl:NamedIndividual ,
+                                            <http://ocean-data.org/schema/Parameter> ;
+                                   rdfs:comment "The molecular weight measured in Daltons."@en-us ;
+                                   rdfs:label "Parameter - Molecular Weight in Daltons"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_NCBITaxonIdentifier
+:Parameter_NCBITaxonIdentifier rdf:type owl:NamedIndividual ,
+                                        <http://ocean-data.org/schema/Parameter> ;
+                               rdfs:comment "An NCBI identifier for a certain taxa."@en-us ;
+                               rdfs:label "Parameter - NCBI Taxon Identifier"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_NCBITaxonName
+:Parameter_NCBITaxonName rdf:type owl:NamedIndividual ,
+                                  <http://ocean-data.org/schema/Parameter> ;
+                         rdfs:comment "The taxonomic species name at NCBI related to an NCBI identifier."@en-us ;
+                         rdfs:label "Parameter - NCBI Taxon Name"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_Name
+:Parameter_Name rdf:type owl:NamedIndividual ,
+                         <http://ocean-data.org/schema/Parameter> ;
+                rdfs:comment "An identified name for a thing."@en-us ;
+                rdfs:label "Parameter - Name"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_Probability
+:Parameter_Probability rdf:type owl:NamedIndividual ,
+                                <http://ocean-data.org/schema/Parameter> ;
+                       rdfs:comment "A probability of some thing."@en-us ;
+                       rdfs:label "Parameter - Probabiliy"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_SampleIdentifier
+:Parameter_SampleIdentifier rdf:type owl:NamedIndividual ,
+                                     <http://ocean-data.org/schema/Parameter> ;
+                            rdfs:comment "Uniquely identifies one sample within a dataset."@en-us ;
+                            rdfs:label "Parameter - Sample Identifier"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_Score
+:Parameter_Score rdf:type owl:NamedIndividual ,
+                          <http://ocean-data.org/schema/Parameter> ;
+                 rdfs:comment "An arbitrary value representing the quality of some thing."@en-us ;
+                 rdfs:label "Parameter - Score"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_SpectralCount
+:Parameter_SpectralCount rdf:type owl:NamedIndividual ,
+                                  <http://ocean-data.org/schema/Parameter> ;
+                         rdfs:comment "The spectral count for an identifified protein."@en-us ;
+                         rdfs:label "Parameter - Spectral Count"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_StationIdentifier
+:Parameter_StationIdentifier rdf:type owl:NamedIndividual ,
+                                      <http://ocean-data.org/schema/Parameter> ;
+                             rdfs:comment "Representative of a particular station."@en-us ;
+                             rdfs:label "Parameter - Station Identifier"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_Time
+:Parameter_Time rdf:type owl:NamedIndividual ,
+                         <http://ocean-data.org/schema/Parameter> ;
+                rdfs:comment "An hour, minutes, and seconds represented in some recognized format."@en-us ;
+                rdfs:label "Parameter - Date"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_TotalIonChromatogram
+:Parameter_TotalIonChromatogram rdf:type owl:NamedIndividual ,
+                                         <http://ocean-data.org/schema/Parameter> ;
+                                rdfs:comment "Total Ion Chromatogram"@en-us ;
+                                rdfs:label "Parameter - Total Ion Chromatogram"@en-us ;
+                                <http://www.w3.org/2004/02/skos/core#altLabel> "TIC" .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/Parameter_TotalPrecursorIntensity
+:Parameter_TotalPrecursorIntensity rdf:type owl:NamedIndividual ,
+                                            <http://ocean-data.org/schema/Parameter> ;
+                                   rdfs:comment "Total Precursor Intensity"@en-us ;
+                                   rdfs:label "Parameter - Total Precursor Intensity"@en-us .
+
+
+###  http://ocean-data.org/schema/data-type/v1.0/SubjectArea_Proteomics
+:SubjectArea_Proteomics rdf:type owl:NamedIndividual ,
+                                 :SubjectArea ;
+                        rdfs:comment "Proteomics"@en-us ;
+                        rdfs:label "SubjectArea - Proteomics"@en-us .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://ocean-data.org/schema/forOrganization> rdfs:comment "The organization at which an agent performing a role was affiliated with."@en-us ;
+                                               rdfs:label "forOrganization"@en-us ;
+                                               owl:deprecated "true"^^xsd:boolean ;
+                                               <http://www.w3.org/2004/02/skos/core#related> <http://www.w3.org/ns/prov#onBehalfOf> .
+
+
+<http://ocean-data.org/schema/fromCollection> rdfs:comment "specifies that a Dataset is part of some DatasetCollection"@en-us ;
+                                              rdfs:label "fromCollection"@en-us .
+
+
+<http://ocean-data.org/schema/hasDataset> rdfs:comment "Used by odo:DeploymentDataset, odo:Award, odo:Project classes"@en-us ;
+                                          rdfs:label "hasDataset"@en-us ;
+                                          owl:deprecated "true"^^xsd:boolean ;
+                                          <http://www.w3.org/2004/02/skos/core#related> <http://ocean-data.org/schema/fromCollection> ,
+                                                                                        <http://ocean-data.org/schema/funded> ,
+                                                                                        <http://ocean-data.org/schema/producedWork> .
+
+
+<http://ocean-data.org/schema/hasRole> rdfs:comment "All the roles associated to some Agent"@en-us ;
+                                       rdfs:label "hasRole"@en-us ;
+                                       owl:deprecated "true"^^xsd:boolean ;
+                                       <http://www.w3.org/2004/02/skos/core#related> <http://ocean-data.org/schema/performedRole> .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :aggregates ;
+  owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+  owl:onClass :DataType ;
+  rdfs:subClassOf :DataType
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :summationOf ;
+  owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+  owl:onClass <http://ocean-data.org/schema/Parameter> ;
+  rdfs:subClassOf <http://ocean-data.org/schema/Parameter>
+] .
+
+
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
