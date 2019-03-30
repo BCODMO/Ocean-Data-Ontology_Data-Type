@@ -39,18 +39,26 @@
 }, {
   "@id" : "http://ocean-data.org/schema/data-type/v1.0/",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Adam Shepherd"
-  } ],
   "http://purl.org/dc/elements/1.1/publisher" : [ {
+    "@language" : "en-us",
     "@value" : "Biological and Chemical Oceanography Data Management Office (BCO-DMO)"
+  }, {
+    "@value" : "Biological and Chemical Oceanography Data Management Office (BCO-DMO)"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@language" : "en-us",
+    "@value" : "2012-01-01"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@id" : "http://orcid.org/0000-0003-4486-9448"
   } ],
   "http://purl.org/dc/terms/issued" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2017-09-04"
+    "@value" : "2019-03-30"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2019-03-30"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@id" : "http://lod.bco-dmo.org/id/affiliation/191"
@@ -58,6 +66,16 @@
   "http://purl.org/dc/terms/source" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "@value" : "https://github.com/BCODMO/Ocean-Data-Ontology_Data-Type"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en-us",
+    "@value" : "Ocean Data Ontology - Data Type Extension"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://ocean-data.org/schema/data-type/v1.0/"
+  }, {
+    "@value" : "odo-dt"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en-us",
@@ -774,6 +792,9 @@
   "@id" : "http://purl.org/dc/elements/1.1/publisher",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -783,10 +804,19 @@
   "@id" : "http://purl.org/dc/terms/issued",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/publisher",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",

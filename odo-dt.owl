@@ -17,8 +17,8 @@
         <rdfs:label xml:lang="en-us">Ocean Data Ontology - Data Type Extension</rdfs:label>
         <owl:versionInfo>1.0</owl:versionInfo>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ocean-data.org/schema/data-type/v1.0/</vann:preferredNamespaceUri>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-30</dcterms:modified>
-        <dct:title xml:lang="en-us">Ocean Data Ontology - Data Type Extension</dcterms:title>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-30</dct:modified>
+        <dct:title xml:lang="en-us">Ocean Data Ontology - Data Type Extension</dct:title>
         <rdfs:comment xml:lang="en-us">An ontology for describing data types used by BCO-DMO</rdfs:comment>
         <dc:publisher>Biological and Chemical Oceanography Data Management Office (BCO-DMO)</dc:publisher>
         <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/BCODMO/Ocean-Data-Ontology_Data-Type</dct:source>
@@ -26,7 +26,7 @@
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-30</dct:issued>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">odo-dt</vann:preferredNamespaceUri>
         <rdfs:seeAlso rdf:resource="http://info.deepcarbon.net/schema#DataType"/>
-        <dct:created xml:lang="en-us">2012-01-01</dcterms:created>
+        <dct:created xml:lang="en-us">2012-01-01</dct:created>
         <dct:creator rdf:resource="http://orcid.org/0000-0003-4486-9448"/>
         <dc:publisher xml:lang="en-us">Biological and Chemical Oceanography Data Management Office (BCO-DMO)</dc:publisher>
     </owl:Ontology>

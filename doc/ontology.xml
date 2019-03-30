@@ -9,14 +9,20 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://ocean-data.org/schema/data-type/v1.0/">
-        <dc:creator>Adam Shepherd</dc:creator>
+        <dc:publisher xml:lang="en-us">Biological and Chemical Oceanography Data Management Office (BCO-DMO)</dc:publisher>
         <dc:publisher>Biological and Chemical Oceanography Data Management Office (BCO-DMO)</dc:publisher>
+        <terms:created xml:lang="en-us">2012-01-01</terms:created>
         <terms:creator rdf:resource="http://orcid.org/0000-0003-4486-9448"/>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-04</terms:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-30</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-30</terms:modified>
         <terms:publisher rdf:resource="http://lod.bco-dmo.org/id/affiliation/191"/>
         <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/BCODMO/Ocean-Data-Ontology_Data-Type</terms:source>
+        <terms:title xml:lang="en-us">Ocean Data Ontology - Data Type Extension</terms:title>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ocean-data.org/schema/data-type/v1.0/</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>odo-dt</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en-us">An ontology for describing data types used by BCO-DMO</rdfs:comment>
         <rdfs:label xml:lang="en-us">Ocean Data Ontology - Data Type Extension</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://info.deepcarbon.net/schema#DataType"/>
@@ -51,6 +57,13 @@
     
 
 
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
     <!-- http://purl.org/dc/terms/creator -->
 
 
@@ -72,6 +85,13 @@
     
 
 
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
     <!-- http://purl.org/dc/terms/publisher -->
 
 
@@ -83,6 +103,20 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
     
 
 

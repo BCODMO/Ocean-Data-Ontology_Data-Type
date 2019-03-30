@@ -2,7 +2,8 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="User Entered Import Resolution" name="https://ocean-data.org/schema/ontology.xml" uri="file:/Users/ashepherd/Projects/BCO-DMO/www.bco-dmo.org/Ocean-Data-Ontology/odo.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1553949713023" name="http://ocean-data.org/schema/data-type/v1.0/" uri="odo-dt.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1553949713023" name="shadowed:http://ocean-data.org/schema/data-type/v1.0/" uri="doc/ontology.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1553959146216" name="http://ocean-data.org/schema/data-type/v1.0/" uri="odo-dt.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1553959146216" name="http://schema.oceanproteinportal.org/v1.0/" uri="OceanProteinPortal/opp.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1553959146216" name="shadowed:http://ocean-data.org/schema/data-type/v1.0/" uri="doc/ontology.xml"/>
     </group>
 </catalog>

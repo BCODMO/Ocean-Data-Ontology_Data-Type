@@ -1,997 +1,854 @@
 {
-  "_comment": "Created with OWL2VOWL (version 0.3.6), http://vowl.visualdataweb.org [Additional Information added by WebVOWL Exporter Version: 1.1.4]",
-  "header": {
-    "languages": [
-      "en-us"
-    ],
-    "baseIris": [
-      "http://ocean-data.org/schema/data-type/v1.0",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns",
-      "http://www.w3.org/2002/07/owl",
-      "http://www.w3.org/2000/01/rdf-schema",
-      "http://www.w3.org/2001/XMLSchema",
-      "http://ocean-data.org/schema"
-    ],
-    "prefixList": {
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "terms": "http://purl.org/dc/terms/",
-      "skos": "http://www.w3.org/2004/02/skos/core#",
-      "xsd": "http://www.w3.org/2001/XMLSchema#",
-      "": "http://ocean-data.org/schema/data-type/v1.0/",
-      "dc": "http://purl.org/dc/elements/1.1/",
-      "xml": "http://www.w3.org/XML/1998/namespace",
-      "v1": "http://ocean-data.org/schema/data-type/v1.0/",
-      "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+  "_comment" : "Created with OWL2VOWL (version 0.3.4), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en-us", "undefined" ],
+    "baseIris" : [ "http://ocean-data.org/schema/data-type/v1.0", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://ocean-data.org/schema" ],
+    "title" : {
+      "en-us" : "Ocean Data Ontology - Data Type Extension"
     },
-    "iri": "http://ocean-data.org/schema/data-type/v1.0/",
-    "version": "1.0",
-    "author": [
-      "Adam Shepherd",
-      "http://orcid.org/0000-0003-4486-9448"
-    ],
-    "labels": {
-      "en-us": "Ocean Data Ontology - Data Type Extension"
+    "iri" : "http://ocean-data.org/schema/data-type/v1.0/",
+    "version" : "1.0",
+    "author" : [ "http://orcid.org/0000-0003-4486-9448" ],
+    "labels" : {
+      "en-us" : "Ocean Data Ontology - Data Type Extension"
     },
-    "comments": {
-      "en-us": "An ontology for describing data types used by BCO-DMO"
+    "comments" : {
+      "en-us" : "An ontology for describing data types used by BCO-DMO"
     },
-    "other": {
-      "creator": [
-        {
-          "identifier": "creator",
-          "language": "undefined",
-          "value": "http://orcid.org/0000-0003-4486-9448",
-          "type": "iri"
-        },
-        {
-          "identifier": "creator",
-          "language": "undefined",
-          "value": "Adam Shepherd",
-          "type": "label"
-        }
-      ],
-      "publisher": [
-        {
-          "identifier": "publisher",
-          "language": "undefined",
-          "value": "Biological and Chemical Oceanography Data Management Office (BCO-DMO)",
-          "type": "label"
-        },
-        {
-          "identifier": "publisher",
-          "language": "undefined",
-          "value": "http://lod.bco-dmo.org/id/affiliation/191",
-          "type": "iri"
-        }
-      ],
-      "source": [
-        {
-          "identifier": "source",
-          "language": "undefined",
-          "value": "https://github.com/BCODMO/Ocean-Data-Ontology_Data-Type",
-          "type": "label"
-        }
-      ],
-      "versionInfo": [
-        {
-          "identifier": "versionInfo",
-          "language": "undefined",
-          "value": "1.0",
-          "type": "label"
-        }
-      ],
-      "issued": [
-        {
-          "identifier": "issued",
-          "language": "undefined",
-          "value": "2017-09-04",
-          "type": "label"
-        }
-      ],
-      "seeAlso": [
-        {
-          "identifier": "seeAlso",
-          "language": "undefined",
-          "value": "http://info.deepcarbon.net/schema#DataType",
-          "type": "iri"
-        }
-      ]
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "http://orcid.org/0000-0003-4486-9448",
+        "type" : "iri"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "en-us",
+        "value" : "2012-01-01",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "Biological and Chemical Oceanography Data Management Office (BCO-DMO)",
+        "type" : "label"
+      }, {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "http://lod.bco-dmo.org/id/affiliation/191",
+        "type" : "iri"
+      }, {
+        "identifier" : "publisher",
+        "language" : "en-us",
+        "value" : "Biological and Chemical Oceanography Data Management Office (BCO-DMO)",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2019-03-30",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://github.com/BCODMO/Ocean-Data-Ontology_Data-Type",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://ocean-data.org/schema/data-type/v1.0/",
+        "type" : "label"
+      }, {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "odo-dt",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2019-03-30",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en-us",
+        "value" : "Ocean Data Ontology - Data Type Extension",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://info.deepcarbon.net/schema#DataType",
+        "type" : "iri"
+      } ]
     }
   },
-  "namespace": [],
-  "settings": {
-    "global": {
-      "zoom": "0.66",
-      "translation": [
-        209.95,
-        95.73
-      ],
-      "paused": false
-    },
-    "gravity": {
-      "classDistance": 200,
-      "datatypeDistance": 120
-    },
-    "filter": {
-      "checkBox": [
-        {
-          "id": "datatypeFilterCheckbox",
-          "checked": false
-        },
-        {
-          "id": "objectPropertyFilterCheckbox",
-          "checked": false
-        },
-        {
-          "id": "subclassFilterCheckbox",
-          "checked": false
-        },
-        {
-          "id": "disjointFilterCheckbox",
-          "checked": true
-        },
-        {
-          "id": "setoperatorFilterCheckbox",
-          "checked": false
-        }
-      ],
-      "degreeSliderValue": "0"
-    },
-    "modes": {
-      "checkBox": [
-        {
-          "id": "pickandpinModuleCheckbox",
-          "checked": false
-        },
-        {
-          "id": "nodescalingModuleCheckbox",
-          "checked": true
-        },
-        {
-          "id": "compactnotationModuleCheckbox",
-          "checked": false
-        },
-        {
-          "id": "colorexternalsModuleCheckbox",
-          "checked": true
-        }
-      ],
-      "colorSwitchState": false
-    }
+  "namespace" : [ ],
+  "metrics" : {
+    "classCount" : 5,
+    "objectPropertyCount" : 13,
+    "datatypePropertyCount" : 2,
+    "individualCount" : 36
   },
-  "class": [
-    {
-      "id": "3",
-      "type": "owl:Class"
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://ocean-data.org/schema/Dataset",
+    "baseIri" : "http://ocean-data.org/schema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dataset"
     },
-    {
-      "id": "4",
-      "type": "owl:Class"
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://ocean-data.org/schema/Parameter",
+    "baseIri" : "http://ocean-data.org/schema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Parameter"
     },
-    {
-      "id": "9",
-      "type": "owl:Thing"
-    },
-    {
-      "id": "16",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "17",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "5",
-      "type": "owl:Class"
-    },
-    {
-      "id": "1",
-      "type": "owl:Class"
-    },
-    {
-      "id": "2",
-      "type": "owl:Class"
+    "individuals" : [ {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_Identifier",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "Identifier"
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_Identifier",
+        "en-us" : "Parameter - Identifier"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_FilterSize",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "The size of some filter."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_FilterSize",
+        "en-us" : "Parameter - Filter Size"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_MolecularWeight",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "The molecular weight."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_MolecularWeight",
+        "en-us" : "Parameter - Molecular Weight"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_TotalIonChromatogram",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "annotations" : {
+        "altLabel" : [ {
+          "identifier" : "altLabel",
+          "language" : "undefined",
+          "value" : "TIC",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en-us" : "Total Ion Chromatogram"
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_TotalIonChromatogram",
+        "en-us" : "Parameter - Total Ion Chromatogram"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_Date",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "A year, month, and day represented in some recognized format."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_Date",
+        "en-us" : "Parameter - Date"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_SampleIdentifier",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "Uniquely identifies one sample within a dataset."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_SampleIdentifier",
+        "en-us" : "Parameter - Sample Identifier"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_Score",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "An arbitrary value representing the quality of some thing."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_Score",
+        "en-us" : "Parameter - Score"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_CruiseStationIdentifier",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "Representative of a particular station from a cruise."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_CruiseStationIdentifier",
+        "en-us" : "Parameter - Cruise Station Identifier"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_MedianRetentionTime",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "Median Retention Time"
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_MedianRetentionTime",
+        "en-us" : "Parameter - Median Retention Time"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_NCBITaxonName",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "The taxonomic species name at NCBI related to an NCBI identifier."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_NCBITaxonName",
+        "en-us" : "Parameter - NCBI Taxon Name"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_Latitude",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "Latitude."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_Latitude",
+        "en-us" : "Parameter - Latitude"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_MinFilterSize_Microns",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "The minimum filter size measured in microns."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_MinFilterSize_Microns",
+        "en-us" : "Parameter - Minimum Filter Size in Microns"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_MinimumFilterSize",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "The minimum size of some filter."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_MinimumFilterSize",
+        "en-us" : "Parameter - Filter Size"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_NCBITaxonIdentifier",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "An NCBI identifier for a certain taxa."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_NCBITaxonIdentifier",
+        "en-us" : "Parameter - NCBI Taxon Identifier"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_TotalPrecursorIntensity",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "Total Precursor Intensity"
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_TotalPrecursorIntensity",
+        "en-us" : "Parameter - Total Precursor Intensity"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_SpectralCount",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "The spectral count for an identifified protein."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_SpectralCount",
+        "en-us" : "Parameter - Spectral Count"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_Description",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "A description of a thing."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_Description",
+        "en-us" : "Parameter - Description"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_Count",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "A numberic quantity measuring the occurrence of some thing."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_Count",
+        "en-us" : "Parameter - Count"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_MaxFilterSize_Microns",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "The maximum filter size measured in microns."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_MaxFilterSize_Microns",
+        "en-us" : "Parameter - Maximum Filter Size in Microns"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_MaximumFilterSize",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "The maximum size of some filter."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_MaximumFilterSize",
+        "en-us" : "Parameter - Maximum Filter Size"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_Depth",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "A depth."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_Depth",
+        "en-us" : "Parameter - Depth"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_CruiseIdentifier",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "Representative of a cruise or some other named deployment."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_CruiseIdentifier",
+        "en-us" : "Parameter - Cruise Identifier"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_MolecularWeight_Daltons",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "The molecular weight measured in Daltons."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_MolecularWeight_Daltons",
+        "en-us" : "Parameter - Molecular Weight in Daltons"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_Probability",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "A probability of some thing."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_Probability",
+        "en-us" : "Parameter - Probabiliy"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_Latitude_DecimalDegrees",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "Latitude in decimal degrees where the values are bounded by -90 (South) and 90 (North)."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_Latitude_DecimalDegrees",
+        "en-us" : "Parameter - Latitude in Decimal Degress"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_Name",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "An identified name for a thing."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_Name",
+        "en-us" : "Parameter - Name"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_Time",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "An hour, minutes, and seconds represented in some recognized format."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_Time",
+        "en-us" : "Parameter - Date"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_DateTime",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "annotations" : {
+        "hasPart" : [ {
+          "identifier" : "hasPart",
+          "language" : "undefined",
+          "value" : "http://ocean-data.org/schema/data-type/v1.0/Time",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en-us" : "A date time measurement."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_DateTime",
+        "en-us" : "Parameter - Date Time"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_IdentificationProbability",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "Metric of peptide quality."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_IdentificationProbability",
+        "en-us" : "Parameter - Best Peptide identification probability"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_GeneticSequenceIdentifier",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "A genetic sequence; e.g. the order of nucleotides in DNA or RNA."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_GeneticSequenceIdentifier",
+        "en-us" : "Parameter - Genetic Sequence Identifier"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_Depth_Meters",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "A depth measurement made in meters."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_Depth_Meters",
+        "en-us" : "Parameter - Depth in Meters"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_Longitude",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "Longitude."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_Longitude",
+        "en-us" : "Parameter - Longitude"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_Longitude_DecimalDegrees",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "Longitude in decimal degrees where the values are bounded by -180 (West) and 1800 (East)."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_Longitude_DecimalDegrees",
+        "en-us" : "Parameter - Longitude in Decical Degrees"
+      }
+    }, {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/Parameter_StationIdentifier",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "Representative of a particular station."
+      },
+      "labels" : {
+        "IRI-based" : "Parameter_StationIdentifier",
+        "en-us" : "Parameter - Station Identifier"
+      }
+    } ],
+    "subClasses" : [ "5" ],
+    "attributes" : [ "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "9",
+    "label" : {
+      "undefined" : "Thing"
     }
-  ],
-  "classAttribute": [
-    {
-      "id": "3",
-      "iri": "http://ocean-data.org/schema/Dataset",
-      "baseIri": "http://ocean-data.org/schema",
-      "label": {
-        "IRI-based": "Dataset"
-      },
-      "attributes": [
-        "external"
-      ],
-      "pos": [
-        894.01,
-        20.36
-      ]
-    },
-    {
-      "id": "4",
-      "iri": "http://ocean-data.org/schema/Parameter",
-      "baseIri": "http://ocean-data.org/schema",
-      "label": {
-        "IRI-based": "Parameter"
-      },
-      "attributes": [
-        "external"
-      ],
-      "individuals": [
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_Identifier",
-          "labels": {
-            "IRI-based": "Parameter_Identifier",
-            "en-us": "Parameter - Identifier"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_FilterSize",
-          "labels": {
-            "IRI-based": "Parameter_FilterSize",
-            "en-us": "Parameter - Filter Size"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_MolecularWeight",
-          "labels": {
-            "IRI-based": "Parameter_MolecularWeight",
-            "en-us": "Parameter - Molecular Weight"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_TotalIonChromatogram",
-          "labels": {
-            "IRI-based": "Parameter_TotalIonChromatogram",
-            "en-us": "Parameter - Total Ion Chromatogram"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_Date",
-          "labels": {
-            "IRI-based": "Parameter_Date",
-            "en-us": "Parameter - Date"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_SampleIdentifier",
-          "labels": {
-            "IRI-based": "Parameter_SampleIdentifier",
-            "en-us": "Parameter - Sample Identifier"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_Score",
-          "labels": {
-            "IRI-based": "Parameter_Score",
-            "en-us": "Parameter - Score"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_CruiseStationIdentifier",
-          "labels": {
-            "IRI-based": "Parameter_CruiseStationIdentifier",
-            "en-us": "Parameter - Cruise Station Identifier"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_MedianRetentionTime",
-          "labels": {
-            "IRI-based": "Parameter_MedianRetentionTime",
-            "en-us": "Parameter - Median Retention Time"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_NCBITaxonName",
-          "labels": {
-            "IRI-based": "Parameter_NCBITaxonName",
-            "en-us": "Parameter - NCBI Taxon Name"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_Latitude",
-          "labels": {
-            "IRI-based": "Parameter_Latitude",
-            "en-us": "Parameter - Latitude"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_MinFilterSize_Microns",
-          "labels": {
-            "IRI-based": "Parameter_MinFilterSize_Microns",
-            "en-us": "Parameter - Minimum Filter Size in Microns"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_MinimumFilterSize",
-          "labels": {
-            "IRI-based": "Parameter_MinimumFilterSize",
-            "en-us": "Parameter - Filter Size"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_NCBITaxonIdentifier",
-          "labels": {
-            "IRI-based": "Parameter_NCBITaxonIdentifier",
-            "en-us": "Parameter - NCBI Taxon Identifier"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_TotalPrecursorIntensity",
-          "labels": {
-            "IRI-based": "Parameter_TotalPrecursorIntensity",
-            "en-us": "Parameter - Total Precursor Intensity"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_SpectralCount",
-          "labels": {
-            "IRI-based": "Parameter_SpectralCount",
-            "en-us": "Parameter - Spectral Count"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_Count",
-          "labels": {
-            "IRI-based": "Parameter_Count",
-            "en-us": "Parameter - Count"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_Description",
-          "labels": {
-            "IRI-based": "Parameter_Description",
-            "en-us": "Parameter - Description"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_MaxFilterSize_Microns",
-          "labels": {
-            "IRI-based": "Parameter_MaxFilterSize_Microns",
-            "en-us": "Parameter - Maximum Filter Size in Microns"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_Depth",
-          "labels": {
-            "IRI-based": "Parameter_Depth",
-            "en-us": "Parameter - Depth"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_MaximumFilterSize",
-          "labels": {
-            "IRI-based": "Parameter_MaximumFilterSize",
-            "en-us": "Parameter - Maximum Filter Size"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_CruiseIdentifier",
-          "labels": {
-            "IRI-based": "Parameter_CruiseIdentifier",
-            "en-us": "Parameter - Cruise Identifier"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_MolecularWeight_Daltons",
-          "labels": {
-            "IRI-based": "Parameter_MolecularWeight_Daltons",
-            "en-us": "Parameter - Molecular Weight in Daltons"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_Probability",
-          "labels": {
-            "IRI-based": "Parameter_Probability",
-            "en-us": "Parameter - Probabiliy"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_Latitude_DecimalDegrees",
-          "labels": {
-            "IRI-based": "Parameter_Latitude_DecimalDegrees",
-            "en-us": "Parameter - Latitude in Decimal Degress"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_Name",
-          "labels": {
-            "IRI-based": "Parameter_Name",
-            "en-us": "Parameter - Name"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_Time",
-          "labels": {
-            "IRI-based": "Parameter_Time",
-            "en-us": "Parameter - Date"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_DateTime",
-          "labels": {
-            "IRI-based": "Parameter_DateTime",
-            "en-us": "Parameter - Date Time"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_GeneticSequenceIdentifier",
-          "labels": {
-            "IRI-based": "Parameter_GeneticSequenceIdentifier",
-            "en-us": "Parameter - Genetic Sequence Identifier"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_IdentificationProbability",
-          "labels": {
-            "IRI-based": "Parameter_IdentificationProbability",
-            "en-us": "Parameter - Best Peptide identification probability"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_Longitude",
-          "labels": {
-            "IRI-based": "Parameter_Longitude",
-            "en-us": "Parameter - Longitude"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_Depth_Meters",
-          "labels": {
-            "IRI-based": "Parameter_Depth_Meters",
-            "en-us": "Parameter - Depth in Meters"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_Longitude_DecimalDegrees",
-          "labels": {
-            "IRI-based": "Parameter_Longitude_DecimalDegrees",
-            "en-us": "Parameter - Longitude in Decical Degrees"
-          }
-        },
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/Parameter_StationIdentifier",
-          "labels": {
-            "IRI-based": "Parameter_StationIdentifier",
-            "en-us": "Parameter - Station Identifier"
-          }
-        }
-      ],
-      "pos": [
-        686.54,
-        361.11
-      ]
-    },
-    {
-      "id": "9",
-      "iri": "http://www.w3.org/2002/07/owl#Thing",
-      "baseIri": "http://owl2vowl.de",
-      "label": {
-        "undefined": "Thing"
-      },
-      "pos": [
-        49.47,
-        819.08
-      ]
-    },
-    {
-      "id": "16",
-      "iri": "http://www.w3.org/2001/XMLSchema#string",
-      "baseIri": "http://www.w3.org/2001/XMLSchema",
-      "label": {
-        "IRI-based": "string"
-      },
-      "attributes": [
-        "datatype"
-      ],
-      "pos": [
-        974.12,
-        435.68
-      ]
-    },
-    {
-      "id": "17",
-      "iri": "http://www.w3.org/2001/XMLSchema#string",
-      "baseIri": "http://www.w3.org/2001/XMLSchema",
-      "label": {
-        "IRI-based": "string"
-      },
-      "attributes": [
-        "datatype"
-      ],
-      "pos": [
-        424.33,
-        503.77
-      ]
-    },
-    {
-      "id": "5",
-      "iri": "http://ocean-data.org/schema/data-type/v1.0/InferredParamter",
-      "baseIri": "http://ocean-data.org/schema/data-type/v1.0",
-      "label": {
-        "IRI-based": "InferredParamter",
-        "en-us": "InferredParamter"
-      },
-      "comment": {
-        "en-us": "An inferred parameter is a parameter whoa value is not explicitly recorded in the Dataset,\n        but that can be inferred based on its data type and related metadata. For example, dataset collected on a Cruise\n        might not explicitly record the cruise in the dataset, but that it can be inferred through the metadata:\n        (odo:Dataset -> odo:fromDeployment [ dc:title ])."
-      },
-      "pos": [
-        688.38,
-        776.34
-      ]
-    },
-    {
-      "id": "1",
-      "iri": "http://ocean-data.org/schema/data-type/v1.0/DataType",
-      "baseIri": "http://ocean-data.org/schema/data-type/v1.0",
-      "label": {
-        "IRI-based": "DataType",
-        "en-us": "DataType"
-      },
-      "comment": {
-        "en-us": "A data type can include more meaning beyond the syntax, such as who created the\n        data type, the source standard that the data type derives from,\n        the operations that can be done on datasets of that data type, and\n        typical scientific domains, software programs and/or instruments\n        that use the data type, etc. The intent is that any humans or\n        machines that when they encounter that data type can quickly\n        'understand' or be in a situation to at least 'process' details\n        within the dataset without even downloading that dataset."
-      },
-      "individuals": [
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/DataType_CruiseResults",
-          "labels": {
-            "IRI-based": "DataType_CruiseResults",
-            "en-us": "DataType - Cruise Results"
-          }
-        }
-      ],
-      "pos": [
-        521.56,
-        -9.41
-      ]
-    },
-    {
-      "id": "2",
-      "iri": "http://ocean-data.org/schema/data-type/v1.0/SubjectArea",
-      "baseIri": "http://ocean-data.org/schema/data-type/v1.0",
-      "label": {
-        "IRI-based": "SubjectArea",
-        "en-us": "SubjectArea"
-      },
-      "comment": {
-        "en-us": "A certain field of study used to group or filter Data Types"
-      },
-      "individuals": [
-        {
-          "iri": "http://ocean-data.org/schema/data-type/v1.0/SubjectArea_Proteomics",
-          "labels": {
-            "IRI-based": "SubjectArea_Proteomics",
-            "en-us": "SubjectArea - Proteomics"
-          }
-        }
-      ],
-      "pos": [
-        148.2,
-        -65.42
-      ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "string"
     }
-  ],
-  "property": [
-    {
-      "id": "0",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "6",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "8",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "10",
-      "type": "rdfs:subClassOf"
-    },
-    {
-      "id": "11",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "12",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "13",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "7",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "14",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "18",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "19",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "20",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "21",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "22",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "23",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "15",
-      "type": "owl:ObjectProperty"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "string"
     }
-  ],
-  "propertyAttribute": [
-    {
-      "id": "0",
-      "iri": "http://ocean-data.org/schema/data-type/v1.0/subjectArea",
-      "baseIri": "http://ocean-data.org/schema/data-type/v1.0",
-      "label": {
-        "IRI-based": "subjectArea",
-        "en-us": "subjectArea"
-      },
-      "attributes": [
-        "object"
-      ],
-      "comment": {
-        "en-us": "Specifies that the SubjectArea pertains to the observations made for a DataType."
-      },
-      "domain": "1",
-      "range": "2",
-      "pos": [
-        334.88,
-        -37.41
-      ]
+  }, {
+    "iri" : "http://ocean-data.org/schema/data-type/v1.0/InferredParamter",
+    "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InferredParamter",
+      "en-us" : "InferredParamter"
     },
-    {
-      "id": "6",
-      "iri": "http://ocean-data.org/schema/data-type/v1.0/measures",
-      "baseIri": "http://ocean-data.org/schema/data-type/v1.0",
-      "label": {
-        "IRI-based": "measures",
-        "en-us": "measures"
-      },
-      "attributes": [
-        "object"
-      ],
-      "comment": {
-        "en-us": "Specifies that a DataType should include the associated Parameter."
-      },
-      "domain": "1",
-      "range": "4",
-      "subproperty": [
-        "7",
-        "8"
-      ],
-      "pos": [
-        525.92,
-        196.4
-      ]
+    "comment" : {
+      "en-us" : "An inferred parameter is a parameter whoa value is not explicitly recorded in the Dataset,\n        but that can be inferred based on its data type and related metadata. For example, dataset collected on a Cruise\n        might not explicitly record the cruise in the dataset, but that it can be inferred through the metadata:\n        (odo:Dataset -> odo:fromDeployment [ dc:title ])."
     },
-    {
-      "id": "8",
-      "iri": "http://ocean-data.org/schema/data-type/v1.0/requires",
-      "baseIri": "http://ocean-data.org/schema/data-type/v1.0",
-      "label": {
-        "IRI-based": "requires",
-        "en-us": "requires"
-      },
-      "attributes": [
-        "object"
-      ],
-      "comment": {
-        "en-us": "Specifies that a DataType must include the associated Parameter."
-      },
-      "domain": "1",
-      "range": "4",
-      "superproperty": [
-        "6"
-      ],
-      "pos": [
-        582.91,
-        171.75
-      ]
+    "id" : "5",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://ocean-data.org/schema/data-type/v1.0/DataType",
+    "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataType",
+      "en-us" : "DataType"
     },
-    {
-      "id": "10",
-      "label": "Subclass of",
-      "attributes": [
-        "object",
-        "anonymous"
-      ],
-      "domain": "5",
-      "range": "4",
-      "pos": [
-        687.53,
-        585.45
-      ]
+    "individuals" : [ {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/DataType_CruiseResults",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "A dataset collected from one or more cruises."
+      },
+      "labels" : {
+        "IRI-based" : "DataType_CruiseResults",
+        "en-us" : "DataType - Cruise Results"
+      }
+    } ],
+    "comment" : {
+      "en-us" : "A data type can include more meaning beyond the syntax, such as who created the\n        data type, the source standard that the data type derives from,\n        the operations that can be done on datasets of that data type, and\n        typical scientific domains, software programs and/or instruments\n        that use the data type, etc. The intent is that any humans or\n        machines that when they encounter that data type can quickly\n        'understand' or be in a situation to at least 'process' details\n        within the dataset without even downloading that dataset."
     },
-    {
-      "id": "11",
-      "iri": "http://ocean-data.org/schema/data-type/v1.0/inferredParameter",
-      "baseIri": "http://ocean-data.org/schema/data-type/v1.0",
-      "label": {
-        "IRI-based": "inferredParameter",
-        "en-us": "inferredParameter"
-      },
-      "attributes": [
-        "object"
-      ],
-      "comment": {
-        "en-us": "This inferred parameter stores the value of the parameter in range."
-      },
-      "domain": "3",
-      "range": "4",
-      "pos": [
-        798.97,
-        176.45
-      ]
+    "id" : "1"
+  }, {
+    "iri" : "http://ocean-data.org/schema/data-type/v1.0/SubjectArea",
+    "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SubjectArea",
+      "en-us" : "SubjectArea"
     },
-    {
-      "id": "12",
-      "iri": "http://ocean-data.org/schema/data-type/v1.0/aggregates",
-      "baseIri": "http://ocean-data.org/schema/data-type/v1.0",
-      "label": {
-        "IRI-based": "aggregates",
-        "en-us": "aggregates"
+    "individuals" : [ {
+      "iri" : "http://ocean-data.org/schema/data-type/v1.0/SubjectArea_Proteomics",
+      "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+      "comment" : {
+        "en-us" : "Proteomics"
       },
-      "attributes": [
-        "object"
-      ],
-      "comment": {
-        "en-us": "Aggregates means that the domain DataType is a new DataType that requires\n        at least one instance of the aggregates range."
-      },
-      "domain": "1",
-      "range": "1",
-      "pos": [
-        528.96,
-        -167.88
-      ]
+      "labels" : {
+        "IRI-based" : "SubjectArea_Proteomics",
+        "en-us" : "SubjectArea - Proteomics"
+      }
+    } ],
+    "comment" : {
+      "en-us" : "A certain field of study used to group or filter Data Types"
     },
-    {
-      "id": "13",
-      "iri": "http://ocean-data.org/schema/data-type/v1.0/specializationOf",
-      "baseIri": "http://ocean-data.org/schema/data-type/v1.0",
-      "label": {
-        "IRI-based": "specializationOf",
-        "en-us": "specializationOf"
-      },
-      "attributes": [
-        "object"
-      ],
-      "comment": {
-        "en-us": "This parameter is narrower version of its range. It a specialization of its range\n        by because of some detail such as a specific unit of measure or becuase it was observed\n        using a specific instrument."
-      },
-      "domain": "4",
-      "range": "4",
-      "superproperty": [
-        "14"
-      ],
-      "pos": [
-        763.96,
-        502.06
-      ]
+    "id" : "2"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://ocean-data.org/schema/data-type/v1.0/subjectArea",
+    "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "subjectArea",
+      "en-us" : "subjectArea"
     },
-    {
-      "id": "7",
-      "iri": "http://ocean-data.org/schema/data-type/v1.0/recommends",
-      "baseIri": "http://ocean-data.org/schema/data-type/v1.0",
-      "label": {
-        "IRI-based": "recommends",
-        "en-us": "recommends"
-      },
-      "attributes": [
-        "object"
-      ],
-      "comment": {
-        "en-us": "Specifies that a DataType recommends that the associated Parameter be present,\n        but does not require it."
-      },
-      "domain": "1",
-      "range": "4",
-      "superproperty": [
-        "6"
-      ],
-      "pos": [
-        648.63,
-        142.41
-      ]
+    "domain" : "1",
+    "comment" : {
+      "en-us" : "Specifies that the SubjectArea pertains to the observations made for a DataType."
     },
-    {
-      "id": "14",
-      "iri": "http://www.w3.org/2002/07/owl#topObjectProperty",
-      "baseIri": "http://www.w3.org/2002/07/owl",
-      "label": {
-        "IRI-based": "topObjectProperty"
-      },
-      "attributes": [
-        "object",
-        "external"
-      ],
-      "domain": "9",
-      "range": "9",
-      "subproperty": [
-        "13",
-        "15"
-      ],
-      "pos": [
-        -32.05,
-        688.47
-      ]
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://ocean-data.org/schema/data-type/v1.0/measures",
+    "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "measures",
+      "en-us" : "measures"
     },
-    {
-      "id": "18",
-      "iri": "http://ocean-data.org/schema/data-type/v1.0/extends",
-      "baseIri": "http://ocean-data.org/schema/data-type/v1.0",
-      "label": {
-        "IRI-based": "extends",
-        "en-us": "extends"
-      },
-      "attributes": [
-        "object"
-      ],
-      "comment": {
-        "en-us": "Extends means that the domain DataType is a specialization of the range DataType\n        by inheriting the range's Parameters but also incluing new Parameters as part of the specialization."
-      },
-      "domain": "1",
-      "range": "1",
-      "pos": [
-        372.95,
-        41.59
-      ]
+    "domain" : "1",
+    "subproperty" : [ "7", "8" ],
+    "comment" : {
+      "en-us" : "Specifies that a DataType should include the associated Parameter."
     },
-    {
-      "id": "19",
-      "iri": "http://ocean-data.org/schema/data-type/v1.0/dataValueDelimiter",
-      "baseIri": "http://ocean-data.org/schema/data-type/v1.0",
-      "label": {
-        "IRI-based": "dataValueDelimiter",
-        "en-us": "delimiter"
-      },
-      "attributes": [
-        "datatype"
-      ],
-      "comment": {
-        "en-us": "For parameters whose data value is a list of multiple values, this property defines a string\n        that determines how that value should be parsed into a list of values by specifying the string identifying\n        where the value should be split."
-      },
-      "domain": "4",
-      "range": "16",
-      "pos": [
-        858.46,
-        405.69
-      ]
+    "attributes" : [ "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://ocean-data.org/schema/data-type/v1.0/requires",
+    "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "requires",
+      "en-us" : "requires"
     },
-    {
-      "id": "20",
-      "iri": "http://ocean-data.org/schema/data-type/v1.0/dataValueFormat",
-      "baseIri": "http://ocean-data.org/schema/data-type/v1.0",
-      "label": {
-        "IRI-based": "dataValueFormat",
-        "en-us": "dataValueFormat"
-      },
-      "attributes": [
-        "datatype"
-      ],
-      "comment": {
-        "en-us": "A string, indicating a format for the data value that enables correct processing of the value. For example, a date value may have a format such as 'YYYY-MM-DD'. Since the a format specified here are implementation specific, this definition does not enforce any particular range on this property."
-      },
-      "domain": "4",
-      "range": "17",
-      "pos": [
-        527.97,
-        447.38
-      ]
+    "superproperty" : [ "6" ],
+    "domain" : "1",
+    "comment" : {
+      "en-us" : "Specifies that a DataType must include the associated Parameter."
     },
-    {
-      "id": "21",
-      "iri": "http://ocean-data.org/schema/data-type/v1.0/summationOf",
-      "baseIri": "http://ocean-data.org/schema/data-type/v1.0",
-      "label": {
-        "IRI-based": "summationOf",
-        "en-us": "summationOf"
-      },
-      "attributes": [
-        "object"
-      ],
-      "comment": {
-        "en-us": "The value of this Parameter is the summation of Parameters attached by this property."
-      },
-      "domain": "4",
-      "range": "4",
-      "superproperty": [
-        "15"
-      ],
-      "pos": [
-        660.96,
-        516.59
-      ]
+    "attributes" : [ "object" ],
+    "id" : "8"
+  }, {
+    "range" : "4",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://ocean-data.org/schema/data-type/v1.0/inferredParameter",
+    "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "inferredParameter",
+      "en-us" : "inferredParameter"
     },
-    {
-      "id": "22",
-      "iri": "http://ocean-data.org/schema/data-type/v1.0/dataType",
-      "baseIri": "http://ocean-data.org/schema/data-type/v1.0",
-      "label": {
-        "IRI-based": "dataType",
-        "en-us": "dataType"
-      },
-      "attributes": [
-        "object"
-      ],
-      "comment": {
-        "en-us": "Specifies that a Dataset meets the criteria for a certain DataType."
-      },
-      "domain": "3",
-      "range": "1",
-      "pos": [
-        713.04,
-        5.89
-      ]
+    "domain" : "3",
+    "comment" : {
+      "en-us" : "This inferred parameter stores the value of the parameter in range."
     },
-    {
-      "id": "23",
-      "iri": "http://ocean-data.org/schema/data-type/v1.0/annotationOf",
-      "baseIri": "http://ocean-data.org/schema/data-type/v1.0",
-      "label": {
-        "IRI-based": "annotationOf",
-        "en-us": "annotationOf"
-      },
-      "attributes": [
-        "object"
-      ],
-      "comment": {
-        "en-us": "The defining Parameter is an annotation of the target Parameter"
-      },
-      "domain": "4",
-      "range": "4",
-      "pos": [
-        817.4,
-        452.02
-      ]
+    "attributes" : [ "object" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://ocean-data.org/schema/data-type/v1.0/specializationOf",
+    "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "specializationOf",
+      "en-us" : "specializationOf"
     },
-    {
-      "id": "15",
-      "iri": "http://ocean-data.org/schema/data-type/v1.0/dependsOn",
-      "baseIri": "http://ocean-data.org/schema/data-type/v1.0",
-      "label": {
-        "IRI-based": "dependsOn",
-        "en-us": "dependsOn"
-      },
-      "attributes": [
-        "object"
-      ],
-      "comment": {
-        "en-us": "This parameter depends on the existence on another parameter."
-      },
-      "domain": "4",
-      "range": "4",
-      "subproperty": [
-        "21"
-      ],
-      "superproperty": [
-        "14"
-      ],
-      "pos": [
-        586.77,
-        484.59
-      ]
-    }
-  ]
+    "superproperty" : [ "13" ],
+    "domain" : "4",
+    "comment" : {
+      "en-us" : "This parameter is narrower version of its range. It a specialization of its range\n        by because of some detail such as a specific unit of measure or becuase it was observed\n        using a specific instrument."
+    },
+    "attributes" : [ "object" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://ocean-data.org/schema/data-type/v1.0/aggregates",
+    "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "aggregates",
+      "en-us" : "aggregates"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en-us" : "Aggregates means that the domain DataType is a new DataType that requires\n        at least one instance of the aggregates range."
+    },
+    "attributes" : [ "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://ocean-data.org/schema/data-type/v1.0/recommends",
+    "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "recommends",
+      "en-us" : "recommends"
+    },
+    "superproperty" : [ "6" ],
+    "domain" : "1",
+    "comment" : {
+      "en-us" : "Specifies that a DataType recommends that the associated Parameter be present,\n        but does not require it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "9",
+    "subproperty" : [ "12", "15" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://ocean-data.org/schema/data-type/v1.0/extends",
+    "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "extends",
+      "en-us" : "extends"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en-us" : "Extends means that the domain DataType is a specialization of the range DataType\n        by inheriting the range's Parameters but also incluing new Parameters as part of the specialization."
+    },
+    "attributes" : [ "object" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://ocean-data.org/schema/data-type/v1.0/dataValueDelimiter",
+    "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "dataValueDelimiter",
+      "en-us" : "delimiter"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en-us" : "For parameters whose data value is a list of multiple values, this property defines a string\n        that determines how that value should be parsed into a list of values by specifying the string identifying\n        where the value should be split."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://ocean-data.org/schema/data-type/v1.0/dataValueFormat",
+    "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "dataValueFormat",
+      "en-us" : "dataValueFormat"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en-us" : "A string, indicating a format for the data value that enables correct processing of the value. For example, a date value may have a format such as 'YYYY-MM-DD'. Since the a format specified here are implementation specific, this definition does not enforce any particular range on this property."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://ocean-data.org/schema/data-type/v1.0/summationOf",
+    "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "summationOf",
+      "en-us" : "summationOf"
+    },
+    "superproperty" : [ "15" ],
+    "domain" : "4",
+    "comment" : {
+      "en-us" : "The value of this Parameter is the summation of Parameters attached by this property."
+    },
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://ocean-data.org/schema/data-type/v1.0/dataType",
+    "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "dataType",
+      "en-us" : "dataType"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en-us" : "Specifies that a Dataset meets the criteria for a certain DataType."
+    },
+    "attributes" : [ "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://ocean-data.org/schema/data-type/v1.0/annotationOf",
+    "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "annotationOf",
+      "en-us" : "annotationOf"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en-us" : "The defining Parameter is an annotation of the target Parameter"
+    },
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://ocean-data.org/schema/data-type/v1.0/dependsOn",
+    "baseIri" : "http://ocean-data.org/schema/data-type/v1.0",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "dependsOn",
+      "en-us" : "dependsOn"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "4",
+    "subproperty" : [ "21" ],
+    "comment" : {
+      "en-us" : "This parameter depends on the existence on another parameter."
+    },
+    "attributes" : [ "object" ],
+    "id" : "15"
+  } ]
 }
