@@ -14,22 +14,26 @@
      xmlns:odo-dt="http://ocean-data.org/schema/data-type/v1.0/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://ocean-data.org/schema/data-type/v1.0/">
-        <owl:imports rdf:resource="https://ocean-data.org/schema/ontology.xml"/>
-        <dc:publisher>Biological and Chemical Oceanography Data Management Office (BCO-DMO)</dc:publisher>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-04</dct:issued>
-        <rdfs:seeAlso rdf:resource="http://info.deepcarbon.net/schema#DataType"/>
-        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/BCODMO/Ocean-Data-Ontology_Data-Type</dct:source>
-        <rdfs:comment xml:lang="en-us">An ontology for describing data types used by BCO-DMO</rdfs:comment>
-        <dct:publisher rdf:resource="http://lod.bco-dmo.org/id/affiliation/191"/>
         <rdfs:label xml:lang="en-us">Ocean Data Ontology - Data Type Extension</rdfs:label>
         <owl:versionInfo>1.0</owl:versionInfo>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ocean-data.org/schema/data-type/v1.0/</vann:preferredNamespaceUri>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-30</dcterms:modified>
+        <dct:title xml:lang="en-us">Ocean Data Ontology - Data Type Extension</dcterms:title>
+        <rdfs:comment xml:lang="en-us">An ontology for describing data types used by BCO-DMO</rdfs:comment>
+        <dc:publisher>Biological and Chemical Oceanography Data Management Office (BCO-DMO)</dc:publisher>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/BCODMO/Ocean-Data-Ontology_Data-Type</dct:source>
+        <dct:publisher rdf:resource="http://lod.bco-dmo.org/id/affiliation/191"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-30</dct:issued>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">odo-dt</vann:preferredNamespaceUri>
+        <rdfs:seeAlso rdf:resource="http://info.deepcarbon.net/schema#DataType"/>
+        <dct:created xml:lang="en-us">2012-01-01</dcterms:created>
         <dct:creator rdf:resource="http://orcid.org/0000-0003-4486-9448"/>
-        <dc:creator>Adam Shepherd</dc:creator>
+        <dc:publisher xml:lang="en-us">Biological and Chemical Oceanography Data Management Office (BCO-DMO)</dc:publisher>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -37,58 +41,58 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/publisher -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/hasPart -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasPart"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/issued -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/publisher -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/source -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -96,7 +100,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/aggregates -->
@@ -108,7 +112,7 @@
         at least one instance of the aggregates range.</rdfs:comment>
         <rdfs:label xml:lang="en-us">aggregates</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/annotationOf -->
@@ -119,7 +123,7 @@
         <rdfs:comment xml:lang="en-us">The defining Parameter is an annotation of the target Parameter</rdfs:comment>
         <rdfs:label xml:lang="en-us">annotationOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/dataType -->
@@ -130,7 +134,7 @@
         <rdfs:comment xml:lang="en-us">Specifies that a Dataset meets the criteria for a certain DataType.</rdfs:comment>
         <rdfs:label xml:lang="en-us">dataType</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/dependsOn -->
@@ -142,7 +146,7 @@
         <rdfs:comment xml:lang="en-us">This parameter depends on the existence on another parameter.</rdfs:comment>
         <rdfs:label xml:lang="en-us">dependsOn</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/extends -->
@@ -154,7 +158,7 @@
         by inheriting the range&apos;s Parameters but also incluing new Parameters as part of the specialization.</rdfs:comment>
         <rdfs:label xml:lang="en-us">extends</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/inferredParameter -->
@@ -165,7 +169,7 @@
         <rdfs:comment xml:lang="en-us">This inferred parameter stores the value of the parameter in range.</rdfs:comment>
         <rdfs:label xml:lang="en-us">inferredParameter</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/measures -->
@@ -176,7 +180,7 @@
         <rdfs:comment xml:lang="en-us">Specifies that a DataType should include the associated Parameter.</rdfs:comment>
         <rdfs:label xml:lang="en-us">measures</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/recommends -->
@@ -189,7 +193,7 @@
         but does not require it.</rdfs:comment>
         <rdfs:label xml:lang="en-us">recommends</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/requires -->
@@ -201,7 +205,7 @@
         <rdfs:comment xml:lang="en-us">Specifies that a DataType must include the associated Parameter.</rdfs:comment>
         <rdfs:label xml:lang="en-us">requires</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/specializationOf -->
@@ -215,7 +219,7 @@
         using a specific instrument.</rdfs:comment>
         <rdfs:label xml:lang="en-us">specializationOf</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/subjectArea -->
@@ -226,7 +230,7 @@
         <rdfs:comment xml:lang="en-us">Specifies that the SubjectArea pertains to the observations made for a DataType.</rdfs:comment>
         <rdfs:label xml:lang="en-us">subjectArea</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/summationOf -->
@@ -238,10 +242,10 @@
         <rdfs:comment xml:lang="en-us">The value of this Parameter is the summation of Parameters attached by this property.</rdfs:comment>
         <rdfs:label xml:lang="en-us">summationOf</rdfs:label>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -249,7 +253,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/dataValueDelimiter -->
@@ -262,7 +266,7 @@
         where the value should be split.</rdfs:comment>
         <rdfs:label xml:lang="en-us">delimiter</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/dataValueFormat -->
@@ -273,10 +277,10 @@
         <rdfs:comment xml:lang="en-us">A string, indicating a format for the data value that enables correct processing of the value. For example, a date value may have a format such as &apos;YYYY-MM-DD&apos;. Since the a format specified here are implementation specific, this definition does not enforce any particular range on this property.</rdfs:comment>
         <rdfs:label xml:lang="en-us">dataValueFormat</rdfs:label>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -284,19 +288,19 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://ocean-data.org/schema/Dataset -->
 
     <owl:Class rdf:about="http://ocean-data.org/schema/Dataset"/>
-    
+
 
 
     <!-- http://ocean-data.org/schema/Parameter -->
 
     <owl:Class rdf:about="http://ocean-data.org/schema/Parameter"/>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/DataType -->
@@ -312,7 +316,7 @@
         within the dataset without even downloading that dataset.</rdfs:comment>
         <rdfs:label xml:lang="en-us">DataType</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/InferredParamter -->
@@ -325,7 +329,7 @@
         (odo:Dataset -&gt; odo:fromDeployment [ dc:title ]).</rdfs:comment>
         <rdfs:label xml:lang="en-us">InferredParamter</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/SubjectArea -->
@@ -334,10 +338,10 @@
         <rdfs:comment xml:lang="en-us">A certain field of study used to group or filter Data Types</rdfs:comment>
         <rdfs:label xml:lang="en-us">SubjectArea</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -345,7 +349,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/DataType_CruiseResults -->
@@ -356,7 +360,7 @@
         <rdfs:comment xml:lang="en-us">A dataset collected from one or more cruises.</rdfs:comment>
         <rdfs:label xml:lang="en-us">DataType - Cruise Results</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_Count -->
@@ -366,7 +370,7 @@
         <rdfs:comment xml:lang="en-us">A numberic quantity measuring the occurrence of some thing.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Count</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_CruiseIdentifier -->
@@ -376,7 +380,7 @@
         <rdfs:comment xml:lang="en-us">Representative of a cruise or some other named deployment.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Cruise Identifier</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_CruiseStationIdentifier -->
@@ -386,7 +390,7 @@
         <rdfs:comment xml:lang="en-us">Representative of a particular station from a cruise.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Cruise Station Identifier</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_Date -->
@@ -396,7 +400,7 @@
         <rdfs:comment xml:lang="en-us">A year, month, and day represented in some recognized format.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Date</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_DateTime -->
@@ -407,7 +411,7 @@
         <rdfs:comment xml:lang="en-us">A date time measurement.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Date Time</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_Depth -->
@@ -417,7 +421,7 @@
         <rdfs:comment xml:lang="en-us">A depth.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Depth</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_Depth_Meters -->
@@ -427,7 +431,7 @@
         <rdfs:comment xml:lang="en-us">A depth measurement made in meters.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Depth in Meters</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_Description -->
@@ -437,7 +441,7 @@
         <rdfs:comment xml:lang="en-us">A description of a thing.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Description</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_FilterSize -->
@@ -447,7 +451,7 @@
         <rdfs:comment xml:lang="en-us">The size of some filter.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Filter Size</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_GeneticSequenceIdentifier -->
@@ -457,7 +461,7 @@
         <rdfs:comment xml:lang="en-us">A genetic sequence; e.g. the order of nucleotides in DNA or RNA.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Genetic Sequence Identifier</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_IdentificationProbability -->
@@ -467,7 +471,7 @@
         <rdfs:comment xml:lang="en-us">Metric of peptide quality.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Best Peptide identification probability</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_Identifier -->
@@ -477,7 +481,7 @@
         <rdfs:comment xml:lang="en-us">Identifier</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Identifier</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_Latitude -->
@@ -487,7 +491,7 @@
         <rdfs:comment xml:lang="en-us">Latitude.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Latitude</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_Latitude_DecimalDegrees -->
@@ -497,7 +501,7 @@
         <rdfs:comment xml:lang="en-us">Latitude in decimal degrees where the values are bounded by -90 (South) and 90 (North).</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Latitude in Decimal Degress</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_Longitude -->
@@ -507,7 +511,7 @@
         <rdfs:comment xml:lang="en-us">Longitude.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Longitude</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_Longitude_DecimalDegrees -->
@@ -517,7 +521,7 @@
         <rdfs:comment xml:lang="en-us">Longitude in decimal degrees where the values are bounded by -180 (West) and 1800 (East).</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Longitude in Decical Degrees</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_MaxFilterSize_Microns -->
@@ -527,7 +531,7 @@
         <rdfs:comment xml:lang="en-us">The maximum filter size measured in microns.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Maximum Filter Size in Microns</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_MaximumFilterSize -->
@@ -537,7 +541,7 @@
         <rdfs:comment xml:lang="en-us">The maximum size of some filter.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Maximum Filter Size</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_MedianRetentionTime -->
@@ -547,7 +551,7 @@
         <rdfs:comment xml:lang="en-us">Median Retention Time</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Median Retention Time</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_MinFilterSize_Microns -->
@@ -557,7 +561,7 @@
         <rdfs:comment xml:lang="en-us">The minimum filter size measured in microns.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Minimum Filter Size in Microns</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_MinimumFilterSize -->
@@ -567,7 +571,7 @@
         <rdfs:comment xml:lang="en-us">The minimum size of some filter.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Filter Size</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_MolecularWeight -->
@@ -577,7 +581,7 @@
         <rdfs:comment xml:lang="en-us">The molecular weight.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Molecular Weight</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_MolecularWeight_Daltons -->
@@ -587,7 +591,7 @@
         <rdfs:comment xml:lang="en-us">The molecular weight measured in Daltons.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Molecular Weight in Daltons</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_NCBITaxonIdentifier -->
@@ -597,7 +601,7 @@
         <rdfs:comment xml:lang="en-us">An NCBI identifier for a certain taxa.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - NCBI Taxon Identifier</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_NCBITaxonName -->
@@ -607,7 +611,7 @@
         <rdfs:comment xml:lang="en-us">The taxonomic species name at NCBI related to an NCBI identifier.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - NCBI Taxon Name</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_Name -->
@@ -617,7 +621,7 @@
         <rdfs:comment xml:lang="en-us">An identified name for a thing.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Name</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_Probability -->
@@ -627,7 +631,7 @@
         <rdfs:comment xml:lang="en-us">A probability of some thing.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Probabiliy</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_SampleIdentifier -->
@@ -637,7 +641,7 @@
         <rdfs:comment xml:lang="en-us">Uniquely identifies one sample within a dataset.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Sample Identifier</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_Score -->
@@ -647,7 +651,7 @@
         <rdfs:comment xml:lang="en-us">An arbitrary value representing the quality of some thing.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Score</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_SpectralCount -->
@@ -657,7 +661,7 @@
         <rdfs:comment xml:lang="en-us">The spectral count for an identifified protein.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Spectral Count</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_StationIdentifier -->
@@ -667,7 +671,7 @@
         <rdfs:comment xml:lang="en-us">Representative of a particular station.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Station Identifier</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_Time -->
@@ -677,7 +681,7 @@
         <rdfs:comment xml:lang="en-us">An hour, minutes, and seconds represented in some recognized format.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Date</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_TotalIonChromatogram -->
@@ -688,7 +692,7 @@
         <rdfs:label xml:lang="en-us">Parameter - Total Ion Chromatogram</rdfs:label>
         <skos:altLabel>TIC</skos:altLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/Parameter_TotalPrecursorIntensity -->
@@ -698,7 +702,7 @@
         <rdfs:comment xml:lang="en-us">Total Precursor Intensity</rdfs:comment>
         <rdfs:label xml:lang="en-us">Parameter - Total Precursor Intensity</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://ocean-data.org/schema/data-type/v1.0/SubjectArea_Proteomics -->
@@ -708,10 +712,10 @@
         <rdfs:comment xml:lang="en-us">Proteomics</rdfs:comment>
         <rdfs:label xml:lang="en-us">SubjectArea - Proteomics</rdfs:label>
     </owl:NamedIndividual>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // General axioms
