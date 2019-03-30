@@ -374,16 +374,16 @@
     
 
 
-    <!-- http://ocean-data.org/schema/data-type/v1.0/InferredParamter -->
+    <!-- http://ocean-data.org/schema/data-type/v1.0/InferredParameter -->
 
 
-    <owl:Class rdf:about="http://ocean-data.org/schema/data-type/v1.0/InferredParamter">
+    <owl:Class rdf:about="http://ocean-data.org/schema/data-type/v1.0/InferredParameter">
         <rdfs:subClassOf rdf:resource="http://ocean-data.org/schema/Parameter"/>
         <rdfs:comment xml:lang="en-us">An inferred parameter is a parameter whoa value is not explicitly recorded in the Dataset,
         but that can be inferred based on its data type and related metadata. For example, dataset collected on a Cruise
         might not explicitly record the cruise in the dataset, but that it can be inferred through the metadata:
         (odo:Dataset -&gt; odo:fromDeployment [ dc:title ]).</rdfs:comment>
-        <rdfs:label xml:lang="en-us">InferredParamter</rdfs:label>
+        <rdfs:label xml:lang="en-us">InferredParameter</rdfs:label>
     </owl:Class>
     
 

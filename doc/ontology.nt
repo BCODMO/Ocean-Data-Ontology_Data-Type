@@ -200,11 +200,11 @@
 <http://ocean-data.org/schema/data-type/v1.0/DataType> <http://www.w3.org/2000/01/rdf-schema#comment> "A data type can include more meaning beyond the syntax, such as who created the\n        data type, the source standard that the data type derives from,\n        the operations that can be done on datasets of that data type, and\n        typical scientific domains, software programs and/or instruments\n        that use the data type, etc. The intent is that any humans or\n        machines that when they encounter that data type can quickly\n        'understand' or be in a situation to at least 'process' details\n        within the dataset without even downloading that dataset."@en-us .
 <http://ocean-data.org/schema/data-type/v1.0/DataType> <http://www.w3.org/2000/01/rdf-schema#label> "DataType"@en-us .
 # 
-# http://ocean-data.org/schema/data-type/v1.0/InferredParamter
-<http://ocean-data.org/schema/data-type/v1.0/InferredParamter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://ocean-data.org/schema/data-type/v1.0/InferredParamter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ocean-data.org/schema/Parameter> .
-<http://ocean-data.org/schema/data-type/v1.0/InferredParamter> <http://www.w3.org/2000/01/rdf-schema#comment> "An inferred parameter is a parameter whoa value is not explicitly recorded in the Dataset,\n        but that can be inferred based on its data type and related metadata. For example, dataset collected on a Cruise\n        might not explicitly record the cruise in the dataset, but that it can be inferred through the metadata:\n        (odo:Dataset -> odo:fromDeployment [ dc:title ])."@en-us .
-<http://ocean-data.org/schema/data-type/v1.0/InferredParamter> <http://www.w3.org/2000/01/rdf-schema#label> "InferredParamter"@en-us .
+# http://ocean-data.org/schema/data-type/v1.0/InferredParameter
+<http://ocean-data.org/schema/data-type/v1.0/InferredParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ocean-data.org/schema/data-type/v1.0/InferredParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ocean-data.org/schema/Parameter> .
+<http://ocean-data.org/schema/data-type/v1.0/InferredParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "An inferred parameter is a parameter whoa value is not explicitly recorded in the Dataset,\n        but that can be inferred based on its data type and related metadata. For example, dataset collected on a Cruise\n        might not explicitly record the cruise in the dataset, but that it can be inferred through the metadata:\n        (odo:Dataset -> odo:fromDeployment [ dc:title ])."@en-us .
+<http://ocean-data.org/schema/data-type/v1.0/InferredParameter> <http://www.w3.org/2000/01/rdf-schema#label> "InferredParameter"@en-us .
 # 
 # http://ocean-data.org/schema/data-type/v1.0/SubjectArea
 <http://ocean-data.org/schema/data-type/v1.0/SubjectArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

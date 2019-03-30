@@ -117,7 +117,7 @@
     "@value" : "DataType - Cruise Results"
   } ]
 }, {
-  "@id" : "http://ocean-data.org/schema/data-type/v1.0/InferredParamter",
+  "@id" : "http://ocean-data.org/schema/data-type/v1.0/InferredParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en-us",
@@ -125,7 +125,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en-us",
-    "@value" : "InferredParamter"
+    "@value" : "InferredParameter"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://ocean-data.org/schema/Parameter"
