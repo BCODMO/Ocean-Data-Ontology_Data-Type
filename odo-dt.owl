@@ -758,7 +758,7 @@
         <odo-dt:measures rdf:resource="http://ocean-data.org/schema/data-type/v1.0/Parameter_Time"/>
         <odo-dt:measures rdf:resource="http://ocean-data.org/schema/data-type/v1.0/Parameter_TotalIonChromatogram"/>
         <odo-dt:measures rdf:resource="http://ocean-data.org/schema/data-type/v1.0/Parameter_TotalPrecursorIntensity"/>
-        <odo-dt:measures rdf:resource="http://ocean-data.org/schema/data-type/v1.0Parameter_/MedianRetentionTime"/>
+        <odo-dt:measures rdf:resource="http://ocean-data.org/schema/data-type/v1.0Parameter_MedianRetentionTime"/>
         <odo-dt:measures rdf:resource="http://ocean-data.org/schema/data-type/v1.0/Parameter_AbsoluteUnits-FemtomolePerLiter"/>
         <odo-dt:measures rdf:resource="http://ocean-data.org/schema/data-type/v1.0/Parameter_BestProteinIdentifierProbability"/>
         <odo-dt:measures rdf:resource="http://ocean-data.org/schema/data-type/v1.0/Parameter_BestSequestDCnScore"/>
@@ -1173,7 +1173,7 @@
         <odo-dt:measures rdf:resource="http://ocean-data.org/schema/data-type/v1.0/Parameter_Time"/>
         <odo-dt:measures rdf:resource="http://ocean-data.org/schema/data-type/v1.0/Parameter_TotalIonChromatogram"/>
         <odo-dt:measures rdf:resource="http://ocean-data.org/schema/data-type/v1.0/Parameter_TotalPrecursorIntensity"/>
-        <odo-dt:measures rdf:resource="http://ocean-data.org/schema/data-type/v1.0Parameter_/MedianRetentionTime"/>
+        <odo-dt:measures rdf:resource="http://ocean-data.org/schema/data-type/v1.0Parameter_MedianRetentionTime"/>
         <odo-dt:measures rdf:resource="http://ocean-data.org/schema/data-type/v1.0/Parameter_AbsoluteUnits-FemtomolePerLiter"/>
         <odo-dt:measures rdf:resource="http://ocean-data.org/schema/data-type/v1.0/Parameter_BestProteinIdentifierProbability"/>
         <odo-dt:measures rdf:resource="http://ocean-data.org/schema/data-type/v1.0/Parameter_BestSequestDCnScore"/>
